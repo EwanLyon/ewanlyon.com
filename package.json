@@ -1,0 +1,26 @@
+{
+  "name": "ewanlyon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "parcel src/index.html"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@types/react-router-dom": "^5.1.6",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.51",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.4"
+  }
+}
