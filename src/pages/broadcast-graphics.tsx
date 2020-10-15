@@ -114,7 +114,7 @@ export const Broadcast: React.FC = () => {
 					<YouTube videoID="38XpupB8pb0" desc="Full round" />
 					<Image imgSrc={require('../media/broadcast/csgo/Midround.jpg')} desc="Mid-round" />
 					<Image imgSrc={require('../media/broadcast/csgo/PistolRound.jpg')} desc="Pistol Round" />
-					<Image imgSrc={require('../media/broadcast/csgo/BuyTime.jpg')} desc="Buy Time" />
+					<Image imgSrc={require('../media/broadcast/csgo/Buytime.jpg')} desc="Buy Time" />
 					<Image imgSrc={require('../media/broadcast/csgo/Map.jpg')} desc="Minimap" />
 					<Image imgSrc={require('../media/broadcast/csgo/ControlPanel.png')} desc="Player control panel" />
 				</ShowcaseGrid>
