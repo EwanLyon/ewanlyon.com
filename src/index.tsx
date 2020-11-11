@@ -9,7 +9,7 @@ const Homepage: React.FC = () => {
 	return (
 		<Router>
 			<Switch>
-				<Route exact path="/">
+				<Route exact path={["/", "/index.html"]}>
 					<Page.Homepage />
 				</Route>
 				<Route path="/contact">

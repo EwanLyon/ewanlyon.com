@@ -6,13 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "parcel src/index.html",
+    "serve:riv": "parcel src/riv.html",
+    "serve:all": "parcel src/*.html",
     "watch": "parcel watch src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/*.html"
   },
   "author": "",
   "license": "",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@types/react-router-dom": "^5.1.6",
+    "html2canvas": "^1.0.0-rc.7",
     "parcel-bundler": "^1.12.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
