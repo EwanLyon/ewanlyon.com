@@ -28,7 +28,7 @@ export const Noticeboard: React.FC = () => {
 	const [genre, setGenre] = useState('');
 	const [desc, setDesc] = useState('');
 	const [imageUrl, setImageUrl] = useState('');
-	const [releaseDate, setReleaseDate] = useState('Out now!');
+	const [releaseDate, setReleaseDate] = useState('');
 	const [length, setLength] = useState('');
 	const [rating, setRating] = useState('M');
 	const [imdbRating, setIMDbRating] = useState('');
@@ -189,10 +189,10 @@ export const Noticeboard: React.FC = () => {
 					</Grid>
 				</Grid>
 				<Button style={{ margin: '1rem 0' }} variant="contained" onClick={copyOutputAsImage}>
-					Copy as image
+					Copy as image (really broken right now)
 				</Button>
-				<span style={{ marginBottom: '1rem', fontWeight: 'lighter', color: '#999' }}>
-					If the image comes out cropped off, press SHIFT + Windows Key + S and drag over the image
+				<span style={{ marginBottom: '1rem', fontWeight: 'lighter', color: '#888' }}>
+					Press SHIFT + Windows Key + S and drag over the image, then copy and paste into a word document
 				</span>
 				<Output ref={outputRef} style={{ marginBottom: '5%' }}>
 					<NoticeboardMovie
