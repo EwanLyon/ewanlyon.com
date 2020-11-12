@@ -5,10 +5,10 @@ import { RatingImage, Ratings } from './ratings/ratings';
 
 const NoticeboardMovieContainer = styled.div`
 	padding-bottom: 63.87%;
-	width: 100%:
+	width: 100%;
 	box-sizing: border-box;
 	background: white;
-	border: 6px solid black;
+	border: 0.75vw solid black;
 	position: relative;
 	font-family: Roboto, arial, sans-serif;
 `;
@@ -20,11 +20,6 @@ const Content = styled.div`
 	width: 100%;
 	display: flex;
 	height: 100%;
-`;
-
-const Poster = styled.div`
-	height: 100%;
-	background: #aaa;
 `;
 
 const PosterImg = styled.img`
@@ -48,6 +43,7 @@ const TitleCont = styled.div`
 	height: 21%;
 	width: 100%;
 	margin-bottom: 3%;
+	padding-bottom: 0.75vw;
 `;
 
 const Title = styled.span`
@@ -58,13 +54,13 @@ const GenreContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 16px;
+	gap: 8%;
 `;
 
 const Genre = styled.div`
 	background: #e2e2e2;
-	padding: 1rem;
-	font-size: 150%;
+	padding: 0.5vw;
+    font-size: 1vw;
 	text-transform: uppercase;
 `;
 
@@ -79,6 +75,8 @@ const Desc = styled.div`
 const MetaInfo = styled.span`
 	font-size: 1.2vw;
 	margin: 0.5rem 0;
+	width: 100%;
+    text-align: center;
 `;
 
 const InfoBoxes = styled.div`
@@ -87,7 +85,7 @@ const InfoBoxes = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	flex-grow: 1;
+	height: 15%;
 `;
 
 const FWTCLogo = styled.img`
@@ -97,7 +95,7 @@ const FWTCLogo = styled.img`
 const SideLabel = styled.span`
 	font-weight: lighter;
 	font-style: italic;
-	font-size: 1.4vw;
+	font-size: 1.2vw;
 	margin: 0 1.2vw;
 	white-space: pre-line;
 	text-align: center;
@@ -180,9 +178,9 @@ export const NoticeboardMovie: React.FC<Props> = (props: Props) => {
 	return (
 		<NoticeboardMovieContainer style={{ borderColor: primaryColour }} className={props.className}>
 			<Content>
-				<Poster>
+				{/* <Poster> */}
 					<PosterImg src={props.imageUrl} style={{ minWidth: props.imageUrl ? '' : '45%', outline: '' }} />
-				</Poster>
+				{/* </Poster> */}
 				<DataCont>
 					<TitleCont
 						style={{
@@ -228,7 +226,8 @@ const IMDbContainer = styled.div`
 	box-sizing: border-box;
 	border-radius: 6px;
 
-	font-size: 2.5vh;
+	font-size: 1.5vw;
+	padding-right: 7%;
 `;
 
 const IMDbLogo = styled.img`
@@ -243,7 +242,7 @@ const IMDbTextCont = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-grow: 1;
-	padding: 1vw;
+	padding: 10%;
 `;
 
 interface IMDbBoxProps {

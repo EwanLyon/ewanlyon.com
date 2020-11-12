@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
-import html2canvas from 'html2canvas';
+import domtoimage from 'dom-to-image';
 
-import { Grid, TextField, InputLabel, Select, MenuItem, FormControl, Button } from '@material-ui/core';
+import { Grid, TextField, InputLabel, Select, MenuItem, FormControl, Button, Snackbar } from '@material-ui/core';
+import { Alert } from '@material-ui/lab';
 
 import { NoticeboardMovie, NoticeboardTypes } from './noticeboard-design';
 import { Ratings } from './ratings/ratings';
@@ -23,26 +24,53 @@ const Output = styled.div`
 
 export const Noticeboard: React.FC = () => {
 	const [type, setType] = useState('Normal');
-	const [title, setTitle] = useState('');
+	const [title, setTitle] = useState('Tenet');
 	const [subtitle, setSubtitle] = useState('');
-	const [genre, setGenre] = useState('');
-	const [desc, setDesc] = useState('');
-	const [imageUrl, setImageUrl] = useState('');
-	const [releaseDate, setReleaseDate] = useState('');
-	const [length, setLength] = useState('');
+	const [genre, setGenre] = useState('Action, Thriller');
+	const [desc, setDesc] = useState(
+		'Armed with only one word—Tenet—and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time. Not time travel. Inversion.'
+	);
+	const [imageUrl, setImageUrl] = useState(
+		'https://m.media-amazon.com/images/M/MV5BMzU3YWYwNTQtZTdiMC00NjY5LTlmMTMtZDFlYTEyODBjMTk5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1012_.jpg'
+	);
+	const [releaseDate, setReleaseDate] = useState('Out now!');
+	const [length, setLength] = useState('150');
 	const [rating, setRating] = useState('M');
-	const [imdbRating, setIMDbRating] = useState('');
+	const [imdbRating, setIMDbRating] = useState('7.8');
+	const [errorMessage, setErrorMessage] = useState(
+		'Error 0: Error showed up/occured but did not change the error message.'
+	);
 	const outputRef = useRef<HTMLDivElement>(null);
+	const [alertOpen, setAlertOpen] = useState(false);
 
 	const copyOutputAsImage = () => {
 		if (outputRef.current) {
-			html2canvas(outputRef.current, { allowTaint: true, useCORS: true, scrollY: -window.scrollY }).then((canvas) => {
-				canvas.toBlob((blob) => {
-					const clipboardImage = new ClipboardItem({ 'image/png': blob });
-					navigator.clipboard.write([clipboardImage]);
-				});
-			});
+			try {
+				domtoimage.toBlob(outputRef.current).then(
+					(blob) => {
+						const clipboardImage = new ClipboardItem({ 'image/png': blob });
+						navigator.clipboard.write([clipboardImage]);
+					},
+					(error) => {
+						setErrorMessage(error);
+						console.log(error);
+						openAlert();
+					}
+				);
+			} catch (error) {
+				setErrorMessage(error);
+				console.log(error);
+				openAlert();
+			}
 		}
+	};
+
+	const openAlert = () => {
+		setAlertOpen(true);
+	};
+
+	const closeAlert = () => {
+		setAlertOpen(false);
 	};
 
 	return (
@@ -208,6 +236,11 @@ export const Noticeboard: React.FC = () => {
 						imdbRating={imdbRating}
 					/>
 				</Output>
+				<Snackbar open={alertOpen} onClose={closeAlert} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}>
+					<Alert elevation={6} onClose={closeAlert} variant="filled" severity="error">
+						{errorMessage}
+					</Alert>
+				</Snackbar>
 			</Grid>
 		</NoticeboardContainer>
 	);
