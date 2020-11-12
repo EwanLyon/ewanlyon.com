@@ -217,10 +217,10 @@ export const Noticeboard: React.FC = () => {
 					</Grid>
 				</Grid>
 				<Button style={{ margin: '1rem 0' }} variant="contained" onClick={copyOutputAsImage}>
-					Copy as image (really broken right now)
+					Copy as image
 				</Button>
 				<span style={{ marginBottom: '1rem', fontWeight: 'lighter', color: '#888' }}>
-					Press SHIFT + Windows Key + S and drag over the image, then copy and paste into a word document
+					If the button doesn't work press SHIFT + Windows Key + S and drag over the image, then copy and paste into a word document.
 				</span>
 				<Output ref={outputRef} style={{ marginBottom: '5%' }}>
 					<NoticeboardMovie
