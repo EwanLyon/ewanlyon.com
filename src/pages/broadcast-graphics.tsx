@@ -24,20 +24,37 @@ const InfoTitle = styled.span`
 	font-weight: bold;
 `;
 
+const Contents = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
+
 export const Broadcast: React.FC = () => {
 	return (
 		<BroadcastContainer>
 			<Header title="Broadcast Graphics" />
+			<Contents>
+				<a href="#aus-speedruns">Australian Speedruns</a>
+				<a href="#csgo">CS:GO</a>
+				<a href="#cricket">Cricket</a>
+				<a href="#personal">Personal Livestream</a>
+				<a href="#spotify">ncg-spotify</a>
+				<a href="#livesplit">ncg-livesplit</a>
+				<a href="#tutorial">Tutorial</a>
+			</Contents>
 			<Event>
-				<Title>Australian Speedrun Marathon</Title>
+				<Title id="aus-speedruns">Australian Speedruns</Title>
 				<Paragraph>
 					I designed and programmed the graphics for the{' '}
 					<a href="https://www.twitch.tv/ausspeedruns" target="_blank">
-						Australian Speedrun Marathon
-					</a>{' '}
-					2020 online event. Multiple layouts had to be made including: an intermission screen, widescreen, 4:3,
-					Nintendo DS, Gameboy Advanced, 2 player race designs and a transition screen. The event ended up raising over
-					$13,000 which was near double the previous highest of $7,000. The graphic's used{' '}
+						Australian Speedruns
+					</a>{'. '}
+					They are a group that run speedrun marathons for charity. Multiple layouts had to be made including: an
+					intermission screen, widescreen, 4:3, Nintendo DS, Gameboy Advanced, 2 player race designs and a transition
+					screen. The graphic's used{' '}
 					<a href="https://github.com/speedcontrol/nodecg-speedcontrol/" target="_blank">
 						nodecg-speedcontrol
 					</a>{' '}
@@ -47,9 +64,9 @@ export const Broadcast: React.FC = () => {
 					<div>
 						<InfoTitle>Features</InfoTitle>
 						<ul>
-							<li>Intermission screen</li>
-							<li>Ticker showing current total, next runs and a call to action</li>
-							<li>Widescreen, Standard, Nintendo DS, Gameboy Advanced and race layouts</li>
+							<li>Ticker showing current total, next runs, incentives and milestones and a call to action</li>
+							<li>Layouts ranging for nearly all game aspect ratios and race layouts</li>
+							<li>Listen for tweets using the event hashtag and display them</li>
 						</ul>
 					</div>
 					<div>
@@ -64,16 +81,24 @@ export const Broadcast: React.FC = () => {
 									nodecg-speedcontrol
 								</a>
 							</li>
+							<li>
+								<a href="https://github.com/Palakis/obs-websocket" target="_blank">
+									obs-websocket
+								</a>
+							</li>
+							<li>Twitter API</li>
+							<li>Google API</li>
 						</ul>
 					</div>
 				</InfoBox>
+				<YouTube style={{ padding: '0 30%' }} videoID="Exc516Mh3H8" desc="FAST 2020" />
 				<ShowcaseGrid>
 					<YouTube videoID="7QIWBDlc15o" desc="ASM 2020" />
 					<YouTube videoID="T38naXjvsvA" desc="PAX Online" />
 				</ShowcaseGrid>
 			</Event>
 			<Event>
-				<Title>CS:GO</Title>
+				<Title id="csgo">CS:GO</Title>
 				<Paragraph>
 					A personal project was creating a set of{' '}
 					<a href="https://blog.counter-strike.net/layouts" target="_blank">
@@ -120,7 +145,7 @@ export const Broadcast: React.FC = () => {
 				</ShowcaseGrid>
 			</Event>
 			<Event>
-				<Title>Cricket</Title>
+				<Title id="cricket">Cricket</Title>
 				<Paragraph>
 					This was a project I made at the start of 2019 to challenge myself to create a full set of graphics. The main
 					goal was for the operator to press the least number of buttons to operate. The design was inspired by Google’s
@@ -163,7 +188,7 @@ export const Broadcast: React.FC = () => {
 				</ShowcaseGrid>
 			</Event>
 			<Event>
-				<Title>Personal Livestream</Title>
+				<Title id="personal">Personal Livestream</Title>
 				<Paragraph>These are layouts developed for my streams (that I rarely do).</Paragraph>
 				<InfoBox>
 					<div>
@@ -196,7 +221,7 @@ export const Broadcast: React.FC = () => {
 				/>
 			</Event>
 			<Event>
-				<Title>ncg-spotify</Title>
+				<Title id="spotify">ncg-spotify</Title>
 				<Paragraph>
 					NCG-Spotify is a NodeCG bundle aimed to handle Spotify song information and for other bundles to use them
 					easier.
@@ -230,7 +255,7 @@ export const Broadcast: React.FC = () => {
 				/>
 			</Event>
 			<Event>
-				<Title>ncg-livesplit</Title>
+				<Title id="livesplit">ncg-livesplit</Title>
 				<Paragraph>
 					This is a simple element that allows the LiveSplit server addon to talk to NodeCG bundles and vice versa. This
 					allows dynamic background elements to react to splits.
@@ -263,7 +288,7 @@ export const Broadcast: React.FC = () => {
 				</ShowcaseGrid>
 			</Event>
 			<Event>
-				<Title>NodeCG Tutorials</Title>
+				<Title id="tutorial">NodeCG Tutorials</Title>
 				<Paragraph>Tutorial I made on a basic NodeCG bundle for newcomers.</Paragraph>
 				<YouTube style={{ padding: '0 30%' }} videoID="uSWRcgD9NQQ" />
 			</Event>

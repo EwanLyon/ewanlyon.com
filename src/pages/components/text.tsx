@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { StyledComponent } from 'styled-components';
 
 interface CentreProps {
 	centred?: boolean;
@@ -38,11 +38,12 @@ const TitleContainer = styled.div`
 interface TitleProps {
 	style?: React.CSSProperties;
 	className?: string;
+	id?: string;
 }
 
 export const Title: React.FC<TitleProps> = (props: React.PropsWithChildren<TitleProps>) => {
 	return (
-		<TitleContainer className={props.className} style={props.style}>
+		<TitleContainer id={props.id} className={props.className} style={props.style}>
 			{props.children}
 		</TitleContainer>
 	);
