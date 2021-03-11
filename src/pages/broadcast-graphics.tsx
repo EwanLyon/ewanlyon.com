@@ -37,7 +37,7 @@ export const Broadcast: React.FC = () => {
 		<BroadcastContainer>
 			<Header title="Broadcast Graphics" />
 			<Contents>
-				<a href="#aus-speedruns">Australian Speedruns</a>
+				<a href="#aus-speedruns">AusSpeedruns</a>
 				<a href="#csgo">CS:GO</a>
 				<a href="#cricket">Cricket</a>
 				<a href="#personal">Personal Livestream</a>
@@ -46,13 +46,13 @@ export const Broadcast: React.FC = () => {
 				<a href="#tutorial">Tutorial</a>
 			</Contents>
 			<Event>
-				<Title id="aus-speedruns">Australian Speedruns</Title>
+				<Title id="aus-speedruns">AusSpeedruns</Title>
 				<Paragraph>
-					I designed and programmed the graphics for the{' '}
+					I designed and programmed the graphics for {' '}
 					<a href="https://www.twitch.tv/ausspeedruns" target="_blank">
-						Australian Speedruns
+						AusSpeedruns
 					</a>{'. '}
-					They are a group that run speedrun marathons for charity. Multiple layouts had to be made including: an
+					Multiple layouts had to be made including: an
 					intermission screen, widescreen, 4:3, Nintendo DS, Gameboy Advanced, 2 player race designs and a transition
 					screen. The graphic's used{' '}
 					<a href="https://github.com/speedcontrol/nodecg-speedcontrol/" target="_blank">
