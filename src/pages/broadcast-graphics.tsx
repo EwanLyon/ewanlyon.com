@@ -1,27 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Gfycat, Image, Paragraph, ShowcaseGrid, Title, YouTube } from './components';
 import { Header } from './components/header';
 
 const BroadcastContainer = styled.div`
 	font-size: 1.5vw;
+
+	& a {
+		font-weight: bold;
+	}
 `;
 
 const Event = styled.div``;
 
-const InfoBox = styled.div`
-	display: flex;
-	justify-content: space-around;
-	padding: 0 15%;
-	font-weight: lighter;
+// const InfoBox = styled.div`
+// 	display: flex;
+// 	justify-content: space-around;
+// 	padding: 0 15%;
+// 	font-weight: lighter;
 
-	& > div {
-		max-width: 50%;
-	}
-`;
+// 	& > div {
+// 		max-width: 50%;
+// 	}
+// `;
 
-const InfoTitle = styled.span`
-	font-weight: bold;
+// const InfoTitle = styled.span`
+// 	font-weight: bold;
+// `;
+
+const Divider = styled.div`
+	height: 1px;
+	margin: auto;
+	width: 80%;
+	background: #ffffff;
+	margin-top: 5vw;
 `;
 
 const Contents = styled.div`
@@ -30,15 +42,42 @@ const Contents = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	& > a {
+		font-size: 1.2rem;
+	}
+`;
+
+const ShowcaseGridCenter = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2vh;
+	
+	& > * {
+		width: 70%;
+	}
 `;
 
 export const Broadcast: React.FC = () => {
+	useEffect(() => {
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+		
+				document.querySelector(anchor.getAttribute('href') ?? '')?.scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+	}, []);
+
 	return (
 		<BroadcastContainer>
-			<Header title="Broadcast Graphics" />
 			<Contents>
 				<a href="#aus-speedruns">AusSpeedruns</a>
 				<a href="#csgo">CS:GO</a>
+				<a href="#custom-livesplit">Custom LiveSplit Displays</a>
 				<a href="#cricket">Cricket</a>
 				<a href="#personal">Personal Livestream</a>
 				<a href="#spotify">ncg-spotify</a>
@@ -49,54 +88,19 @@ export const Broadcast: React.FC = () => {
 				<Title id="aus-speedruns">AusSpeedruns</Title>
 				<Paragraph>
 					I designed and programmed the graphics for {' '}
-					<a href="https://www.twitch.tv/ausspeedruns" target="_blank">
+					<a href="https://ausspeedruns.com" target="_blank">
 						AusSpeedruns
 					</a>{'. '}
-					Multiple layouts had to be made including: an
-					intermission screen, widescreen, 4:3, Nintendo DS, Gameboy Advanced, 2 player race designs and a transition
-					screen. The graphic's used{' '}
-					<a href="https://github.com/speedcontrol/nodecg-speedcontrol/" target="_blank">
-						nodecg-speedcontrol
-					</a>{' '}
-					as the backend handler.
+					Multiple layouts had to be made to fit the wide range of aspect ratios and races. These graphics had to run nonstop over multiple days while being able to be controlled by remote volunteers with limited training.
 				</Paragraph>
-				<InfoBox>
-					<div>
-						<InfoTitle>Features</InfoTitle>
-						<ul>
-							<li>Ticker showing current total, next runs, incentives and milestones and a call to action</li>
-							<li>Layouts ranging for nearly all game aspect ratios and race layouts</li>
-							<li>Listen for tweets using the event hashtag and display them</li>
-						</ul>
-					</div>
-					<div>
-						<InfoTitle>Libraries used</InfoTitle>
-						<ul>
-							<li>React</li>
-							<li>TypeScript</li>
-							<li>Styled-components</li>
-							<li>GSAP</li>
-							<li>
-								<a href="https://github.com/speedcontrol/nodecg-speedcontrol/" target="_blank">
-									nodecg-speedcontrol
-								</a>
-							</li>
-							<li>
-								<a href="https://github.com/Palakis/obs-websocket" target="_blank">
-									obs-websocket
-								</a>
-							</li>
-							<li>Twitter API</li>
-							<li>Google API</li>
-						</ul>
-					</div>
-				</InfoBox>
-				<YouTube style={{ padding: '0 30%' }} videoID="Exc516Mh3H8" desc="FAST 2020" />
 				<ShowcaseGrid>
-					<YouTube videoID="7QIWBDlc15o" desc="ASM 2020" />
-					<YouTube videoID="T38naXjvsvA" desc="PAX Online" />
+					<Image imgSrc={require('../media/broadcast/ausspeedruns/asm2021.png')} desc="ASM 2021" />
+					<Image imgSrc={require('../media/broadcast/ausspeedruns/fast2020.png')} desc="FAST 2020" />
+					<Image imgSrc={require('../media/broadcast/ausspeedruns/paxonline.png')} desc="PAX Online" />
+					<Image imgSrc={require('../media/broadcast/ausspeedruns/asm2020.png')} desc="ASM 2020" />
 				</ShowcaseGrid>
 			</Event>
+			<Divider />
 			<Event>
 				<Title id="csgo">CS:GO</Title>
 				<Paragraph>
@@ -104,80 +108,46 @@ export const Broadcast: React.FC = () => {
 					<a href="https://blog.counter-strike.net/layouts" target="_blank">
 						CS:GO
 					</a>{' '}
-					for use at a tournament. It uses the game state integration system allowing for real time data to be used in
-					displaying information in a different or more informative way than the original hud. As this is being
-					developed it is subject to change. The design has been inspired by future user interfaces such as the Games
-					Done Quick layouts used from 2018-2020.
+					for use in tournaments. It uses the game state integration system allowing for real time data to be used in
+					displaying information in a different or more informative way than the original hud.
 				</Paragraph>
-				<InfoBox>
-					<div>
-						<InfoTitle>Features</InfoTitle>
-						<ul>
-							<li>Plant, bomb and defuse progress bars</li>
-							<li>Team logo and name</li>
-							<li>Team economy and grenades</li>
-							<li>Map with all player’s facing direction and vertical location (maps like Vertigo and Nuke)</li>
-							<li>Map shows all grenades including an animation for flash and frag grenades exploding</li>
-							<li>Easily customisable design</li>{' '}
-						</ul>
-					</div>
-					<div>
-						<InfoTitle>Libraries used</InfoTitle>
-						<ul>
-							<li>React</li>
-							<li>TypeScript</li>
-							<li>Styled-components</li>
-							<li>GSAP</li>
-							<li>Material UI</li>
-						</ul>
-					</div>
-				</InfoBox>
 				<Paragraph>
-					These have not been used at an actual tournament. Round data has been taken from tournament demos.
+					I then continued to develop the backend releasing it open source under the GPL license.
+					<br />
+					<br />
+					<a href="https://github.com/EwanLyon/nodecg-csgo-manager" target="_blank">NodeCG-CSGO-Manager GitHub</a>
 				</Paragraph>
 				<ShowcaseGrid>
 					<YouTube videoID="38XpupB8pb0" desc="Full round" />
-					<Image imgSrc={require('../media/broadcast/csgo/Midround.jpg')} desc="Mid-round" />
-					<Image imgSrc={require('../media/broadcast/csgo/PistolRound.jpg')} desc="Pistol Round" />
-					<Image imgSrc={require('../media/broadcast/csgo/Buytime.jpg')} desc="Buy Time" />
-					<Image imgSrc={require('../media/broadcast/csgo/Map.jpg')} desc="Minimap" />
-					<Image imgSrc={require('../media/broadcast/csgo/ControlPanel.png')} desc="Player control panel" />
+					<Image imgSrc={'https://github.com/EwanLyon/clubwho-csgo-graphics/raw/main/media/FullHUD.jpg'} desc="Personal Design" />
+					<Image imgSrc={'https://github.com/EwanLyon/angles-csgo-hud/raw/main/media/FullHUD.jpg'} desc="Angles Hud" />
+					<Image imgSrc={'https://github.com/EwanLyon/basic-csgo-hud/raw/main/media/FullHUD.jpg'} desc="Basic Hud" />
+					<Image imgSrc={'https://github.com/EwanLyon/nodecg-csgo-manager/raw/main/media/dashboard.png'} desc="Control Panel" />
 				</ShowcaseGrid>
 			</Event>
+			<Divider />
+			<Event>
+				<Title id="custom-livesplit">Custom LiveSplit Displays</Title>
+				<Paragraph>
+					Experimenting with new ways to display LiveSplit splits.
+				</Paragraph>
+				<ShowcaseGridCenter>
+					<Image imgSrc={require('../media/broadcast/livesplit/olympics.gif')} desc="Mario and Sonic at the Olympic Games" />
+					<Image imgSrc={require('../media/broadcast/livesplit/portal.gif')} desc="Portal" />
+				</ShowcaseGridCenter>
+			</Event>
+			<Divider />
 			<Event>
 				<Title id="cricket">Cricket</Title>
 				<Paragraph>
 					This was a project I made at the start of 2019 to challenge myself to create a full set of graphics. The main
-					goal was for the operator to press the least number of buttons to operate. The design was inspired by Google’s
-					material/paper UI and avoiding the use of gradients for 3D effects as most designs used.
+					goal was for the operator to press the least number of buttons to operate.
+					<br />
 					<br />
 					<a href="https://github.com/EwanLyon/cricket-layouts" target="_blank">
-						GitHub
+						Cricket-Layouts GitHub
 					</a>
 				</Paragraph>
-				<InfoBox>
-					<div>
-						<InfoTitle>Features</InfoTitle>
-						<ul>
-							<li>Full score bug</li>
-							<li>Mini score bug</li>
-							<li>Full batting scoreboard</li>
-							<li>Toss notification</li>
-							<li>Location nameplate</li>
-							<li>Changable batting order</li>
-							<li>Match day information</li>
-						</ul>
-					</div>
-					<div>
-						<InfoTitle>Libraries used</InfoTitle>
-						<ul>
-							<li>Polymer 2</li>
-							<li>TypeScript</li>
-							<li>GSAP</li>
-							<li>Polymer Paper Elements</li>
-						</ul>
-					</div>
-				</InfoBox>
 				<ShowcaseGrid>
 					<Image imgSrc={require('../media/broadcast/cricket/Scorebug.png')} desc="Score Bug" />
 					<Image imgSrc={require('../media/broadcast/cricket/GameControls.png')} desc="Main Controls" />
@@ -187,29 +157,10 @@ export const Broadcast: React.FC = () => {
 					<Image imgSrc={require('../media/broadcast/cricket/GraphicsController.png')} desc="Graphics Controls" />
 				</ShowcaseGrid>
 			</Event>
+			<Divider />
 			<Event>
 				<Title id="personal">Personal Livestream</Title>
 				<Paragraph>These are layouts developed for my streams (that I rarely do).</Paragraph>
-				<InfoBox>
-					<div>
-						<InfoTitle>Features</InfoTitle>
-						<ul>
-							<li>Countdown screen</li>
-							<li>Follower and Host notifications</li>
-							<li>Spotify song integration</li>
-							<li>Adjustable livesplit element</li>
-						</ul>
-					</div>
-					<div>
-						<InfoTitle>Libraries used</InfoTitle>
-						<ul>
-							<li>React</li>
-							<li>TypeScript</li>
-							<li>GSAP</li>
-							<li>Sass</li>
-						</ul>
-					</div>
-				</InfoBox>
 				<ShowcaseGrid>
 					<Gfycat gfycatId="parallelwarmheartedhoneybee" desc="Countdown" />
 					<Gfycat gfycatId="mammothshowybasenji" desc="Gameplay" />
@@ -220,73 +171,42 @@ export const Broadcast: React.FC = () => {
 					style={{ padding: '0 25%', marginTop: '3vw' }}
 				/>
 			</Event>
+			<Divider />
 			<Event>
 				<Title id="spotify">ncg-spotify</Title>
 				<Paragraph>
 					NCG-Spotify is a NodeCG bundle aimed to handle Spotify song information and for other bundles to use them
 					easier.
 					<br />
+					<br />
 					<a href="https://github.com/EwanLyon/ncg-spotify" target="_blank">
 						GitHub
 					</a>
 				</Paragraph>
-				<InfoBox>
-					<div>
-						<InfoTitle>Features</InfoTitle>
-						<ul>
-							<li>Song name</li>
-							<li>Song artist</li>
-							<li>Album art</li>
-							<li>Playing status</li>
-						</ul>
-					</div>
-					<div>
-						<InfoTitle>Libraries used</InfoTitle>
-						<ul>
-							<li>TypeScript</li>
-							<li>Spotify‑web‑api‑node</li>
-						</ul>
-					</div>
-				</InfoBox>
 				<Image
 					imgSrc={require('../media/broadcast/spotify.jpg')}
 					desc="Dashboard panel"
 					style={{ padding: '0 42%', marginTop: '3vw' }}
 				/>
 			</Event>
+			<Divider />
 			<Event>
 				<Title id="livesplit">ncg-livesplit</Title>
 				<Paragraph>
 					This is a simple element that allows the LiveSplit server addon to talk to NodeCG bundles and vice versa. This
 					allows dynamic background elements to react to splits.
 					<br />
+					<br />
 					<a href="https://github.com/EwanLyon/nodecg-livesplit" target="_blank">
 						GitHub
 					</a>
 				</Paragraph>
-				<InfoBox>
-					<div>
-						<InfoTitle>Features</InfoTitle>
-						<ul>
-							<li>Song name</li>
-							<li>Song artist</li>
-							<li>Album art</li>
-							<li>Playing status</li>
-						</ul>
-					</div>
-					<div>
-						<InfoTitle>Libraries used</InfoTitle>
-						<ul>
-							<li>TypeScript</li>
-							<li>Spotify‑web‑api‑node</li>
-						</ul>
-					</div>
-				</InfoBox>
 				<ShowcaseGrid>
 					<Image imgSrc={require('../media/broadcast/livesplit.png')} desc="Dashboard panel" />
 					<YouTube videoID="2VS2IG_3y00" desc="Integration" />
 				</ShowcaseGrid>
 			</Event>
+			<Divider />
 			<Event>
 				<Title id="tutorial">NodeCG Tutorials</Title>
 				<Paragraph>Tutorial I made on a basic NodeCG bundle for newcomers.</Paragraph>

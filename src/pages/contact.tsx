@@ -10,7 +10,7 @@ const ContactDetails = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 1.8vw;
+	font-size: 1.8rem;
 `;
 
 const ContactLink = styled.a`
@@ -25,6 +25,7 @@ export const Contact: React.FC = () => {
 				<ContactLink href="https://www.linkedin.com/in/ewan-lyon-a57734173/" target="_blank">
 					LinkedIn
 				</ContactLink>
+				<DumbEmail style={{ margin: '1vh' }} text="ewan@ewanlyon.com" />
 				<ContactLink href="https://twitter.com/Clubwhom" target="_blank">
 					Twitter
 				</ContactLink>
@@ -34,7 +35,6 @@ export const Contact: React.FC = () => {
 				<ContactLink href="https://www.youtube.com/channel/UCegx-UqkpUx9HjQ6lcXKzdg" target="_blank">
 					YouTube
 				</ContactLink>
-				<DumbEmail style={{ marginTop: '1vh' }} text="ewan@ewanlyon.com" />
 			</ContactDetails>
 		</ContactContainer>
 	);

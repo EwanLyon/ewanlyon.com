@@ -12,6 +12,10 @@ const Desc = styled.span`
 	display: block;
 	font-size: 1.8vw;
 	font-weight: lighter;
+	
+	@media (max-width: 425px) {
+		font-size: 1.2rem;
+	}
 `;
 
 interface ImageProps {

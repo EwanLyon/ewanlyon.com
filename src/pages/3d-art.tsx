@@ -13,6 +13,10 @@ const ArtGrid = styled.div`
 const ArtColumn = styled.div`
 	flex: 25%;
 	padding: 0 4px;
+
+	@media (max-width: 425px) {
+		flex: 100%;
+	}
 `;
 
 const ArtImg = styled.img`
@@ -24,7 +28,7 @@ const ArtImg = styled.img`
 export const Art: React.FC = () => {
 	return (
 		<ArtContainer>
-			<Header title="Art" tag="Some art work made in Blender and Substance Designer. Models are from myself and NASA" />
+			<Header title="Art" tag="Some old art made in Blender and Substance Designer for fun." />
 			<ArtGrid>
 				<ArtColumn>
 					<ArtImg src={require('../media/art/All4F.png')} alt="4 Neon Fighter Jets" />

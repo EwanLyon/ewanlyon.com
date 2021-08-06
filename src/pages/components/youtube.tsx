@@ -3,9 +3,14 @@ import styled from 'styled-components';
 
 const Desc = styled.span`
 	display: block;
-	font-size: 1.8vw;
+	font-size: 1.8rem;
 	font-weight: lighter;
 	margin-top: 1%;
+
+	
+	@media (max-width: 425px) {
+		font-size: 1rem;
+	}
 `;
 
 const YouTubeElementContainer = styled.div``;

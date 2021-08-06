@@ -9,7 +9,11 @@ const ShowcaseGridContainer = styled.div`
 	row-gap: 3vw;
 
 	& > * {
-		width: 80%;
+		width: 90%;
+	}
+
+	@media (max-width: 425px) {
+		grid-template-columns: 100%;
 	}
 `;
 

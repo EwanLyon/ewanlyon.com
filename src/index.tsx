@@ -18,9 +18,6 @@ const Homepage: React.FC = () => {
 				<Route path="/alivevr">
 					<Page.AliveVR />
 				</Route>
-				<Route path="/broadcast-graphics">
-					<Page.Broadcast />
-				</Route>
 				<Route path="/3d-art">
 					<Page.Art />
 				</Route>

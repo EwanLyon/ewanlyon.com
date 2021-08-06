@@ -8,6 +8,8 @@ const HeaderContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 0 3vh;
+	box-sizing: border-box;
 `;
 
 const Logo = styled.img`
@@ -19,11 +21,11 @@ const Logo = styled.img`
 
 const Title = styled.span`
 	font-weight: 700;
-	font-size: 2vw;
+	font-size: 1.5rem;
 `;
 
 const Tag = styled.span`
-	font-size: 1.5vw;
+	font-size: 1.1rem;
 `;
 
 interface Props {

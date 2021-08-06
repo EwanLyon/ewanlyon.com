@@ -6,11 +6,15 @@ interface CentreProps {
 }
 
 const ParagraphContainer = styled.div`
-	font-size: 1.5vw;
+	font-size: 1.5rem;
 	padding: 0 15%;
 	margin-bottom: 2%;
 	font-weight: lighter;
 	${(props: CentreProps) => (props.centred ? 'text-align: center;' : '')}
+	
+	@media (max-width: 425px) {
+		font-size: 1rem;
+	}
 `;
 
 interface ParagraphProps {
@@ -29,10 +33,14 @@ export const Paragraph: React.FC<ParagraphProps> = (props: React.PropsWithChildr
 
 const TitleContainer = styled.div`
 	font-weight: bold;
-	font-size: 1.8vw;
+	font-size: 2rem;
 	padding: 0 15%;
 	text-align: center;
 	margin: 5% 0;
+
+	@media (max-width: 425px) {
+		font-size: 1.5rem;
+	}
 `;
 
 interface TitleProps {

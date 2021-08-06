@@ -10,8 +10,8 @@ interface Props {
 }
 
 export const DumbEmail: React.FC<Props> = (props: Props) => {
-	const spanArray = props.text.split('').map((letter) => {
-		return <span>{letter}</span>;
+	const spanArray = props.text.split('').map((letter, i) => {
+		return <span key={i}>{letter}</span>;
 	});
 
 	return (
