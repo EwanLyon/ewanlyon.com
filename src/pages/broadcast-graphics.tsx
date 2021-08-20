@@ -44,7 +44,7 @@ const Contents = styled.div`
 	align-items: center;
 
 	& > a {
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 `;
 
@@ -108,7 +108,7 @@ export const Broadcast: React.FC = () => {
 					<a href="https://blog.counter-strike.net/layouts" target="_blank">
 						CS:GO
 					</a>{' '}
-					for use in tournaments. It uses the game state integration system allowing for real time data to be used in
+					graphics for use in tournaments. It uses the game state integration system allowing for real time data to be used in
 					displaying information in a different or more informative way than the original hud.
 				</Paragraph>
 				<Paragraph>
