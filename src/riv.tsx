@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import { Noticeboard } from './rivoli/noticeboard';
+import { Rooftop } from './rivoli/rooftop';
 
 const Rivoli: React.FC = () => {
 	return (
-		<Noticeboard/>
+		<Rooftop/>
 	);
 };
 
