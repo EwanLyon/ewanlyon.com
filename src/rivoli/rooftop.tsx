@@ -1,6 +1,16 @@
-import { Accordion, AccordionDetails, AccordionSummary, Chip, Paper } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import {
+	Accordion,
+	AccordionDetails,
+	AccordionSummary,
+	Chip,
+	FormControlLabel,
+	Paper,
+	Switch,
+	Typography,
+} from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const RooftopContainer = styled.div``;
 
@@ -27,14 +37,13 @@ const ALL_INGREDIENTS = [
 	'Raspberry Syrup',
 	'Bacardi 8',
 	'Bacardi Oakheart',
-	'Mandarin Napoleon',
+	'Mandarine Napoleon',
 	'DK Apricot',
 	"Dewar's White Label",
 	'Pineapple Juice',
 	'Patron Silver',
 	'DK Wild Strawberry',
 	'Strawberry Syrup',
-	'Lime Wedges',
 	'Mint Leaves',
 	'Monin Passionfruit Puree',
 	'DK Passionfruit',
@@ -45,7 +54,57 @@ const ALL_INGREDIENTS = [
 	'Raspberries',
 ];
 
+const VODKA = ['42 Below', 'Grey Goose'];
+
+const RUM = ['Bacardi 8', 'Bacardi Carta Blanca', 'Bacardi Oakheart'];
+
+const WHISKY = ["Dewar's White Label", 'Pure Scot'];
+
+const LIQUEUR = [
+	'DK Triple Sec',
+	'DK Crème de Café',
+	'Grand Marnier',
+	'Mandarine Napoleon',
+	'DK Apricot',
+	'DK Wild Strawberry',
+	'DK Passionfruit',
+];
+
+const SYRUP = ['Raspberry Syrup', 'Strawberry Syrup', 'Grenadine'];
+
+const BITTER = ['Aperol', 'Martini Bitter', 'Angostura Bitters'];
+
+const GIN = ['Bombay Sapphire'];
+
+const TEQUILA = ['Cazadores Blanco', 'Patron Silver'];
+
+const OTHER = [
+	'Soda Water',
+	'Lime',
+	'Prosecco',
+	'Cranberry Juice',
+	'Lime Juice',
+	'Sugar Syrup',
+	'Espresso',
+	'Lemon Juice',
+	'Coke',
+	'Martini Rosso',
+	'Pineapple Juice',
+	'Mint Leaves',
+	'Monin Passionfruit Puree',
+	'Raspberries',
+];
+
 ALL_INGREDIENTS.sort();
+VODKA.sort();
+RUM.sort();
+WHISKY.sort();
+LIQUEUR.sort();
+SYRUP.sort();
+BITTER.sort();
+GIN.sort();
+TEQUILA.sort();
+OTHER.sort();
 
 const GRANISHES = [
 	'Orange Rind',
@@ -60,22 +119,26 @@ const GRANISHES = [
 	'Strawberry',
 ];
 
+interface ICocktail {
+	name: string;
+	image: string;
+	ingredients: {
+		name: string;
+		amount: string | number;
+	}[];
+	top?: string[];
+	garnishes?: string[];
+	extra?: string[];
+}
+
 interface IAllCocktails {
-	[key: string]: {
-		image: string;
-		ingredients: {
-			name: string;
-			amount: string | number;
-		}[];
-		top?: string[];
-		garnishes?: string[];
-		extra?: string[];
-	};
+	[key: string]: ICocktail;
 }
 
 const ALL_COCKTAILS: IAllCocktails = {
 	'Aperol Spritz': {
-		image: require('./images/cocktails/Aperol.svg'),
+		name: 'Aperol Spritz',
+		image: require('./images/cocktails/Aperol Spritz.svg'),
 		ingredients: [
 			{ name: 'Aperol', amount: 60 },
 			{ name: 'Prosecco', amount: 60 },
@@ -86,6 +149,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		extra: ['Built'],
 	},
 	Cosmopolitan: {
+		name: 'Cosmopolitan',
 		image: require('./images/cocktails/Cosmopolitan.svg'),
 		ingredients: [
 			{ name: 'Grey Goose', amount: 45 },
@@ -97,6 +161,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Orange Rind'],
 	},
 	'Espresso Martini': {
+		name: 'Espresso Martini',
 		image: require('./images/cocktails/Espresso Martini.svg'),
 		ingredients: [
 			{ name: '42 Below', amount: 40 },
@@ -108,6 +173,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		extra: ['Shake Well', 'Double Strain'],
 	},
 	'Long Island Iced Tea': {
+		name: 'Long Island Iced Tea',
 		image: require('./images/cocktails/Long Island Iced Tea.svg'),
 		ingredients: [
 			{ name: '42 Below', amount: 15 },
@@ -117,11 +183,13 @@ const ALL_COCKTAILS: IAllCocktails = {
 			{ name: 'Grand Marnier', amount: 15 },
 			{ name: 'Lemon Juice', amount: 50 },
 			{ name: 'Sugar Syrup', amount: 15 },
+			{ name: 'Coke', amount: 'Top' },
 		],
-		top: ['Ice', 'Coke'],
+		top: ['Ice'],
 		garnishes: ['Lemon Wedge'],
 	},
 	'Traditional Negroni': {
+		name: 'Traditional Negroni',
 		image: require('./images/cocktails/Traditional Negroni.svg'),
 		ingredients: [
 			{ name: 'Bombay Sapphire', amount: 30 },
@@ -133,6 +201,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		extra: ['Built'],
 	},
 	'Raspberry Collins': {
+		name: 'Raspberry Collins',
 		image: require('./images/cocktails/Raspberry Collins.svg'),
 		ingredients: [
 			{ name: 'Bombay Sapphire', amount: 50 },
@@ -144,10 +213,11 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Lemon Wedge', 'Raspberries'],
 	},
 	'Tiki Mandarine': {
+		name: 'Tiki Mandarine',
 		image: require('./images/cocktails/Tiki Mandarine.svg'),
 		ingredients: [
 			{ name: 'Bacardi 8', amount: 20 },
-			{ name: 'Mandarin Napoleon', amount: 10 },
+			{ name: 'Mandarine Napoleon', amount: 10 },
 			{ name: 'DK Apricot', amount: 10 },
 			{ name: "Dewar's White Label", amount: 20 },
 			{ name: 'Lemon Juice', amount: 30 },
@@ -157,6 +227,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Orange Wedge', 'Lime Wedge'],
 	},
 	'Patron Margarita': {
+		name: 'Patron Margarita',
 		image: require('./images/cocktails/Patron Margarita.svg'),
 		ingredients: [
 			{ name: 'Patron Silver', amount: 50 },
@@ -167,6 +238,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Lime Wheel'],
 	},
 	'Wild Strawberry Mojito': {
+		name: 'Wild Strawberry Mojito',
 		image: require('./images/cocktails/Wild Strawberry Mojito.svg'),
 		ingredients: [
 			{ name: 'Bacardi Carta Blanca', amount: 30 },
@@ -179,6 +251,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Strawberry', 'Mint Sprig'],
 	},
 	'Cuban Mojito': {
+		name: 'Cuban Mojito',
 		image: require('./images/cocktails/Cuban Mojito.svg'),
 		ingredients: [
 			{ name: 'Bacardi Carta Blanca', amount: 50 },
@@ -190,6 +263,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Mint Sprig'],
 	},
 	'Passionfruit Mojito': {
+		name: 'Passionfruit Mojito',
 		image: require('./images/cocktails/Passionfruit Mojito.svg'),
 		ingredients: [
 			{ name: 'Bacardi Carta Blanca', amount: 50 },
@@ -202,6 +276,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Mint Sprig'],
 	},
 	Zombie: {
+		name: 'Zombie',
 		image: require('./images/cocktails/Zombie.svg'),
 		ingredients: [
 			{ name: 'Pineapple Juice', amount: 20 },
@@ -216,6 +291,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Orange Wedge', 'Lime Wheel'],
 	},
 	'Old Fashioned': {
+		name: 'Old Fashioned',
 		image: require('./images/cocktails/Old Fashioned.svg'),
 		ingredients: [
 			{ name: 'Pure Scot', amount: 50 },
@@ -262,13 +338,24 @@ function useLocalStorage<Type>(key: string, initialValue: Type) {
 	return [storedValue, setValue];
 }
 
-const CocktailImage = styled.img`
+const IngredientSection = styled.div`
+	margin-bottom: 0.5em;
+`;
+
+const IngredientTitle = styled(Typography)`
+	margin-bottom: 0.5em;
+`;
+
+const IngredientChips = styled.div`
+	display: flex;
+	flex-wrap: wrap;
 `;
 
 export const Rooftop: React.FC = () => {
-	const [inStock, setInStock] = useLocalStorage<string[]>("stock",[]);
+	const [inStock, setInStock] = useLocalStorage<string[]>('stock', []);
 	const [availableCocktails, setAvaialableCocktails] = useState<string[]>([]);
 	const [makingCocktails, setMakingCocktails] = useState<string[]>([]);
+	const [showAll, setShowAll] = useState(false);
 
 	function handleStockChange(ingredient: string) {
 		const m_inStock = [...inStock];
@@ -307,42 +394,110 @@ export const Rooftop: React.FC = () => {
 		setAvaialableCocktails(m_availableCocktails);
 	}, [inStock]);
 
+	function IngredientChip(ingredient: string) {
+		const stocked = inStock.includes(ingredient);
+		const usedInNum = Object.keys(ALL_COCKTAILS).filter((key) =>
+			ALL_COCKTAILS[key].ingredients.some((cocktailIngredient) => cocktailIngredient.name === ingredient)
+		).length;
+		return (
+			<Chip
+				key={ingredient}
+				label={`${ingredient} ${usedInNum}`}
+				onClick={() => {
+					handleStockChange(ingredient);
+				}}
+				color="secondary"
+				variant={stocked ? 'default' : 'outlined'}
+				style={{ marginRight: stocked ? 1 : 0, marginLeft: stocked ? 1 : 0 }}
+			/>
+		);
+	}
+
 	return (
 		<RooftopContainer>
-			<Accordion>
-				<AccordionSummary>Ingredients List</AccordionSummary>
+			<Accordion style={{position: 'fixed', width: '100%'}}>
+				<AccordionSummary expandIcon={<ExpandMoreIcon />}>
+					<Typography>Ingredients List</Typography>
+				</AccordionSummary>
 				<AccordionDetails>
-					<div style={{ display: 'flex', flexWrap: 'wrap' }}>
-						{ALL_INGREDIENTS.map((ingredient) => {
-							const stocked = inStock.includes(ingredient);
-							return (
-								<Chip
-									key={ingredient}
-									label={ingredient}
-									onClick={() => {
-										handleStockChange(ingredient);
-									}}
-									color="secondary"
-									variant={stocked ? 'default' : 'outlined'}
-									style={{marginRight: stocked ? 1 : 0, marginLeft: stocked ? 1 : 0}}
-								/>
-							);
-						})}
+					<div style={{ display: 'flex', flexDirection: 'column' }}>
+						<IngredientSection>
+							<IngredientTitle>Vodka</IngredientTitle>
+							<IngredientChips>{VODKA.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Rum</IngredientTitle>
+							<IngredientChips>{RUM.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Whisky</IngredientTitle>
+							<IngredientChips>{WHISKY.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Liqueur</IngredientTitle>
+							<IngredientChips>{LIQUEUR.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Syrup</IngredientTitle>
+							<IngredientChips>{SYRUP.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Bitters</IngredientTitle>
+							<IngredientChips>{BITTER.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Gin</IngredientTitle>
+							<IngredientChips>{GIN.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Tequila</IngredientTitle>
+							<IngredientChips>{TEQUILA.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Other</IngredientTitle>
+							<IngredientChips>{OTHER.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
 					</div>
 				</AccordionDetails>
 			</Accordion>
-			<div style={{display: 'flex', width: '100%', height: '90vh', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap'}}>
-				{makingCocktails.map(cocktail => {
-					return <CocktailImage src={ALL_COCKTAILS[cocktail].image} />
+			<div
+				style={{
+					display: 'flex',
+					width: '100%',
+					height: '100vh',
+					padding: '10% 0',
+					boxSizing: 'border-box',
+					justifyContent: 'space-around',
+					alignItems: 'center',
+					flexWrap: 'wrap',
+				}}
+			>
+				{Object.keys(ALL_COCKTAILS).map((cocktail) => {
+					return (
+						<Cocktail
+							key={cocktail}
+							cocktail={cocktail}
+							instock={inStock}
+							hidden={!makingCocktails.includes(cocktail)}
+						/>
+					);
 				})}
 			</div>
 			<Paper elevation={3} style={{ position: 'fixed', bottom: 8, padding: 4 }}>
-				{availableCocktails.map((cocktail) => {
+				<FormControlLabel
+					control={<Switch checked={showAll} onChange={(e) => setShowAll(e.target.checked)} color="primary" />}
+					label="Show All"
+					labelPlacement="start"
+				/>
+				{(showAll ? Object.keys(ALL_COCKTAILS) : availableCocktails).map((cocktail) => {
+					const missingIngredients = ALL_COCKTAILS[cocktail].ingredients.filter(
+						(ingredient) => !inStock.includes(ingredient.name)
+					).length;
 					return (
 						<Chip
-							color="primary"
+							color={availableCocktails.includes(cocktail) ? 'primary' : 'secondary'}
 							key={cocktail}
-							label={cocktail}
+							label={missingIngredients > 0 ? `${cocktail} ${missingIngredients}` : cocktail}
 							onClick={() => {
 								handleMakingChange(cocktail);
 							}}
@@ -352,5 +507,65 @@ export const Rooftop: React.FC = () => {
 				})}
 			</Paper>
 		</RooftopContainer>
+	);
+};
+
+const CocktailTitle = styled.span`
+	font-weight: bold;
+	font-size: 1.1rem;
+`;
+
+const CocktailContainer = styled.div`
+	display: ${(hidden: {hidden?: boolean}) => hidden.hidden ? 'none' : 'flex'};
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.5em;
+`;
+
+interface CocktailProps {
+	cocktail: string;
+	instock: string[];
+	hidden?: boolean;
+}
+
+const Cocktail: React.FC<CocktailProps> = (props: CocktailProps) => {
+	const cocktail = ALL_COCKTAILS[props.cocktail];
+	return (
+		<CocktailContainer hidden={props.hidden}>
+			<CocktailTitle style={{ fontWeight: 'bold', fontSize: '1.1em' }}>{cocktail.name}</CocktailTitle>
+			<img style={{ height: '200px', width: '150px', objectFit: 'contain', margin: '0.5em 0' }} src={cocktail.image} />
+			{cocktail.ingredients.map((ingredient) => {
+				return (
+					<div
+						key={ingredient.name}
+						style={{
+							display: 'flex',
+							justifyContent: 'space-between',
+							width: '100%',
+							background: !props.instock.includes(ingredient.name) ? '#ff000050' : '',
+						}}
+					>
+						<span>{ingredient.name}</span>
+						<span style={{ fontWeight: 'bold', marginLeft: '1rem' }}>
+							{typeof ingredient.amount === 'number' ? `${ingredient.amount}ml` : ingredient.amount}
+						</span>
+					</div>
+				);
+			})}
+			<div style={{ height: '0.5em' }} />
+			{cocktail.top?.map((top) => {
+				return <span key={top}>{top}</span>;
+			})}
+			{cocktail.garnishes?.map((garnish) => {
+				return <span key={garnish}>{garnish}</span>;
+			})}
+			{cocktail.extra?.map((extra) => {
+				return (
+					<span key={extra} style={{ fontStyle: 'italic' }}>
+						{extra}
+					</span>
+				);
+			})}
+		</CocktailContainer>
 	);
 };
