@@ -522,6 +522,8 @@ const CocktailContainer = styled.div`
 	font-size: 1.5em;
 `;
 
+const CocktailText = styled(Typography)``;
+
 interface CocktailProps {
 	cocktail: string;
 	instock: string[];
@@ -545,25 +547,25 @@ const Cocktail: React.FC<CocktailProps> = (props: CocktailProps) => {
 							background: !props.instock.includes(ingredient.name) ? '#ff000050' : '',
 						}}
 					>
-						<span>{ingredient.name}</span>
-						<span style={{ fontWeight: 'bold', marginLeft: '1rem' }}>
+						<CocktailText>{ingredient.name}</CocktailText>
+						<CocktailText style={{ fontWeight: 'bold', marginLeft: '1rem' }}>
 							{typeof ingredient.amount === 'number' ? `${ingredient.amount}ml` : ingredient.amount}
-						</span>
+						</CocktailText>
 					</div>
 				);
 			})}
 			<div style={{ height: '0.5em' }} />
 			{cocktail.top?.map((top) => {
-				return <span key={top}>{top}</span>;
+				return <CocktailText key={top}>{top}</CocktailText>;
 			})}
 			{cocktail.garnishes?.map((garnish) => {
-				return <span key={garnish}>{garnish}</span>;
+				return <CocktailText key={garnish}>{garnish}</CocktailText>;
 			})}
 			{cocktail.extra?.map((extra) => {
 				return (
-					<span key={extra} style={{ fontStyle: 'italic' }}>
+					<CocktailText key={extra} style={{ fontStyle: 'italic' }}>
 						{extra}
-					</span>
+					</CocktailText>
 				);
 			})}
 		</CocktailContainer>
