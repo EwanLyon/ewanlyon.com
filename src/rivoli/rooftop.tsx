@@ -68,9 +68,16 @@ const LIQUEUR = [
 	'DK Apricot',
 	'DK Wild Strawberry',
 	'DK Passionfruit',
+	'Martini Rosso'
 ];
 
-const SYRUP = ['Raspberry Syrup', 'Strawberry Syrup', 'Grenadine'];
+const SYRUPJUICE = ['Raspberry Syrup', 'Strawberry Syrup', 'Grenadine',
+'Monin Passionfruit Puree',
+'Cranberry Juice',
+'Lemon Juice',
+'Pineapple Juice',
+'Sugar Syrup',
+'Lime Juice'];
 
 const BITTER = ['Aperol', 'Martini Bitter', 'Angostura Bitters'];
 
@@ -78,20 +85,14 @@ const GIN = ['Bombay Sapphire'];
 
 const TEQUILA = ['Cazadores Blanco', 'Patron Silver'];
 
+const MIXERS = [
+	'Coke', 'Soda Water'];
+
 const OTHER = [
-	'Soda Water',
 	'Lime',
 	'Prosecco',
-	'Cranberry Juice',
-	'Lime Juice',
-	'Sugar Syrup',
 	'Espresso',
-	'Lemon Juice',
-	'Coke',
-	'Martini Rosso',
-	'Pineapple Juice',
 	'Mint Leaves',
-	'Monin Passionfruit Puree',
 	'Raspberries',
 ];
 
@@ -100,11 +101,12 @@ VODKA.sort();
 RUM.sort();
 WHISKY.sort();
 LIQUEUR.sort();
-SYRUP.sort();
+SYRUPJUICE.sort();
 BITTER.sort();
 GIN.sort();
 TEQUILA.sort();
 OTHER.sort();
+MIXERS.sort();
 
 const GRANISHES = [
 	'Orange Rind',
@@ -422,6 +424,14 @@ export const Rooftop: React.FC = () => {
 				<AccordionDetails>
 					<div style={{ display: 'flex', flexDirection: 'column' }}>
 						<IngredientSection>
+							<IngredientTitle>Gin</IngredientTitle>
+							<IngredientChips>{GIN.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Tequila</IngredientTitle>
+							<IngredientChips>{TEQUILA.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
 							<IngredientTitle>Vodka</IngredientTitle>
 							<IngredientChips>{VODKA.map(IngredientChip)}</IngredientChips>
 						</IngredientSection>
@@ -438,20 +448,16 @@ export const Rooftop: React.FC = () => {
 							<IngredientChips>{LIQUEUR.map(IngredientChip)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
-							<IngredientTitle>Syrup</IngredientTitle>
-							<IngredientChips>{SYRUP.map(IngredientChip)}</IngredientChips>
+							<IngredientTitle>Syrup / Juice</IngredientTitle>
+							<IngredientChips>{SYRUPJUICE.map(IngredientChip)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Bitters</IngredientTitle>
 							<IngredientChips>{BITTER.map(IngredientChip)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
-							<IngredientTitle>Gin</IngredientTitle>
-							<IngredientChips>{GIN.map(IngredientChip)}</IngredientChips>
-						</IngredientSection>
-						<IngredientSection>
-							<IngredientTitle>Tequila</IngredientTitle>
-							<IngredientChips>{TEQUILA.map(IngredientChip)}</IngredientChips>
+							<IngredientTitle>Mixers</IngredientTitle>
+							<IngredientChips>{MIXERS.map(IngredientChip)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Other</IngredientTitle>
