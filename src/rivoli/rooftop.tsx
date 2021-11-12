@@ -510,7 +510,7 @@ export const Rooftop: React.FC = () => {
 	);
 };
 
-const CocktailTitle = styled.span`
+const CocktailTitle = styled(Typography)`
 	font-weight: bold;
 	font-size: 1.1rem;
 `;
