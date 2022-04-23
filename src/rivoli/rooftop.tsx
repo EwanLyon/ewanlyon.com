@@ -209,7 +209,6 @@ const ALL_COCKTAILS: IAllCocktails = {
 			{ name: 'Bombay Sapphire', amount: 50 },
 			{ name: 'Lemon Juice', amount: 30 },
 			{ name: 'Raspberry Syrup', amount: 20 },
-			{ name: 'Raspberries', amount: '3' },
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Lemon Wedge', 'Raspberries'],
@@ -263,6 +262,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Mint Sprig'],
+		extra: ['Muddled'],
 	},
 	'Passionfruit Mojito': {
 		name: 'Passionfruit Mojito',
@@ -276,6 +276,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Mint Sprig'],
+		extra: ['Muddled'],
 	},
 	Zombie: {
 		name: 'Zombie',
@@ -462,6 +463,10 @@ export const Rooftop: React.FC = () => {
 						<IngredientSection>
 							<IngredientTitle>Other</IngredientTitle>
 							<IngredientChips>{OTHER.map(IngredientChip)}</IngredientChips>
+						</IngredientSection>
+						<IngredientSection>
+							<IngredientTitle>Credit</IngredientTitle>
+							<span>Developed by Ewan Lyon for ninteenforty</span>
 						</IngredientSection>
 					</div>
 				</AccordionDetails>
