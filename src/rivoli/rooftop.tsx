@@ -27,7 +27,6 @@ const ALL_INGREDIENTS = [
 	'DK Crème de Café',
 	'Espresso',
 	'Bacardi Carta Blanca',
-	'Cazadores Blanco',
 	'Bombay Sapphire',
 	'Grand Marnier',
 	'Lemon Juice',
@@ -83,7 +82,7 @@ const BITTER = ['Aperol', 'Martini Bitter', 'Angostura Bitters'];
 
 const GIN = ['Bombay Sapphire'];
 
-const TEQUILA = ['Cazadores Blanco', 'Patron Silver'];
+const TEQUILA = ['Patron Silver'];
 
 const MIXERS = [
 	'Coke', 'Soda Water'];
@@ -93,7 +92,6 @@ const OTHER = [
 	'Prosecco',
 	'Espresso',
 	'Mint Leaves',
-	'Raspberries',
 ];
 
 ALL_INGREDIENTS.sort();
@@ -180,7 +178,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		ingredients: [
 			{ name: '42 Below', amount: 15 },
 			{ name: 'Bacardi Carta Blanca', amount: 15 },
-			{ name: 'Cazadores Blanco', amount: 15 },
+			{ name: 'Patron Silver', amount: 15 },
 			{ name: 'Bombay Sapphire', amount: 15 },
 			{ name: 'Grand Marnier', amount: 15 },
 			{ name: 'Lemon Juice', amount: 50 },
@@ -282,7 +280,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Zombie',
 		image: require('./images/cocktails/Zombie.svg'),
 		ingredients: [
-			{ name: 'Pineapple Juice', amount: 20 },
+			{ name: 'Pineapple Juice', amount: 40 },
 			{ name: 'Bacardi 8', amount: 20 },
 			{ name: 'Bacardi Carta Blanca', amount: 20 },
 			{ name: 'Bacardi Oakheart', amount: 20 },
