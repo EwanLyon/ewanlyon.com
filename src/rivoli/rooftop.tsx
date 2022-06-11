@@ -248,6 +248,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Strawberry', 'Mint Sprig'],
+                extra: ['Built'],
 	},
 	'Cuban Mojito': {
 		name: 'Cuban Mojito',
