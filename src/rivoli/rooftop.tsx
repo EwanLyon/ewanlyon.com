@@ -62,7 +62,6 @@ const WHISKY = ["Dewar's White Label", 'Pure Scot'];
 const LIQUEUR = [
 	'DK Triple Sec',
 	'DK Crème de Café',
-	'Grand Marnier',
 	'Mandarine Napoleon',
 	'DK Apricot',
 	'DK Wild Strawberry',
@@ -82,10 +81,9 @@ const BITTER = ['Aperol', 'Martini Bitter', 'Angostura Bitters'];
 
 const GIN = ['Bombay Sapphire'];
 
-const TEQUILA = ['Patron Silver'];
+const TEQUILA = ['Patron Silver', 'Patron Reposado'];
 
-const MIXERS = [
-	'Coke', 'Soda Water'];
+const MIXERS = ['Coke', 'Soda Water'];
 
 const OTHER = [
 	'Lime',
@@ -180,7 +178,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 			{ name: 'Bacardi Carta Blanca', amount: 15 },
 			{ name: 'Patron Silver', amount: 15 },
 			{ name: 'Bombay Sapphire', amount: 15 },
-			{ name: 'Grand Marnier', amount: 15 },
+			{ name: 'DK Triple Sec', amount: 15 },
 			{ name: 'Lemon Juice', amount: 50 },
 			{ name: 'Sugar Syrup', amount: 15 },
 			{ name: 'Coke', amount: 'Top' },
@@ -229,7 +227,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Patron Margarita',
 		image: require('./images/cocktails/Patron Margarita.svg'),
 		ingredients: [
-			{ name: 'Patron Silver', amount: 50 },
+			{ name: 'Patron Reposado', amount: 50 },
 			{ name: 'DK Triple Sec', amount: 20 },
 			{ name: 'Lime Juice', amount: 60 },
 			{ name: 'Sugar Syrup', amount: 20 },
