@@ -9,7 +9,8 @@
     "serve:riv": "parcel src/riv.html",
     "serve:all": "parcel src/*.html",
     "watch": "parcel watch src/index.html",
-    "build": "parcel build src/*.html"
+    "build": "parcel build src/*.html && npm run copy-public",
+    "copy-public": "cp -r src/public ./dist"
   },
   "author": "",
   "license": "",
