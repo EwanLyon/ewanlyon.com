@@ -14,50 +14,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const RooftopContainer = styled.div``;
 
-const ALL_INGREDIENTS = [
-	'Aperol',
-	'Prosecco',
-	'Soda Water',
-	'Grey Goose',
-	'DK Triple Sec',
-	'Cranberry Juice',
-	'Lime Juice',
-	'Sugar Syrup',
-	'42 Below',
-	'DK Crème de Café',
-	'Espresso',
-	'Bacardi Carta Blanca',
-	'Bombay Sapphire',
-	'Grand Marnier',
-	'Lemon Juice',
-	'Coke',
-	'Martini Bitter',
-	'Martini Rosso',
-	'Raspberry Syrup',
-	'Bacardi 8',
-	'Bacardi Oakheart',
-	'Mandarine Napoleon',
-	'DK Apricot',
-	"Dewar's White Label",
-	'Pineapple Juice',
-	'Patron Silver',
-	'DK Wild Strawberry',
-	'Strawberry Syrup',
-	'Mint Leaves',
-	'Monin Passionfruit Puree',
-	'DK Passionfruit',
-	'Grenadine',
-	'Pure Scot',
-	'Lime',
-	'Angostura Bitters',
-	'Raspberries',
-];
-
 const VODKA = ['42 Below', 'Grey Goose'];
 
 const RUM = ['Bacardi 8', 'Bacardi Carta Blanca', 'Bacardi Oakheart'];
 
-const WHISKY = ["Dewar's White Label", 'Pure Scot'];
+const WHISKY = ["Dewar's White Label", 'Pure Scot', "Maker's Mark"];
 
 const LIQUEUR = [
 	'DK Triple Sec',
@@ -83,16 +44,19 @@ const GIN = ['Bombay Sapphire'];
 
 const TEQUILA = ['Patron Silver', 'Patron Reposado'];
 
-const MIXERS = ['Coke', 'Soda Water'];
+const MIXERS = ['Coke', 'Soda Water', 'Fever Tree Ginger Beer'];
 
 const OTHER = [
 	'Lime',
 	'Prosecco',
 	'Espresso',
 	'Mint Leaves',
+	'Raspberry Jam',
+	'Blackberry Jam',
+	'Apricot Jam',
+	'Marmalade',
 ];
 
-ALL_INGREDIENTS.sort();
 VODKA.sort();
 RUM.sort();
 WHISKY.sort();
@@ -301,6 +265,79 @@ const ALL_COCKTAILS: IAllCocktails = {
 		top: ['Ice'],
 		garnishes: ['Orange Wedge'],
 		extra: ['Built'],
+	},
+	'Raspberry Jam': {
+		name: 'Raspberry Jam',
+		image: require('./images/cocktails/Raspberry Collins.svg'),
+		ingredients: [
+			{ name: 'Bacardi Carta Blanca', amount: 45 },
+			{ name: 'Lemon Juice', amount: 30 },
+			{ name: 'Raspberry Jam', amount: '2 Tbs' },
+		],
+		top: ['Ice', 'Lemonade'],
+		garnishes: ['Mint Sprig', '3 Raspberries'],
+		extra: ["Don't strain"],
+	},
+	'Blackberry Jam': {
+		name: 'Blackberry Jam',
+		image: require('./images/cocktails/Raspberry Collins.svg'),
+		ingredients: [
+			{ name: 'Bombay Sapphire', amount: 45 },
+			{ name: 'Lemon Juice', amount: 30 },
+			{ name: 'Blackberry Jam', amount: '2 Tbs' },
+		],
+		top: ['Ice', 'Lemonade'],
+		garnishes: ['Mint Sprig', '2 Blackberries'],
+		extra: ["Don't strain"],
+	},
+	'Apricot Jam': {
+		name: 'Apricot Jam',
+		image: require('./images/cocktails/Raspberry Collins.svg'),
+		ingredients: [
+			{ name: '42 Below', amount: 45 },
+			{ name: 'Lemon Juice', amount: 30 },
+			{ name: 'Apricot Jam', amount: '2 Tbs' },
+		],
+		top: ['Ice', 'Lemonade'],
+		garnishes: ['Mint Sprig'],
+		extra: ["Don't strain"],
+	},
+	'Orange Marmalade Jam': {
+		name: 'Orange Marmalade Jam',
+		image: require('./images/cocktails/Raspberry Collins.svg'),
+		ingredients: [
+			{ name: 'Bombay Sapphire', amount: 45 },
+			{ name: 'Lemon Juice', amount: 30 },
+			{ name: 'Martini Bitter', amount: 15 },
+			{ name: 'Marmalade', amount: '2 Tbs' },
+		],
+		top: ['Ice', 'Lemonade'],
+		garnishes: ['Mint Sprig', 'Dehydrated Orange'],
+		extra: ["Don't strain"],
+	},
+	'Moscow Mule': {
+		name: 'Moscow Mule',
+		image: require('./images/cocktails/Old Fashioned.svg'),
+		ingredients: [
+			{ name: '42 Below', amount: 45 },
+			{ name: 'Lime Wedges', amount: '4' },
+			{ name: 'Fever Tree Ginger Beer', amount: '1 Bottle' },
+		],
+		top: ['Ice'],
+		garnishes: ['Lime Wheel'],
+		extra: ['Muddled'],
+	},
+	'Manhattan': {
+		name: 'Manhattan',
+		image: require('./images/cocktails/Old Fashioned.svg'),
+		ingredients: [
+			{ name: "Maker's Mark", amount: 45 },
+			{ name: 'Martini Rosso', amount: 30 },
+			{ name: 'Orange Bitters', amount: '1 Dash' },
+		],
+		top: ['Ice'],
+		garnishes: ['Cherry', 'Dehydrated Orange Wheel'],
+		extra: ['Muddled'],
 	},
 };
 
