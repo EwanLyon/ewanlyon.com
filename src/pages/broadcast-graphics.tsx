@@ -3,6 +3,29 @@ import styled from 'styled-components';
 import { Gfycat, Image, Paragraph, ShowcaseGrid, Title, YouTube } from './components';
 import { Header } from './components/header';
 
+import ASAP2022Img from '../media/broadcast/ausspeedruns/asap2022.png';
+import ASM2022Img from '../media/broadcast/ausspeedruns/asm2022.png';
+import PAX2021Img from '../media/broadcast/ausspeedruns/pax2021.png';
+import ASM2021Img from '../media/broadcast/ausspeedruns/asm2021.png';
+import FAST2020Img from '../media/broadcast/ausspeedruns/fast2020.png';
+import PAXOnlineImg from '../media/broadcast/ausspeedruns/paxonline.png';
+import ASM2020Img from '../media/broadcast/ausspeedruns/asm2020.png';
+
+import LiveSplitOlympics from '../media/broadcast/livesplit/olympics.gif';
+import LiveSplitPortal from '../media/broadcast/livesplit/portal.gif';
+import LivesplitControls from '../media/broadcast/livesplit.png';
+
+import CricketScoreBug from '../media/broadcast/cricket/Scorebug.png';
+import CricketControls from '../media/broadcast/cricket/GameControls.png';
+import CricketScore from '../media/broadcast/cricket/FullScore.png';
+import CricketSetup from '../media/broadcast/cricket/SetupControls.png';
+import CricketLocation from '../media/broadcast/cricket/Location.png';
+import CricketGraphics from '../media/broadcast/cricket/GraphicsController.png';
+
+import Spotify from '../media/broadcast/spotify.jpg';
+
+import PersonalSpeedrun from '../media/broadcast/Speedrun.png';
+
 const BroadcastContainer = styled.div`
 	font-size: 1.5vw;
 
@@ -53,7 +76,7 @@ const ShowcaseGridCenter = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 2vh;
-	
+
 	& > * {
 		width: 70%;
 	}
@@ -61,12 +84,12 @@ const ShowcaseGridCenter = styled.div`
 
 export const Broadcast: React.FC = () => {
 	useEffect(() => {
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 			anchor.addEventListener('click', function (e) {
 				e.preventDefault();
-		
+
 				document.querySelector(anchor.getAttribute('href') ?? '')?.scrollIntoView({
-					behavior: 'smooth'
+					behavior: 'smooth',
 				});
 			});
 		});
@@ -87,17 +110,22 @@ export const Broadcast: React.FC = () => {
 			<Event>
 				<Title id="aus-speedruns">AusSpeedruns</Title>
 				<Paragraph>
-					I designed and programmed the graphics for {' '}
+					I designed and programmed the graphics for{' '}
 					<a href="https://ausspeedruns.com" target="_blank">
 						AusSpeedruns
-					</a>{'. '}
-					Multiple layouts had to be made to fit the wide range of aspect ratios and races. These graphics had to run nonstop over multiple days while being able to be controlled by remote volunteers with limited training.
+					</a>
+					{'. '}
+					Multiple layouts had to be made to fit the wide range of aspect ratios and races. These graphics have to run
+					nonstop over multiple days while being able to be controlled by remote volunteers with limited training.
 				</Paragraph>
 				<ShowcaseGrid>
-					<Image imgSrc={require('../media/broadcast/ausspeedruns/asm2021.png')} desc="ASM 2021" />
-					<Image imgSrc={require('../media/broadcast/ausspeedruns/fast2020.png')} desc="FAST 2020" />
-					<Image imgSrc={require('../media/broadcast/ausspeedruns/paxonline.png')} desc="PAX Online" />
-					<Image imgSrc={require('../media/broadcast/ausspeedruns/asm2020.png')} desc="ASM 2020" />
+					<Image imgSrc={ASAP2022Img} desc="ASAP 2022" />
+					<Image imgSrc={ASM2022Img} desc="ASM 2022" />
+					<Image imgSrc={PAX2021Img} desc="PAX 2021" />
+					<Image imgSrc={ASM2021Img} desc="ASM 2021" />
+					<Image imgSrc={FAST2020Img} desc="FAST 2020" />
+					<Image imgSrc={PAXOnlineImg} desc="PAX Online" />
+					<Image imgSrc={ASM2020Img} desc="ASM 2020" />
 				</ShowcaseGrid>
 			</Event>
 			<Divider />
@@ -108,32 +136,38 @@ export const Broadcast: React.FC = () => {
 					<a href="https://blog.counter-strike.net/layouts" target="_blank">
 						CS:GO
 					</a>{' '}
-					graphics for use in tournaments. It uses the game state integration system allowing for real time data to be used in
-					displaying information in a different or more informative way than the original hud.
+					graphics for use in tournaments. It uses the game state integration system allowing for real time data to be
+					used in displaying information in a different or more informative way than the original hud.
 				</Paragraph>
 				<Paragraph>
 					I then continued to develop the backend releasing it open source under the GPL license.
 					<br />
 					<br />
-					<a href="https://github.com/EwanLyon/nodecg-csgo-manager" target="_blank">NodeCG-CSGO-Manager GitHub</a>
+					<a href="https://github.com/EwanLyon/nodecg-csgo-manager" target="_blank">
+						NodeCG-CSGO-Manager GitHub
+					</a>
 				</Paragraph>
 				<ShowcaseGrid>
 					<YouTube videoID="38XpupB8pb0" desc="Full round" />
-					<Image imgSrc={'https://github.com/EwanLyon/clubwho-csgo-graphics/raw/main/media/FullHUD.jpg'} desc="Personal Design" />
+					<Image
+						imgSrc={'https://github.com/EwanLyon/clubwho-csgo-graphics/raw/main/media/FullHUD.jpg'}
+						desc="Personal Design"
+					/>
 					<Image imgSrc={'https://github.com/EwanLyon/angles-csgo-hud/raw/main/media/FullHUD.jpg'} desc="Angles Hud" />
 					<Image imgSrc={'https://github.com/EwanLyon/basic-csgo-hud/raw/main/media/FullHUD.jpg'} desc="Basic Hud" />
-					<Image imgSrc={'https://github.com/EwanLyon/nodecg-csgo-manager/raw/main/media/dashboard.png'} desc="Control Panel" />
+					<Image
+						imgSrc={'https://github.com/EwanLyon/nodecg-csgo-manager/raw/main/media/dashboard.png'}
+						desc="Control Panel"
+					/>
 				</ShowcaseGrid>
 			</Event>
 			<Divider />
 			<Event>
 				<Title id="custom-livesplit">Custom LiveSplit Displays</Title>
-				<Paragraph>
-					Experimenting with new ways to display LiveSplit splits.
-				</Paragraph>
+				<Paragraph>Experimenting with new ways to display LiveSplit splits.</Paragraph>
 				<ShowcaseGridCenter>
-					<Image imgSrc={require('../media/broadcast/livesplit/olympics.gif')} desc="Mario and Sonic at the Olympic Games" />
-					<Image imgSrc={require('../media/broadcast/livesplit/portal.gif')} desc="Portal" />
+					<Image imgSrc={LiveSplitOlympics} desc="Mario and Sonic at the Olympic Games" />
+					<Image imgSrc={LiveSplitPortal} desc="Portal" />
 				</ShowcaseGridCenter>
 			</Event>
 			<Divider />
@@ -149,12 +183,12 @@ export const Broadcast: React.FC = () => {
 					</a>
 				</Paragraph>
 				<ShowcaseGrid>
-					<Image imgSrc={require('../media/broadcast/cricket/Scorebug.png')} desc="Score Bug" />
-					<Image imgSrc={require('../media/broadcast/cricket/GameControls.png')} desc="Main Controls" />
-					<Image imgSrc={require('../media/broadcast/cricket/FullScore.png')} desc="Batter Scoreboard" />
-					<Image imgSrc={require('../media/broadcast/cricket/SetupControls.png')} desc="Setup Controls" />
-					<Image imgSrc={require('../media/broadcast/cricket/Location.png')} desc="Location Bug" />
-					<Image imgSrc={require('../media/broadcast/cricket/GraphicsController.png')} desc="Graphics Controls" />
+					<Image imgSrc={CricketScoreBug} desc="Score Bug" />
+					<Image imgSrc={CricketControls} desc="Main Controls" />
+					<Image imgSrc={CricketScore} desc="Batter Scoreboard" />
+					<Image imgSrc={CricketSetup} desc="Setup Controls" />
+					<Image imgSrc={CricketLocation} desc="Location Bug" />
+					<Image imgSrc={CricketGraphics} desc="Graphics Controls" />
 				</ShowcaseGrid>
 			</Event>
 			<Divider />
@@ -165,11 +199,7 @@ export const Broadcast: React.FC = () => {
 					<Gfycat gfycatId="parallelwarmheartedhoneybee" desc="Countdown" />
 					<Gfycat gfycatId="mammothshowybasenji" desc="Gameplay" />
 				</ShowcaseGrid>
-				<Image
-					imgSrc={require('../media/broadcast/Speedrun.png')}
-					desc="Speedrun"
-					style={{ padding: '0 25%', marginTop: '3vw' }}
-				/>
+				<Image imgSrc={PersonalSpeedrun} desc="Speedrun" style={{ padding: '0 25%', marginTop: '3vw' }} />
 			</Event>
 			<Divider />
 			<Event>
@@ -184,7 +214,7 @@ export const Broadcast: React.FC = () => {
 					</a>
 				</Paragraph>
 				<Image
-					imgSrc={require('../media/broadcast/spotify.jpg')}
+					imgSrc={Spotify}
 					desc="Dashboard panel"
 					style={{ padding: '0 42%', marginTop: '3vw' }}
 				/>
@@ -202,7 +232,7 @@ export const Broadcast: React.FC = () => {
 					</a>
 				</Paragraph>
 				<ShowcaseGrid>
-					<Image imgSrc={require('../media/broadcast/livesplit.png')} desc="Dashboard panel" />
+					<Image imgSrc={LivesplitControls} desc="Dashboard panel" />
 					<YouTube videoID="2VS2IG_3y00" desc="Integration" />
 				</ShowcaseGrid>
 			</Event>

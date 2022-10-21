@@ -5,6 +5,8 @@ import {Divider} from './components/divider';
 import { DumbEmail } from './components';
 import { Broadcast } from '.';
 
+import LogoIMG from '../media/EL_TransparentFull.png';
+
 const HomepageContainer = styled.div`
 	color: white;
 	font-family: Lato, Arial, sans-serif;
@@ -78,13 +80,15 @@ const LinkDivider = styled.p`
 export const Homepage: React.FC = () => {
 	return (
 		<HomepageContainer>
-			<Logo src={require('../media/EL_TransparentFull.png')} />
+			<Logo src={LogoIMG} />
 			<TitleCont>
 				<Title>Ewan Lyon</Title>
 				<TagLine>Broadcast Designer</TagLine>
 				<DumbEmailStyled text="ewan@ewanlyon.com" />
 			</TitleCont>
 			<Naviagation>
+				<Link to="/games">Games</Link>
+				<LinkDivider>-</LinkDivider>
 				<a href="https://github.com/EwanLyon" target="_blank">GitHub</a>
 				<LinkDivider>-</LinkDivider>
 				<Link to="/alivevr">Alive VR</Link>

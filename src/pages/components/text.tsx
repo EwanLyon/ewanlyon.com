@@ -21,6 +21,7 @@ interface ParagraphProps {
 	centred?: boolean;
 	style?: React.CSSProperties;
 	className?: string;
+	children?: React.ReactNode;
 }
 
 export const Paragraph: React.FC<ParagraphProps> = (props: React.PropsWithChildren<ParagraphProps>) => {
@@ -47,6 +48,7 @@ interface TitleProps {
 	style?: React.CSSProperties;
 	className?: string;
 	id?: string;
+	children?: React.ReactNode;
 }
 
 export const Title: React.FC<TitleProps> = (props: React.PropsWithChildren<TitleProps>) => {

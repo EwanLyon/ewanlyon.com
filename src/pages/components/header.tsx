@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Divider } from './divider';
 
+import LogoIMG from '../../media/EL_TransparentFull.png';
+
 const HeaderContainer = styled.div`
 	width: 100%;
 	display: flex;
@@ -38,7 +40,7 @@ export const Header: React.FC<Props> = (props: Props) => {
 	return (
 		<HeaderContainer>
 			<Link to="/">
-				<Logo src={require('../../media/EL_TransparentFull.png')} />
+				<Logo src={LogoIMG} />
 			</Link>
 			<Title>{props.title}</Title>
 			<Tag>{props.tag}</Tag>

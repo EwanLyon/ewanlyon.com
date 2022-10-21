@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
 import * as Page from './pages';
@@ -8,22 +8,15 @@ import * as Page from './pages';
 const Homepage: React.FC = () => {
 	return (
 		<Router>
-			<Switch>
-				<Route exact path={["/", "/index.html"]}>
-					<Page.Homepage />
-				</Route>
-				<Route path="/contact">
-					<Page.Contact />
-				</Route>
-				<Route path="/alivevr">
-					<Page.AliveVR />
-				</Route>
-				<Route path="/3d-art">
-					<Page.Art />
-				</Route>
-			</Switch>
+			<Routes>
+				<Route path="/" element={<Page.Homepage />} />
+				<Route path="/contact" element={<Page.Contact />} />
+				<Route path="/alivevr" element={<Page.AliveVR />} />
+				<Route path="/3d-art" element={<Page.Art />} />
+				<Route path="/games" element={<Page.Games />} />
+			</Routes>
 		</Router>
 	);
 };
 
-render(<Homepage />, document.getElementById('landing-page'));
+createRoot(document.getElementById('landing-page')!).render(<Homepage />, );

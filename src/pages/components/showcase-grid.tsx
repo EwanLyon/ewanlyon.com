@@ -20,6 +20,7 @@ const ShowcaseGridContainer = styled.div`
 interface Props {
 	style?: React.CSSProperties;
 	className?: string;
+	children?: React.ReactNode;
 }
 
 export const ShowcaseGrid: React.FC<Props> = (props: React.PropsWithChildren<Props>) => {
