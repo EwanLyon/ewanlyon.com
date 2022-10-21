@@ -9,8 +9,23 @@ import {
 	Paper,
 	Switch,
 	Typography,
-} from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import AperolSpritz from './images/cocktails/Aperol Spritz.svg';
+import Cosmopolitan from './images/cocktails/Cosmopolitan.svg';
+import EspressoMartini from './images/cocktails/Espresso Martini.svg';
+import LongIslandIcedTea from './images/cocktails/Long Island Iced Tea.svg';
+import TraditionalNegroni from './images/cocktails/Traditional Negroni.svg';
+import RaspberryCollins from './images/cocktails/Raspberry Collins.svg';
+import TikiMandarine from './images/cocktails/Tiki Mandarine.svg';
+import PatronMargarita from './images/cocktails/Patron Margarita.svg';
+import WildStrawberryMojito from './images/cocktails/Wild Strawberry Mojito.svg';
+import CubanMojito from './images/cocktails/Cuban Mojito.svg';
+import PassionfruitMojito from './images/cocktails/Passionfruit Mojito.svg';
+import Zombie from './images/cocktails/Zombie.svg';
+import OldFashioned from './images/cocktails/Old Fashioned.svg';
+// import AperolSpritz from './images/cocktails/Aperol Spritz.svg';
 
 const RooftopContainer = styled.div``;
 
@@ -27,16 +42,20 @@ const LIQUEUR = [
 	'DK Apricot',
 	'DK Wild Strawberry',
 	'DK Passionfruit',
-	'Martini Rosso'
+	'Martini Rosso',
 ];
 
-const SYRUPJUICE = ['Raspberry Syrup', 'Strawberry Syrup', 'Grenadine',
-'Monin Passionfruit Puree',
-'Cranberry Juice',
-'Lemon Juice',
-'Pineapple Juice',
-'Sugar Syrup',
-'Lime Juice'];
+const SYRUPJUICE = [
+	'Raspberry Syrup',
+	'Strawberry Syrup',
+	'Grenadine',
+	'Monin Passionfruit Puree',
+	'Cranberry Juice',
+	'Lemon Juice',
+	'Pineapple Juice',
+	'Sugar Syrup',
+	'Lime Juice',
+];
 
 const BITTER = ['Aperol', 'Martini Bitter', 'Angostura Bitters'];
 
@@ -100,7 +119,7 @@ interface IAllCocktails {
 const ALL_COCKTAILS: IAllCocktails = {
 	'Aperol Spritz': {
 		name: 'Aperol Spritz',
-		image: require('./images/cocktails/Aperol Spritz.svg'),
+		image: AperolSpritz,
 		ingredients: [
 			{ name: 'Aperol', amount: 60 },
 			{ name: 'Prosecco', amount: 60 },
@@ -112,7 +131,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	Cosmopolitan: {
 		name: 'Cosmopolitan',
-		image: require('./images/cocktails/Cosmopolitan.svg'),
+		image: Cosmopolitan,
 		ingredients: [
 			{ name: 'Grey Goose', amount: 45 },
 			{ name: 'DK Triple Sec', amount: 15 },
@@ -124,7 +143,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Espresso Martini': {
 		name: 'Espresso Martini',
-		image: require('./images/cocktails/Espresso Martini.svg'),
+		image: EspressoMartini,
 		ingredients: [
 			{ name: '42 Below', amount: 40 },
 			{ name: 'DK Crème de Café', amount: 20 },
@@ -136,7 +155,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Long Island Iced Tea': {
 		name: 'Long Island Iced Tea',
-		image: require('./images/cocktails/Long Island Iced Tea.svg'),
+		image: LongIslandIcedTea,
 		ingredients: [
 			{ name: '42 Below', amount: 15 },
 			{ name: 'Bacardi Carta Blanca', amount: 15 },
@@ -152,7 +171,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Traditional Negroni': {
 		name: 'Traditional Negroni',
-		image: require('./images/cocktails/Traditional Negroni.svg'),
+		image: TraditionalNegroni,
 		ingredients: [
 			{ name: 'Bombay Sapphire', amount: 30 },
 			{ name: 'Martini Bitter', amount: 30 },
@@ -164,7 +183,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Raspberry Collins': {
 		name: 'Raspberry Collins',
-		image: require('./images/cocktails/Raspberry Collins.svg'),
+		image: RaspberryCollins,
 		ingredients: [
 			{ name: 'Bombay Sapphire', amount: 50 },
 			{ name: 'Lemon Juice', amount: 30 },
@@ -175,7 +194,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Tiki Mandarine': {
 		name: 'Tiki Mandarine',
-		image: require('./images/cocktails/Tiki Mandarine.svg'),
+		image: TikiMandarine,
 		ingredients: [
 			{ name: 'Bacardi 8', amount: 20 },
 			{ name: 'Mandarine Napoleon', amount: 10 },
@@ -189,7 +208,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Patron Margarita': {
 		name: 'Patron Margarita',
-		image: require('./images/cocktails/Patron Margarita.svg'),
+		image: PatronMargarita,
 		ingredients: [
 			{ name: 'Patron Reposado', amount: 50 },
 			{ name: 'DK Triple Sec', amount: 20 },
@@ -200,7 +219,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Wild Strawberry Mojito': {
 		name: 'Wild Strawberry Mojito',
-		image: require('./images/cocktails/Wild Strawberry Mojito.svg'),
+		image: WildStrawberryMojito,
 		ingredients: [
 			{ name: 'Bacardi Carta Blanca', amount: 30 },
 			{ name: 'DK Wild Strawberry', amount: 30 },
@@ -210,11 +229,11 @@ const ALL_COCKTAILS: IAllCocktails = {
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Strawberry', 'Mint Sprig'],
-                extra: ['Built'],
+		extra: ['Built'],
 	},
 	'Cuban Mojito': {
 		name: 'Cuban Mojito',
-		image: require('./images/cocktails/Cuban Mojito.svg'),
+		image: CubanMojito,
 		ingredients: [
 			{ name: 'Bacardi Carta Blanca', amount: 50 },
 			{ name: 'Lime', amount: '4 Wedges' },
@@ -227,7 +246,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Passionfruit Mojito': {
 		name: 'Passionfruit Mojito',
-		image: require('./images/cocktails/Passionfruit Mojito.svg'),
+		image: PassionfruitMojito,
 		ingredients: [
 			{ name: 'Bacardi Carta Blanca', amount: 50 },
 			{ name: 'Monin Passionfruit Puree', amount: 50 },
@@ -241,7 +260,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	Zombie: {
 		name: 'Zombie',
-		image: require('./images/cocktails/Zombie.svg'),
+		image: Zombie,
 		ingredients: [
 			{ name: 'Pineapple Juice', amount: 40 },
 			{ name: 'Bacardi 8', amount: 20 },
@@ -256,7 +275,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Old Fashioned': {
 		name: 'Old Fashioned',
-		image: require('./images/cocktails/Old Fashioned.svg'),
+		image: OldFashioned,
 		ingredients: [
 			{ name: 'Pure Scot', amount: 50 },
 			{ name: 'Sugar Syrup', amount: 10 },
@@ -268,7 +287,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Raspberry Jam': {
 		name: 'Raspberry Jam',
-		image: require('./images/cocktails/Raspberry Collins.svg'),
+		image: RaspberryCollins,
 		ingredients: [
 			{ name: 'Bacardi Carta Blanca', amount: 45 },
 			{ name: 'Lemon Juice', amount: 30 },
@@ -280,7 +299,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Blackberry Jam': {
 		name: 'Blackberry Jam',
-		image: require('./images/cocktails/Raspberry Collins.svg'),
+		image: RaspberryCollins,
 		ingredients: [
 			{ name: 'Bombay Sapphire', amount: 45 },
 			{ name: 'Lemon Juice', amount: 30 },
@@ -292,7 +311,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Apricot Jam': {
 		name: 'Apricot Jam',
-		image: require('./images/cocktails/Raspberry Collins.svg'),
+		image: RaspberryCollins,
 		ingredients: [
 			{ name: '42 Below', amount: 45 },
 			{ name: 'Lemon Juice', amount: 30 },
@@ -304,7 +323,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Orange Marmalade Jam': {
 		name: 'Orange Marmalade Jam',
-		image: require('./images/cocktails/Raspberry Collins.svg'),
+		image: RaspberryCollins,
 		ingredients: [
 			{ name: 'Bombay Sapphire', amount: 45 },
 			{ name: 'Lemon Juice', amount: 30 },
@@ -317,7 +336,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Moscow Mule': {
 		name: 'Moscow Mule',
-		image: require('./images/cocktails/Old Fashioned.svg'),
+		image: OldFashioned,
 		ingredients: [
 			{ name: '42 Below', amount: 45 },
 			{ name: 'Lime Wedges', amount: '4' },
@@ -327,9 +346,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		garnishes: ['Lime Wheel'],
 		extra: ['Muddled'],
 	},
-	'Manhattan': {
+	Manhattan: {
 		name: 'Manhattan',
-		image: require('./images/cocktails/Old Fashioned.svg'),
+		image: OldFashioned,
 		ingredients: [
 			{ name: "Maker's Mark", amount: 45 },
 			{ name: 'Martini Rosso', amount: 30 },
@@ -389,6 +408,11 @@ const IngredientChips = styled.div`
 `;
 
 export const Rooftop: React.FC = () => {
+	useEffect(() => {
+		document.title = 'Rooftop';
+		document.getElementsByTagName("body")[0].style = "background: #FFF; color: #000;"
+	});
+
 	const [inStock, setInStock] = useLocalStorage<string[]>('stock', []);
 	const [availableCocktails, setAvaialableCocktails] = useState<string[]>([]);
 	const [makingCocktails, setMakingCocktails] = useState<string[]>([]);
@@ -444,7 +468,7 @@ export const Rooftop: React.FC = () => {
 					handleStockChange(ingredient);
 				}}
 				color="secondary"
-				variant={stocked ? 'default' : 'outlined'}
+				variant={stocked ? 'filled' : 'outlined'}
 				style={{ marginRight: stocked ? 1 : 0, marginLeft: stocked ? 1 : 0 }}
 			/>
 		);
@@ -452,7 +476,7 @@ export const Rooftop: React.FC = () => {
 
 	return (
 		<RooftopContainer>
-			<Accordion style={{position: 'fixed', width: '100%'}}>
+			<Accordion style={{ position: 'fixed', width: '100%' }}>
 				<AccordionSummary expandIcon={<ExpandMoreIcon />}>
 					<Typography>Ingredients List</Typography>
 				</AccordionSummary>
@@ -546,7 +570,7 @@ export const Rooftop: React.FC = () => {
 							onClick={() => {
 								handleMakingChange(cocktail);
 							}}
-							variant={makingCocktails.includes(cocktail) ? 'default' : 'outlined'}
+							variant={makingCocktails.includes(cocktail) ? 'filled' : 'outlined'}
 						/>
 					);
 				})}
@@ -561,7 +585,7 @@ const CocktailTitle = styled(Typography)`
 `;
 
 const CocktailContainer = styled.div`
-	display: ${(hidden: {hidden?: boolean}) => hidden.hidden ? 'none' : 'flex'};
+	display: ${(hidden: { hidden?: boolean }) => (hidden.hidden ? 'none' : 'flex')};
 	flex-direction: column;
 	align-items: center;
 	font-size: 1.5em;
