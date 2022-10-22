@@ -57,7 +57,7 @@ const SYRUPJUICE = [
 	'Lime Juice',
 ];
 
-const BITTER = ['Aperol', 'Martini Bitter', 'Angostura Bitters'];
+const BITTER = ['Aperol', 'Martini Bitter', 'Angostura Bitters', 'Orange Bitters'];
 
 const GIN = ['Bombay Sapphire'];
 
@@ -339,7 +339,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 		image: OldFashioned,
 		ingredients: [
 			{ name: '42 Below', amount: 45 },
-			{ name: 'Lime Wedges', amount: '4' },
+			{ name: 'Lime', amount: '4 Wedges' },
 			{ name: 'Fever Tree Ginger Beer', amount: '1 Bottle' },
 		],
 		top: ['Ice'],
