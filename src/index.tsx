@@ -16,6 +16,7 @@ const Homepage: React.FC = () => {
 				<Route path="/3d-art" element={<Page.Art />} />
 				<Route path="/games" element={<Page.Games />} />
 				<Route path="/riv" element={<Rooftop />} />
+				<Route path="/broadcast" element={<Page.Broadcast />} />
 			</Routes>
 		</Router>
 	);

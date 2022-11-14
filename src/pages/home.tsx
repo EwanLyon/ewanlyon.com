@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {Divider} from './components/divider';
+import { Divider } from './components/divider';
 import { DumbEmail } from './components';
-import { Broadcast } from '.';
+import { GamesMade } from './games';
 
 import LogoIMG from '../media/EL_TransparentFull.png';
+import { Events } from './broadcast-graphics';
+import Stack from '@mui/material/Stack';
+import useWindowDimensions from './components/useWindowDimensions';
 
 const HomepageContainer = styled.div`
 	color: white;
@@ -44,23 +47,27 @@ const Title = styled.span`
 const TagLine = styled.span`
 	font-size: 1.5rem;
 	margin-bottom: 1vw;
+	text-align: center;
 
 	@media (max-width: 425px) {
 		font-size: 1.2rem;
 	}
 `;
 
-const Naviagation = styled.nav`
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
+const Naviagation = styled(Stack)`
 	letter-spacing: 0.2em;
 	font-size: 1.8rem;
 
 	@media (max-width: 425px) {
-		font-size: 0.9rem;
+		font-size: 1rem;
+	}
+
+	@media (max-width: 1100px) {
+		font-size: 1.5rem;
+	}
+
+	a {
+		white-space: nowrap;
 	}
 `;
 
@@ -74,31 +81,43 @@ const DumbEmailStyled = styled(DumbEmail)`
 `;
 
 const LinkDivider = styled.p`
-	margin: 0 1vw;
+	/* margin: 0 1vw; */
 `;
 
 export const Homepage: React.FC = () => {
+	const { width } = useWindowDimensions();
+	const vertical = width < 910;
+
 	return (
 		<HomepageContainer>
 			<Logo src={LogoIMG} />
 			<TitleCont>
 				<Title>Ewan Lyon</Title>
-				<TagLine>Broadcast Designer</TagLine>
+				<Naviagation direction={vertical ? 'column' : 'row'} justifyContent="center" alignItems={vertical ? 'center' : 'baseline'} divider={!vertical && <LinkDivider>|</LinkDivider>} spacing={1}>
+					<TagLine>Game Designer</TagLine>
+					<TagLine>Programmer</TagLine>
+					<TagLine>Broadcast Designer</TagLine>
+				</Naviagation>
 				<DumbEmailStyled text="ewan@ewanlyon.com" />
 			</TitleCont>
-			<Naviagation>
+			<Naviagation direction={vertical ? 'column' : 'row'} justifyContent="center" alignItems="center" divider={!vertical && <LinkDivider>-</LinkDivider>} spacing={1}>
 				<Link to="/games">Games</Link>
-				<LinkDivider>-</LinkDivider>
-				<a href="https://github.com/EwanLyon" target="_blank">GitHub</a>
-				<LinkDivider>-</LinkDivider>
+				<Link to="/broadcast">Broadcast</Link>
+				<a href="https://github.com/EwanLyon" target="_blank">
+					GitHub
+				</a>
 				<Link to="/alivevr">Alive VR</Link>
-				<LinkDivider>-</LinkDivider>
 				<Link to="/3d-art">3D Art</Link>
-				<LinkDivider>-</LinkDivider>
 				<Link to="/contact">Contact</Link>
 			</Naviagation>
 			<Divider />
-			<Broadcast />
+			{GamesMade.sixoclockswill}
+			<Divider />
+			{Events.asm}
+			<Divider />
+			{GamesMade.hackermanfrenzy}
+			<Divider />
+			{Events.csgo}
 		</HomepageContainer>
 	);
 };

@@ -82,6 +82,149 @@ const ShowcaseGridCenter = styled.div`
 	}
 `;
 
+export const Events = {
+	asm: (
+		<Event>
+			<Title id="aus-speedruns">AusSpeedruns</Title>
+			<Paragraph>
+				I designed and programmed the graphics for{' '}
+				<a href="https://ausspeedruns.com" target="_blank">
+					AusSpeedruns
+				</a>
+				{'. '}
+				Multiple layouts had to be made to fit the wide range of aspect ratios and races. These graphics have to run
+				nonstop over multiple days while being able to be controlled by remote volunteers with limited training.
+			</Paragraph>
+			<ShowcaseGrid>
+				<Image imgSrc={ASAP2022Img} desc="ASAP 2022" />
+				<Image imgSrc={ASM2022Img} desc="ASM 2022" />
+				<Image imgSrc={PAX2021Img} desc="PAX 2021" />
+				<Image imgSrc={ASM2021Img} desc="ASM 2021" />
+				<Image imgSrc={FAST2020Img} desc="FAST 2020" />
+				<Image imgSrc={PAXOnlineImg} desc="PAX Online" />
+				<Image imgSrc={ASM2020Img} desc="ASM 2020" />
+			</ShowcaseGrid>
+		</Event>
+	),
+	csgo: (
+		<Event>
+			<Title id="csgo">CS:GO</Title>
+			<Paragraph>
+				A personal project was creating a set of{' '}
+				<a href="https://blog.counter-strike.net/layouts" target="_blank">
+					CS:GO
+				</a>{' '}
+				graphics for use in tournaments. It uses the game state integration system allowing for real time data to be
+				used in displaying information in a different or more informative way than the original hud.
+			</Paragraph>
+			<Paragraph>
+				I then continued to develop the backend releasing it open source under the GPL license.
+				<br />
+				<br />
+				<a href="https://github.com/EwanLyon/nodecg-csgo-manager" target="_blank">
+					NodeCG-CSGO-Manager GitHub
+				</a>
+			</Paragraph>
+			<ShowcaseGrid>
+				<YouTube videoID="38XpupB8pb0" desc="Full round" />
+				<Image
+					imgSrc={'https://github.com/EwanLyon/clubwho-csgo-graphics/raw/main/media/FullHUD.jpg'}
+					desc="Personal Design"
+				/>
+				<Image imgSrc={'https://github.com/EwanLyon/angles-csgo-hud/raw/main/media/FullHUD.jpg'} desc="Angles Hud" />
+				<Image imgSrc={'https://github.com/EwanLyon/basic-csgo-hud/raw/main/media/FullHUD.jpg'} desc="Basic Hud" />
+				<Image
+					imgSrc={'https://github.com/EwanLyon/nodecg-csgo-manager/raw/main/media/dashboard.png'}
+					desc="Control Panel"
+				/>
+			</ShowcaseGrid>
+		</Event>
+	),
+	livesplit: (
+		<Event>
+			<Title id="custom-livesplit">Custom LiveSplit Displays</Title>
+			<Paragraph>Experimenting with new ways to display LiveSplit splits.</Paragraph>
+			<ShowcaseGridCenter>
+				<Image imgSrc={LiveSplitOlympics} desc="Mario and Sonic at the Olympic Games" />
+				<Image imgSrc={LiveSplitPortal} desc="Portal" />
+			</ShowcaseGridCenter>
+		</Event>
+	),
+	cricket: (
+		<Event>
+			<Title id="cricket">Cricket</Title>
+			<Paragraph>
+				This was a project I made at the start of 2019 to challenge myself to create a full set of graphics. The main
+				goal was for the operator to press the least number of buttons to operate.
+				<br />
+				<br />
+				<a href="https://github.com/EwanLyon/cricket-layouts" target="_blank">
+					Cricket-Layouts GitHub
+				</a>
+			</Paragraph>
+			<ShowcaseGrid>
+				<Image imgSrc={CricketScoreBug} desc="Score Bug" />
+				<Image imgSrc={CricketControls} desc="Main Controls" />
+				<Image imgSrc={CricketScore} desc="Batter Scoreboard" />
+				<Image imgSrc={CricketSetup} desc="Setup Controls" />
+				<Image imgSrc={CricketLocation} desc="Location Bug" />
+				<Image imgSrc={CricketGraphics} desc="Graphics Controls" />
+			</ShowcaseGrid>
+		</Event>
+	),
+	spotify: (
+		<Event>
+			<Title id="spotify">ncg-spotify</Title>
+			<Paragraph>
+				NCG-Spotify is a NodeCG bundle aimed to handle Spotify song information and for other bundles to use them
+				easier.
+				<br />
+				<br />
+				<a href="https://github.com/EwanLyon/ncg-spotify" target="_blank">
+					GitHub
+				</a>
+			</Paragraph>
+			<Image imgSrc={Spotify} desc="Dashboard panel" style={{ padding: '0 42%', marginTop: '3vw' }} />
+		</Event>
+	),
+	ncglivesplit: (
+		<Event>
+			<Title id="livesplit">ncg-livesplit</Title>
+			<Paragraph>
+				This is a simple element that allows the LiveSplit server addon to talk to NodeCG bundles and vice versa. This
+				allows dynamic background elements to react to splits.
+				<br />
+				<br />
+				<a href="https://github.com/EwanLyon/nodecg-livesplit" target="_blank">
+					GitHub
+				</a>
+			</Paragraph>
+			<ShowcaseGrid>
+				<Image imgSrc={LivesplitControls} desc="Dashboard panel" />
+				<YouTube videoID="2VS2IG_3y00" desc="Integration" />
+			</ShowcaseGrid>
+		</Event>
+	),
+	tutorial: (
+		<Event>
+			<Title id="tutorial">NodeCG Tutorials</Title>
+			<Paragraph>Tutorial I made on a basic NodeCG bundle for newcomers.</Paragraph>
+			<YouTube style={{ padding: '0 30%' }} videoID="uSWRcgD9NQQ" />
+		</Event>
+	),
+	personal: (
+		<Event>
+			<Title id="personal">Personal Livestream</Title>
+			<Paragraph>These are layouts developed for my streams (that I rarely do).</Paragraph>
+			<ShowcaseGrid>
+				<Gfycat gfycatId="parallelwarmheartedhoneybee" desc="Countdown" />
+				<Gfycat gfycatId="mammothshowybasenji" desc="Gameplay" />
+			</ShowcaseGrid>
+			<Image imgSrc={PersonalSpeedrun} desc="Speedrun" style={{ padding: '0 25%', marginTop: '3vw' }} />
+		</Event>
+	),
+};
+
 export const Broadcast: React.FC = () => {
 	useEffect(() => {
 		document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -97,6 +240,7 @@ export const Broadcast: React.FC = () => {
 
 	return (
 		<BroadcastContainer>
+			<Header title="Broadcast" />
 			<Contents>
 				<a href="#aus-speedruns">AusSpeedruns</a>
 				<a href="#csgo">CS:GO</a>
@@ -107,141 +251,21 @@ export const Broadcast: React.FC = () => {
 				<a href="#livesplit">ncg-livesplit</a>
 				<a href="#tutorial">Tutorial</a>
 			</Contents>
-			<Event>
-				<Title id="aus-speedruns">AusSpeedruns</Title>
-				<Paragraph>
-					I designed and programmed the graphics for{' '}
-					<a href="https://ausspeedruns.com" target="_blank">
-						AusSpeedruns
-					</a>
-					{'. '}
-					Multiple layouts had to be made to fit the wide range of aspect ratios and races. These graphics have to run
-					nonstop over multiple days while being able to be controlled by remote volunteers with limited training.
-				</Paragraph>
-				<ShowcaseGrid>
-					<Image imgSrc={ASAP2022Img} desc="ASAP 2022" />
-					<Image imgSrc={ASM2022Img} desc="ASM 2022" />
-					<Image imgSrc={PAX2021Img} desc="PAX 2021" />
-					<Image imgSrc={ASM2021Img} desc="ASM 2021" />
-					<Image imgSrc={FAST2020Img} desc="FAST 2020" />
-					<Image imgSrc={PAXOnlineImg} desc="PAX Online" />
-					<Image imgSrc={ASM2020Img} desc="ASM 2020" />
-				</ShowcaseGrid>
-			</Event>
+			{Events.asm}
 			<Divider />
-			<Event>
-				<Title id="csgo">CS:GO</Title>
-				<Paragraph>
-					A personal project was creating a set of{' '}
-					<a href="https://blog.counter-strike.net/layouts" target="_blank">
-						CS:GO
-					</a>{' '}
-					graphics for use in tournaments. It uses the game state integration system allowing for real time data to be
-					used in displaying information in a different or more informative way than the original hud.
-				</Paragraph>
-				<Paragraph>
-					I then continued to develop the backend releasing it open source under the GPL license.
-					<br />
-					<br />
-					<a href="https://github.com/EwanLyon/nodecg-csgo-manager" target="_blank">
-						NodeCG-CSGO-Manager GitHub
-					</a>
-				</Paragraph>
-				<ShowcaseGrid>
-					<YouTube videoID="38XpupB8pb0" desc="Full round" />
-					<Image
-						imgSrc={'https://github.com/EwanLyon/clubwho-csgo-graphics/raw/main/media/FullHUD.jpg'}
-						desc="Personal Design"
-					/>
-					<Image imgSrc={'https://github.com/EwanLyon/angles-csgo-hud/raw/main/media/FullHUD.jpg'} desc="Angles Hud" />
-					<Image imgSrc={'https://github.com/EwanLyon/basic-csgo-hud/raw/main/media/FullHUD.jpg'} desc="Basic Hud" />
-					<Image
-						imgSrc={'https://github.com/EwanLyon/nodecg-csgo-manager/raw/main/media/dashboard.png'}
-						desc="Control Panel"
-					/>
-				</ShowcaseGrid>
-			</Event>
+			{Events.csgo}
 			<Divider />
-			<Event>
-				<Title id="custom-livesplit">Custom LiveSplit Displays</Title>
-				<Paragraph>Experimenting with new ways to display LiveSplit splits.</Paragraph>
-				<ShowcaseGridCenter>
-					<Image imgSrc={LiveSplitOlympics} desc="Mario and Sonic at the Olympic Games" />
-					<Image imgSrc={LiveSplitPortal} desc="Portal" />
-				</ShowcaseGridCenter>
-			</Event>
+			{Events.cricket}
 			<Divider />
-			<Event>
-				<Title id="cricket">Cricket</Title>
-				<Paragraph>
-					This was a project I made at the start of 2019 to challenge myself to create a full set of graphics. The main
-					goal was for the operator to press the least number of buttons to operate.
-					<br />
-					<br />
-					<a href="https://github.com/EwanLyon/cricket-layouts" target="_blank">
-						Cricket-Layouts GitHub
-					</a>
-				</Paragraph>
-				<ShowcaseGrid>
-					<Image imgSrc={CricketScoreBug} desc="Score Bug" />
-					<Image imgSrc={CricketControls} desc="Main Controls" />
-					<Image imgSrc={CricketScore} desc="Batter Scoreboard" />
-					<Image imgSrc={CricketSetup} desc="Setup Controls" />
-					<Image imgSrc={CricketLocation} desc="Location Bug" />
-					<Image imgSrc={CricketGraphics} desc="Graphics Controls" />
-				</ShowcaseGrid>
-			</Event>
+			{Events.livesplit}
 			<Divider />
-			<Event>
-				<Title id="personal">Personal Livestream</Title>
-				<Paragraph>These are layouts developed for my streams (that I rarely do).</Paragraph>
-				<ShowcaseGrid>
-					<Gfycat gfycatId="parallelwarmheartedhoneybee" desc="Countdown" />
-					<Gfycat gfycatId="mammothshowybasenji" desc="Gameplay" />
-				</ShowcaseGrid>
-				<Image imgSrc={PersonalSpeedrun} desc="Speedrun" style={{ padding: '0 25%', marginTop: '3vw' }} />
-			</Event>
+			{Events.personal}
 			<Divider />
-			<Event>
-				<Title id="spotify">ncg-spotify</Title>
-				<Paragraph>
-					NCG-Spotify is a NodeCG bundle aimed to handle Spotify song information and for other bundles to use them
-					easier.
-					<br />
-					<br />
-					<a href="https://github.com/EwanLyon/ncg-spotify" target="_blank">
-						GitHub
-					</a>
-				</Paragraph>
-				<Image
-					imgSrc={Spotify}
-					desc="Dashboard panel"
-					style={{ padding: '0 42%', marginTop: '3vw' }}
-				/>
-			</Event>
+			{Events.spotify}
 			<Divider />
-			<Event>
-				<Title id="livesplit">ncg-livesplit</Title>
-				<Paragraph>
-					This is a simple element that allows the LiveSplit server addon to talk to NodeCG bundles and vice versa. This
-					allows dynamic background elements to react to splits.
-					<br />
-					<br />
-					<a href="https://github.com/EwanLyon/nodecg-livesplit" target="_blank">
-						GitHub
-					</a>
-				</Paragraph>
-				<ShowcaseGrid>
-					<Image imgSrc={LivesplitControls} desc="Dashboard panel" />
-					<YouTube videoID="2VS2IG_3y00" desc="Integration" />
-				</ShowcaseGrid>
-			</Event>
+			{Events.tutorial}
 			<Divider />
-			<Event>
-				<Title id="tutorial">NodeCG Tutorials</Title>
-				<Paragraph>Tutorial I made on a basic NodeCG bundle for newcomers.</Paragraph>
-				<YouTube style={{ padding: '0 30%' }} videoID="uSWRcgD9NQQ" />
-			</Event>
+			{Events.ncglivesplit}
 		</BroadcastContainer>
 	);
 };

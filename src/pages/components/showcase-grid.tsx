@@ -12,7 +12,7 @@ const ShowcaseGridContainer = styled.div`
 		width: 90%;
 	}
 
-	@media (max-width: 425px) {
+	@media (max-width: 768px) {
 		grid-template-columns: 100%;
 	}
 `;

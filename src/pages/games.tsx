@@ -73,49 +73,64 @@ const ShowcaseGridCenter = styled.div`
 	}
 `;
 
+export const GamesMade = {
+	sixoclockswill: (
+		<Event>
+			<Title id="six-oclock-swill">
+				Six O'clock Swill
+				<br />
+				<i>Lead Designer/Developer</i>
+			</Title>
+			<Paragraph centred>
+				<a href="https://SixOclockSwill.net" target="_blank">
+					SixOclockSwill.net
+				</a>
+				<br />
+				<br />
+				<a href="https://liquor-license-required.itch.io/six-oclock-swill" target="_blank">
+					itch.io
+				</a>
+			</Paragraph>
+			<Paragraph>
+				Physics based bar tending game which challenges the player to make and mix drinks with difficult controls. This
+				game was shown in PAX Aus 2022 at the Swinburne booth and had very positive reviews.
+			</Paragraph>
+			<ShowcaseGrid>
+				<Image imgSrc={SOS00} />
+				<Image imgSrc={SOS01} />
+				<Image imgSrc={SOS02} />
+				<Image imgSrc={SOS03} />
+				<Image imgSrc={SOS04} />
+				<Image imgSrc={SOS05} />
+			</ShowcaseGrid>
+		</Event>
+	),
+	hackermanfrenzy: (
+		<Event>
+			<Title id="six-oclock-swill">
+				Hackerman
+				<br />
+				<i>Lead Developer</i>
+			</Title>
+			<Paragraph centred>80s themed hacking game with micro games.</Paragraph>
+			<ShowcaseGrid>
+				<Image imgSrc={HM00} />
+				<Image imgSrc={HM01} />
+				<Image imgSrc={HM02} />
+				<Image imgSrc={HM03} />
+				<Image imgSrc={HM04} />
+				<Image imgSrc={HM05} />
+			</ShowcaseGrid>
+		</Event>
+	),
+};
+
 export const Games: React.FC = () => {
 	return (
 		<GamesContainer>
 			<Header title="Games" />
-			<Event>
-				<Title id="six-oclock-swill">Six O'clock Swill<br /><i>Lead Designer/Developer</i></Title>
-				<Paragraph centred>
-					<a href="https://SixOclockSwill.net" target="_blank">
-						SixOclockSwill.net
-					</a>
-					<br />
-					<br />
-					<a href="https://liquor-license-required.itch.io/six-oclock-swill" target="_blank">
-						itch.io
-					</a>
-				</Paragraph>
-				<Paragraph>
-					Physics based bar tending game which challenges the player to make and mix drinks with difficult controls.
-					This game was shown in PAX Aus 2022 at the Swinburne booth and had very positive reviews.
-				</Paragraph>
-				<ShowcaseGrid>
-					<Image imgSrc={SOS00} />
-					<Image imgSrc={SOS01} />
-					<Image imgSrc={SOS02} />
-					<Image imgSrc={SOS03} />
-					<Image imgSrc={SOS04} />
-					<Image imgSrc={SOS05} />
-				</ShowcaseGrid>
-			</Event>
-			<Event>
-				<Title id="six-oclock-swill">Hackerman<br /><i>Lead Developer</i></Title>
-				<Paragraph centred>
-					80s themed hacking game with micro games.
-				</Paragraph>
-				<ShowcaseGrid>
-					<Image imgSrc={HM00} />
-					<Image imgSrc={HM01} />
-					<Image imgSrc={HM02} />
-					<Image imgSrc={HM03} />
-					<Image imgSrc={HM04} />
-					<Image imgSrc={HM05} />
-				</ShowcaseGrid>
-			</Event>
+			{GamesMade.sixoclockswill}
+			{GamesMade.hackermanfrenzy}
 		</GamesContainer>
 	);
 };
