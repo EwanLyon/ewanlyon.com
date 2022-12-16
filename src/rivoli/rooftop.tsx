@@ -4,6 +4,7 @@ import {
 	Accordion,
 	AccordionDetails,
 	AccordionSummary,
+	Button,
 	Chip,
 	FormControlLabel,
 	Paper,
@@ -33,17 +34,9 @@ const VODKA = ['42 Below', 'Grey Goose'];
 
 const RUM = ['Bacardi 8', 'Bacardi Carta Blanca', 'Bacardi Oakheart'];
 
-const WHISKY = ["Dewar's White Label", 'Pure Scot', "Maker's Mark"];
+const WHISKY = ['Pure Scot', "Maker's Mark"];
 
-const LIQUEUR = [
-	'DK Triple Sec',
-	'DK Crème de Café',
-	'Mandarine Napoleon',
-	'DK Apricot',
-	'DK Wild Strawberry',
-	'DK Passionfruit',
-	'Martini Rosso',
-];
+const LIQUEUR = ['DK Triple Sec', 'DK Crème de Café', 'DK Wild Strawberry', 'DK Passionfruit', 'Martini Rosso'];
 
 const SYRUPJUICE = [
 	'Raspberry Syrup',
@@ -191,20 +184,6 @@ const ALL_COCKTAILS: IAllCocktails = {
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Lemon Wedge', 'Raspberries'],
-	},
-	'Tiki Mandarine': {
-		name: 'Tiki Mandarine',
-		image: TikiMandarine,
-		ingredients: [
-			{ name: 'Bacardi 8', amount: 20 },
-			{ name: 'Mandarine Napoleon', amount: 10 },
-			{ name: 'DK Apricot', amount: 10 },
-			{ name: "Dewar's White Label", amount: 20 },
-			{ name: 'Lemon Juice', amount: 30 },
-			{ name: 'Pineapple Juice', amount: 100 },
-		],
-		top: ['Ice'],
-		garnishes: ['Orange Wedge', 'Lime Wedge'],
 	},
 	'Patron Margarita': {
 		name: 'Patron Margarita',
@@ -410,7 +389,7 @@ const IngredientChips = styled.div`
 export const Rooftop: React.FC = () => {
 	useEffect(() => {
 		document.title = 'Rooftop';
-		document.getElementsByTagName("body")[0].style = "background: #FFF; color: #000;"
+		document.getElementsByTagName('body')[0].style = 'background: #FFF; color: #000;';
 	});
 
 	const [inStock, setInStock] = useLocalStorage<string[]>('stock', []);
@@ -474,6 +453,25 @@ export const Rooftop: React.FC = () => {
 		);
 	}
 
+	function allInStock() {
+		setInStock([
+			...GIN,
+			...TEQUILA,
+			...VODKA,
+			...RUM,
+			...WHISKY,
+			...LIQUEUR,
+			...SYRUPJUICE,
+			...BITTER,
+			...MIXERS,
+			...OTHER,
+		]);
+	}
+
+	function allOutOfStock() {
+		setInStock([]);
+	}
+
 	return (
 		<RooftopContainer>
 			<Accordion style={{ position: 'fixed', width: '100%' }}>
@@ -526,6 +524,8 @@ export const Rooftop: React.FC = () => {
 							<IngredientTitle>Credit</IngredientTitle>
 							<span>Developed by Ewan Lyon for ninteenforty</span>
 						</IngredientSection>
+						<Button onClick={allInStock}>All in Stock</Button>
+						<Button onClick={allOutOfStock}>All Out of Stock</Button>
 					</div>
 				</AccordionDetails>
 			</Accordion>
@@ -558,13 +558,13 @@ export const Rooftop: React.FC = () => {
 					label="Show All"
 					labelPlacement="start"
 				/>
-				{(showAll ? Object.keys(ALL_COCKTAILS) : availableCocktails).map((cocktail) => {
+				{(showAll ? Object.keys(ALL_COCKTAILS) : availableCocktails).sort().map((cocktail) => {
 					const missingIngredients = ALL_COCKTAILS[cocktail].ingredients.filter(
 						(ingredient) => !inStock.includes(ingredient.name)
 					).length;
 					return (
 						<Chip
-							color={availableCocktails.includes(cocktail) ? 'primary' : 'secondary'}
+							color={availableCocktails.includes(cocktail) ? 'primary' : 'error'}
 							key={cocktail}
 							label={missingIngredients > 0 ? `${cocktail} ${missingIngredients}` : cocktail}
 							onClick={() => {
