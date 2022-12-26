@@ -5,13 +5,24 @@ import {
 	AccordionDetails,
 	AccordionSummary,
 	Button,
+	Checkbox,
 	Chip,
+	createTheme,
+	Dialog,
+	DialogContent,
+	DialogTitle,
+	Fab,
 	FormControlLabel,
+	IconButton,
 	Paper,
 	Switch,
+	ThemeProvider,
+	ToggleButton,
+	ToggleButtonGroup,
 	Typography,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CloseIcon from '@mui/icons-material/Close';
 
 import AperolSpritz from './images/cocktails/Aperol Spritz.svg';
 import Cosmopolitan from './images/cocktails/Cosmopolitan.svg';
@@ -27,77 +38,99 @@ import PassionfruitMojito from './images/cocktails/Passionfruit Mojito.svg';
 import Zombie from './images/cocktails/Zombie.svg';
 import OldFashioned from './images/cocktails/Old Fashioned.svg';
 // import AperolSpritz from './images/cocktails/Aperol Spritz.svg';
+import NinteenFortyLogo from './images/NinteenfortyLogo.svg';
 
-const RooftopContainer = styled.div``;
+const RooftopContainer = styled(ThemeProvider)``;
 
-const VODKA = ['42 Below', 'Grey Goose'];
+const NinteenFortyTheme = createTheme({
+	palette: {
+		primary: {
+			main: '#1e4591',
+		},
+		secondary: {
+			main: '#f8ec32',
+		},
+	},
+});
 
-const RUM = ['Bacardi 8', 'Bacardi Carta Blanca', 'Bacardi Oakheart'];
+enum IngredientType {
+	VODKA = 'VODKA',
+	RUM = 'RUM',
+	WHISKY = 'WHISKY',
+	LIQUEUR = 'LIQUEUR',
+	SYRUPJUICE = 'SYRUPJUICE',
+	BITTER = 'BITTER',
+	GIN = 'GIN',
+	TEQUILA = 'TEQUILA',
+	MIXERS = 'MIXERS',
+	GRANISHES = 'GRANISHES',
+	OTHER = 'OTHER',
+}
 
-const WHISKY = ['Pure Scot', "Maker's Mark"];
+interface Ingredient {
+	name: string;
+	type: IngredientType;
+}
 
-const LIQUEUR = ['DK Triple Sec', 'DK Crème de Café', 'DK Wild Strawberry', 'DK Passionfruit', 'Martini Rosso'];
-
-const SYRUPJUICE = [
-	'Raspberry Syrup',
-	'Strawberry Syrup',
-	'Grenadine',
-	'Monin Passionfruit Puree',
-	'Cranberry Juice',
-	'Lemon Juice',
-	'Pineapple Juice',
-	'Sugar Syrup',
-	'Lime Juice',
-];
-
-const BITTER = ['Aperol', 'Martini Bitter', 'Angostura Bitters', 'Orange Bitters'];
-
-const GIN = ['Bombay Sapphire'];
-
-const TEQUILA = ['Patron Silver', 'Patron Reposado'];
-
-const MIXERS = ['Coke', 'Soda Water', 'Fever Tree Ginger Beer'];
-
-const OTHER = [
-	'Lime',
-	'Prosecco',
-	'Espresso',
-	'Mint Leaves',
-	'Raspberry Jam',
-	'Blackberry Jam',
-	'Apricot Jam',
-	'Marmalade',
-];
-
-VODKA.sort();
-RUM.sort();
-WHISKY.sort();
-LIQUEUR.sort();
-SYRUPJUICE.sort();
-BITTER.sort();
-GIN.sort();
-TEQUILA.sort();
-OTHER.sort();
-MIXERS.sort();
-
-const GRANISHES = [
-	'Orange Rind',
-	'Mint',
-	'Raspberries',
-	'Lemon Rind',
-	'Lime Wedge',
-	'Lemon Wedge',
-	'Orange Wedge',
-	'Lime Wheel',
-	'Coffee Beans',
-	'Strawberry',
-];
+const INGREDIENTS = {
+	FortyTwoBelow: { name: '42 Below', type: IngredientType.VODKA },
+	GreyGoose: { name: 'Grey Goose', type: IngredientType.VODKA },
+	Bacardi8: { name: 'Bacardi 8', type: IngredientType.RUM },
+	BacardiCartaBlanca: { name: 'Bacardi Carta Blanca', type: IngredientType.RUM },
+	BacardiOakheart: { name: 'Bacardi Oakheart', type: IngredientType.RUM },
+	PureScot: { name: 'Pure Scot', type: IngredientType.WHISKY },
+	MakersMark: { name: "Maker's Mark", type: IngredientType.WHISKY },
+	DKTripleSec: { name: 'DK Triple Sec', type: IngredientType.LIQUEUR },
+	DKCremeDeCafé: { name: 'DK Crème de Café', type: IngredientType.LIQUEUR },
+	DKWildStrawberry: { name: 'DK Wild Strawberry', type: IngredientType.LIQUEUR },
+	DKPassionfruit: { name: 'DK Passionfruit', type: IngredientType.LIQUEUR },
+	MartiniRosso: { name: 'Martini Rosso', type: IngredientType.LIQUEUR },
+	RaspberrySyrup: { name: 'Raspberry Syrup', type: IngredientType.SYRUPJUICE },
+	StrawberrySyrup: { name: 'Strawberry Syrup', type: IngredientType.SYRUPJUICE },
+	Grenadine: { name: 'Grenadine', type: IngredientType.SYRUPJUICE },
+	MoninPassionfruitPuree: { name: 'Monin Passionfruit Puree', type: IngredientType.SYRUPJUICE },
+	CranberryJuice: { name: 'Cranberry Juice', type: IngredientType.SYRUPJUICE },
+	LemonJuice: { name: 'Lemon Juice', type: IngredientType.SYRUPJUICE },
+	PineappleJuice: { name: 'Pineapple Juice', type: IngredientType.SYRUPJUICE },
+	SugarSyrup: { name: 'Sugar Syrup', type: IngredientType.SYRUPJUICE },
+	LimeJuice: { name: 'Lime Juice', type: IngredientType.SYRUPJUICE },
+	Aperol: { name: 'Aperol', type: IngredientType.BITTER },
+	MartiniBitter: { name: 'Martini Bitter', type: IngredientType.BITTER },
+	AngosturaBitters: { name: 'Angostura Bitters', type: IngredientType.BITTER },
+	OrangeBitters: { name: 'Orange Bitters', type: IngredientType.BITTER },
+	BombaySapphire: { name: 'Bombay Sapphire', type: IngredientType.GIN },
+	PatronSilver: { name: 'Patron Silver', type: IngredientType.TEQUILA },
+	PatronReposado: { name: 'Patron Reposado', type: IngredientType.TEQUILA },
+	Coke: { name: 'Coke', type: IngredientType.MIXERS },
+	SodaWater: { name: 'Soda Water', type: IngredientType.MIXERS },
+	FeverTreeGingerBeer: { name: 'Fever Tree Ginger Beer', type: IngredientType.MIXERS },
+	Lime: { name: 'Lime', type: IngredientType.OTHER },
+	Prosecco: { name: 'Prosecco', type: IngredientType.OTHER },
+	Espresso: { name: 'Espresso', type: IngredientType.OTHER },
+	MintLeaves: { name: 'Mint Leaves', type: IngredientType.OTHER },
+	RaspberryJam: { name: 'Raspberry Jam', type: IngredientType.OTHER },
+	BlackberryJam: { name: 'Blackberry Jam', type: IngredientType.OTHER },
+	ApricotJam: { name: 'Apricot Jam', type: IngredientType.OTHER },
+	Marmalade: { name: 'Marmalade', type: IngredientType.OTHER },
+	OrangeRind: { name: 'Orange Rind', type: IngredientType.GRANISHES },
+	Mint: { name: 'Mint', type: IngredientType.GRANISHES },
+	Raspberries: { name: 'Raspberries', type: IngredientType.GRANISHES },
+	LemonRind: { name: 'Lemon Rind', type: IngredientType.GRANISHES },
+	LimeWedge: { name: 'Lime Wedge', type: IngredientType.GRANISHES },
+	LemonWedge: { name: 'Lemon Wedge', type: IngredientType.GRANISHES },
+	OrangeWedge: { name: 'Orange Wedge', type: IngredientType.GRANISHES },
+	LimeWheel: { name: 'Lime Wheel', type: IngredientType.GRANISHES },
+	CoffeeBeans: { name: 'Coffee Beans', type: IngredientType.GRANISHES },
+	Strawberry: { name: 'Strawberry', type: IngredientType.GRANISHES },
+	LimeCordial: { name: 'Lime Cordial', type: IngredientType.MIXERS },
+	Sprite: { name: 'Sprite', type: IngredientType.MIXERS },
+};
 
 interface ICocktail {
 	name: string;
 	image: string;
 	ingredients: {
-		name: string;
+		ingredient: Ingredient;
 		amount: string | number;
 	}[];
 	top?: string[];
@@ -114,9 +147,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Aperol Spritz',
 		image: AperolSpritz,
 		ingredients: [
-			{ name: 'Aperol', amount: 60 },
-			{ name: 'Prosecco', amount: 60 },
-			{ name: 'Soda Water', amount: 90 },
+			{ ingredient: INGREDIENTS.Aperol, amount: 60 },
+			{ ingredient: INGREDIENTS.Prosecco, amount: 60 },
+			{ ingredient: INGREDIENTS.SodaWater, amount: 90 },
 		],
 		top: ['Ice'],
 		garnishes: ['Orange Wedge'],
@@ -126,11 +159,11 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Cosmopolitan',
 		image: Cosmopolitan,
 		ingredients: [
-			{ name: 'Grey Goose', amount: 45 },
-			{ name: 'DK Triple Sec', amount: 15 },
-			{ name: 'Cranberry Juice', amount: 40 },
-			{ name: 'Lime Juice', amount: 15 },
-			{ name: 'Sugar Syrup', amount: 10 },
+			{ ingredient: INGREDIENTS.GreyGoose, amount: 45 },
+			{ ingredient: INGREDIENTS.DKTripleSec, amount: 15 },
+			{ ingredient: INGREDIENTS.CranberryJuice, amount: 40 },
+			{ ingredient: INGREDIENTS.LimeJuice, amount: 15 },
+			{ ingredient: INGREDIENTS.SugarSyrup, amount: 10 },
 		],
 		garnishes: ['Orange Rind'],
 	},
@@ -138,10 +171,10 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Espresso Martini',
 		image: EspressoMartini,
 		ingredients: [
-			{ name: '42 Below', amount: 40 },
-			{ name: 'DK Crème de Café', amount: 20 },
-			{ name: 'Sugar Syrup', amount: 5 },
-			{ name: 'Espresso', amount: 30 },
+			{ ingredient: INGREDIENTS.FortyTwoBelow, amount: 40 },
+			{ ingredient: INGREDIENTS.DKCremeDeCafé, amount: 20 },
+			{ ingredient: INGREDIENTS.SugarSyrup, amount: 5 },
+			{ ingredient: INGREDIENTS.Espresso, amount: 30 },
 		],
 		garnishes: ['3 Coffee Beans'],
 		extra: ['Shake Well', 'Double Strain'],
@@ -150,14 +183,14 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Long Island Iced Tea',
 		image: LongIslandIcedTea,
 		ingredients: [
-			{ name: '42 Below', amount: 15 },
-			{ name: 'Bacardi Carta Blanca', amount: 15 },
-			{ name: 'Patron Silver', amount: 15 },
-			{ name: 'Bombay Sapphire', amount: 15 },
-			{ name: 'DK Triple Sec', amount: 15 },
-			{ name: 'Lemon Juice', amount: 50 },
-			{ name: 'Sugar Syrup', amount: 15 },
-			{ name: 'Coke', amount: 'Top' },
+			{ ingredient: INGREDIENTS.FortyTwoBelow, amount: 15 },
+			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 15 },
+			{ ingredient: INGREDIENTS.PatronSilver, amount: 15 },
+			{ ingredient: INGREDIENTS.BombaySapphire, amount: 15 },
+			{ ingredient: INGREDIENTS.DKTripleSec, amount: 15 },
+			{ ingredient: INGREDIENTS.LemonJuice, amount: 50 },
+			{ ingredient: INGREDIENTS.SugarSyrup, amount: 15 },
+			{ ingredient: INGREDIENTS.Coke, amount: 'Top' },
 		],
 		top: ['Ice'],
 		garnishes: ['Lemon Wedge'],
@@ -166,9 +199,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Traditional Negroni',
 		image: TraditionalNegroni,
 		ingredients: [
-			{ name: 'Bombay Sapphire', amount: 30 },
-			{ name: 'Martini Bitter', amount: 30 },
-			{ name: 'Martini Rosso', amount: 30 },
+			{ ingredient: INGREDIENTS.BombaySapphire, amount: 30 },
+			{ ingredient: INGREDIENTS.MartiniBitter, amount: 30 },
+			{ ingredient: INGREDIENTS.MartiniRosso, amount: 30 },
 		],
 		top: ['Ice'],
 		garnishes: ['Orange Rind'],
@@ -178,9 +211,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Raspberry Collins',
 		image: RaspberryCollins,
 		ingredients: [
-			{ name: 'Bombay Sapphire', amount: 50 },
-			{ name: 'Lemon Juice', amount: 30 },
-			{ name: 'Raspberry Syrup', amount: 20 },
+			{ ingredient: INGREDIENTS.BombaySapphire, amount: 50 },
+			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
+			{ ingredient: INGREDIENTS.RaspberrySyrup, amount: 20 },
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Lemon Wedge', 'Raspberries'],
@@ -189,10 +222,10 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Patron Margarita',
 		image: PatronMargarita,
 		ingredients: [
-			{ name: 'Patron Reposado', amount: 50 },
-			{ name: 'DK Triple Sec', amount: 20 },
-			{ name: 'Lime Juice', amount: 60 },
-			{ name: 'Sugar Syrup', amount: 20 },
+			{ ingredient: INGREDIENTS.PatronReposado, amount: 50 },
+			{ ingredient: INGREDIENTS.DKTripleSec, amount: 20 },
+			{ ingredient: INGREDIENTS.LimeJuice, amount: 60 },
+			{ ingredient: INGREDIENTS.SugarSyrup, amount: 20 },
 		],
 		garnishes: ['Lime Wheel'],
 	},
@@ -200,11 +233,11 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Wild Strawberry Mojito',
 		image: WildStrawberryMojito,
 		ingredients: [
-			{ name: 'Bacardi Carta Blanca', amount: 30 },
-			{ name: 'DK Wild Strawberry', amount: 30 },
-			{ name: 'Lime Juice', amount: 30 },
-			{ name: 'Strawberry Syrup', amount: 10 },
-			{ name: 'Sugar Syrup', amount: 5 },
+			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 30 },
+			{ ingredient: INGREDIENTS.DKWildStrawberry, amount: 30 },
+			{ ingredient: INGREDIENTS.LimeJuice, amount: 30 },
+			{ ingredient: INGREDIENTS.StrawberrySyrup, amount: 10 },
+			{ ingredient: INGREDIENTS.SugarSyrup, amount: 5 },
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Strawberry', 'Mint Sprig'],
@@ -214,10 +247,10 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Cuban Mojito',
 		image: CubanMojito,
 		ingredients: [
-			{ name: 'Bacardi Carta Blanca', amount: 50 },
-			{ name: 'Lime', amount: '4 Wedges' },
-			{ name: 'Mint Leaves', amount: '6' },
-			{ name: 'Sugar Syrup', amount: 10 },
+			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 50 },
+			{ ingredient: INGREDIENTS.Lime, amount: '4 Wedges' },
+			{ ingredient: INGREDIENTS.MintLeaves, amount: '6' },
+			{ ingredient: INGREDIENTS.SugarSyrup, amount: 10 },
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Mint Sprig'],
@@ -227,11 +260,11 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Passionfruit Mojito',
 		image: PassionfruitMojito,
 		ingredients: [
-			{ name: 'Bacardi Carta Blanca', amount: 50 },
-			{ name: 'Monin Passionfruit Puree', amount: 50 },
-			{ name: 'Lime', amount: '4 Wedges' },
-			{ name: 'Mint Leaves', amount: '6' },
-			{ name: 'Sugar Syrup', amount: 10 },
+			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 50 },
+			{ ingredient: INGREDIENTS.MoninPassionfruitPuree, amount: 50 },
+			{ ingredient: INGREDIENTS.Lime, amount: '4 Wedges' },
+			{ ingredient: INGREDIENTS.MintLeaves, amount: '6' },
+			{ ingredient: INGREDIENTS.SugarSyrup, amount: 10 },
 		],
 		top: ['Ice', 'Soda Water'],
 		garnishes: ['Mint Sprig'],
@@ -241,13 +274,13 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Zombie',
 		image: Zombie,
 		ingredients: [
-			{ name: 'Pineapple Juice', amount: 40 },
-			{ name: 'Bacardi 8', amount: 20 },
-			{ name: 'Bacardi Carta Blanca', amount: 20 },
-			{ name: 'Bacardi Oakheart', amount: 20 },
-			{ name: 'Lime Juice', amount: 20 },
-			{ name: 'DK Passionfruit', amount: 10 },
-			{ name: 'Grenadine', amount: 10 },
+			{ ingredient: INGREDIENTS.PineappleJuice, amount: 40 },
+			{ ingredient: INGREDIENTS.Bacardi8, amount: 20 },
+			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 20 },
+			{ ingredient: INGREDIENTS.BacardiOakheart, amount: 20 },
+			{ ingredient: INGREDIENTS.LimeJuice, amount: 20 },
+			{ ingredient: INGREDIENTS.DKPassionfruit, amount: 10 },
+			{ ingredient: INGREDIENTS.Grenadine, amount: 10 },
 		],
 		top: ['Ice'],
 		garnishes: ['Orange Wedge', 'Lime Wheel'],
@@ -256,9 +289,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Old Fashioned',
 		image: OldFashioned,
 		ingredients: [
-			{ name: 'Pure Scot', amount: 50 },
-			{ name: 'Sugar Syrup', amount: 10 },
-			{ name: 'Angostura Bitters', amount: '3 Dashes' },
+			{ ingredient: INGREDIENTS.PureScot, amount: 50 },
+			{ ingredient: INGREDIENTS.SugarSyrup, amount: 10 },
+			{ ingredient: INGREDIENTS.AngosturaBitters, amount: '3 Dashes' },
 		],
 		top: ['Ice'],
 		garnishes: ['Orange Wedge'],
@@ -268,9 +301,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Raspberry Jam',
 		image: RaspberryCollins,
 		ingredients: [
-			{ name: 'Bacardi Carta Blanca', amount: 45 },
-			{ name: 'Lemon Juice', amount: 30 },
-			{ name: 'Raspberry Jam', amount: '2 Tbs' },
+			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 45 },
+			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
+			{ ingredient: INGREDIENTS.RaspberryJam, amount: '2 Tbs' },
 		],
 		top: ['Ice', 'Lemonade'],
 		garnishes: ['Mint Sprig', '3 Raspberries'],
@@ -280,9 +313,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Blackberry Jam',
 		image: RaspberryCollins,
 		ingredients: [
-			{ name: 'Bombay Sapphire', amount: 45 },
-			{ name: 'Lemon Juice', amount: 30 },
-			{ name: 'Blackberry Jam', amount: '2 Tbs' },
+			{ ingredient: INGREDIENTS.BombaySapphire, amount: 45 },
+			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
+			{ ingredient: INGREDIENTS.BlackberryJam, amount: '2 Tbs' },
 		],
 		top: ['Ice', 'Lemonade'],
 		garnishes: ['Mint Sprig', '2 Blackberries'],
@@ -292,9 +325,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Apricot Jam',
 		image: RaspberryCollins,
 		ingredients: [
-			{ name: '42 Below', amount: 45 },
-			{ name: 'Lemon Juice', amount: 30 },
-			{ name: 'Apricot Jam', amount: '2 Tbs' },
+			{ ingredient: INGREDIENTS.FortyTwoBelow, amount: 45 },
+			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
+			{ ingredient: INGREDIENTS.ApricotJam, amount: '2 Tbs' },
 		],
 		top: ['Ice', 'Lemonade'],
 		garnishes: ['Mint Sprig'],
@@ -304,10 +337,10 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Orange Marmalade Jam',
 		image: RaspberryCollins,
 		ingredients: [
-			{ name: 'Bombay Sapphire', amount: 45 },
-			{ name: 'Lemon Juice', amount: 30 },
-			{ name: 'Martini Bitter', amount: 15 },
-			{ name: 'Marmalade', amount: '2 Tbs' },
+			{ ingredient: INGREDIENTS.BombaySapphire, amount: 45 },
+			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
+			{ ingredient: INGREDIENTS.MartiniBitter, amount: 15 },
+			{ ingredient: INGREDIENTS.Marmalade, amount: '2 Tbs' },
 		],
 		top: ['Ice', 'Lemonade'],
 		garnishes: ['Mint Sprig', 'Dehydrated Orange'],
@@ -317,9 +350,9 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Moscow Mule',
 		image: OldFashioned,
 		ingredients: [
-			{ name: '42 Below', amount: 45 },
-			{ name: 'Lime', amount: '4 Wedges' },
-			{ name: 'Fever Tree Ginger Beer', amount: '1 Bottle' },
+			{ ingredient: INGREDIENTS.FortyTwoBelow, amount: 45 },
+			{ ingredient: INGREDIENTS.Lime, amount: '4 Wedges' },
+			{ ingredient: INGREDIENTS.FeverTreeGingerBeer, amount: '1 Bottle' },
 		],
 		top: ['Ice'],
 		garnishes: ['Lime Wheel'],
@@ -329,13 +362,24 @@ const ALL_COCKTAILS: IAllCocktails = {
 		name: 'Manhattan',
 		image: OldFashioned,
 		ingredients: [
-			{ name: "Maker's Mark", amount: 45 },
-			{ name: 'Martini Rosso', amount: 30 },
-			{ name: 'Orange Bitters', amount: '1 Dash' },
+			{ ingredient: INGREDIENTS.MakersMark, amount: 45 },
+			{ ingredient: INGREDIENTS.MartiniRosso, amount: 30 },
+			{ ingredient: INGREDIENTS.OrangeBitters, amount: '1 Dash' },
 		],
 		top: ['Ice'],
 		garnishes: ['Cherry', 'Dehydrated Orange Wheel'],
 		extra: ['Muddled'],
+	},
+	'Lemon Lime Bitters': {
+		name: 'Lemon Lime Bitters',
+		image: CubanMojito,
+		ingredients: [
+			{ ingredient: INGREDIENTS.LimeCordial, amount: 'Around 1cm' },
+			{ ingredient: INGREDIENTS.AngosturaBitters, amount: '3–4 Dashes' },
+			{ ingredient: INGREDIENTS.Sprite, amount: 'Top' },
+		],
+		top: ['Ice'],
+		extra: ['Built'],
 	},
 };
 
@@ -386,16 +430,25 @@ const IngredientChips = styled.div`
 	flex-wrap: wrap;
 `;
 
+function filterIngredientsByType(ingredientType: IngredientType) {
+	return Object.values(INGREDIENTS).filter((ingredient) => ingredient.type === ingredientType);
+}
+
+function sortIngredients(ingredientsArray: Ingredient[]) {
+	return ingredientsArray.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
+}
+
 export const Rooftop: React.FC = () => {
 	useEffect(() => {
 		document.title = 'Rooftop';
 		document.getElementsByTagName('body')[0].style = 'background: #FFF; color: #000;';
-	});
+	}, []);
 
 	const [inStock, setInStock] = useLocalStorage<string[]>('stock', []);
 	const [availableCocktails, setAvaialableCocktails] = useState<string[]>([]);
 	const [makingCocktails, setMakingCocktails] = useState<string[]>([]);
 	const [showAll, setShowAll] = useState(false);
+	const [dialogOpen, setDialogOpen] = useState(false);
 
 	function handleStockChange(ingredient: string) {
 		const m_inStock = [...inStock];
@@ -426,7 +479,7 @@ export const Rooftop: React.FC = () => {
 	useEffect(() => {
 		const m_availableCocktails = Object.keys(ALL_COCKTAILS).filter((key) => {
 			const cocktail = ALL_COCKTAILS[key];
-			if (cocktail.ingredients.every((ingredient) => inStock.includes(ingredient.name))) {
+			if (cocktail.ingredients.every((ingredient) => inStock.includes(ingredient.ingredient.name))) {
 				return key;
 			}
 		});
@@ -434,19 +487,19 @@ export const Rooftop: React.FC = () => {
 		setAvaialableCocktails(m_availableCocktails);
 	}, [inStock]);
 
-	function IngredientChip(ingredient: string) {
-		const stocked = inStock.includes(ingredient);
+	function IngredientChip(ingredient: Ingredient) {
+		const stocked = inStock.includes(ingredient.name);
 		const usedInNum = Object.keys(ALL_COCKTAILS).filter((key) =>
-			ALL_COCKTAILS[key].ingredients.some((cocktailIngredient) => cocktailIngredient.name === ingredient)
+			ALL_COCKTAILS[key].ingredients.some((cocktailIngredient) => cocktailIngredient.ingredient === ingredient)
 		).length;
 		return (
 			<Chip
-				key={ingredient}
-				label={`${ingredient} ${usedInNum}`}
+				key={ingredient.name}
+				label={`${ingredient.name} ${usedInNum}`}
 				onClick={() => {
-					handleStockChange(ingredient);
+					handleStockChange(ingredient.name);
 				}}
-				color="secondary"
+				color="primary"
 				variant={stocked ? 'filled' : 'outlined'}
 				style={{ marginRight: stocked ? 1 : 0, marginLeft: stocked ? 1 : 0 }}
 			/>
@@ -454,71 +507,64 @@ export const Rooftop: React.FC = () => {
 	}
 
 	function allInStock() {
-		setInStock([
-			...GIN,
-			...TEQUILA,
-			...VODKA,
-			...RUM,
-			...WHISKY,
-			...LIQUEUR,
-			...SYRUPJUICE,
-			...BITTER,
-			...MIXERS,
-			...OTHER,
-		]);
+		setInStock(Object.values(INGREDIENTS).map((ingredient) => ingredient.name));
 	}
 
 	function allOutOfStock() {
 		setInStock([]);
 	}
 
+	function ingredientChips(IngredientType: IngredientType) {
+		return sortIngredients(filterIngredientsByType(IngredientType)).map(IngredientChip);
+	}
+
 	return (
-		<RooftopContainer>
-			<Accordion style={{ position: 'fixed', width: '100%' }}>
+		<RooftopContainer theme={NinteenFortyTheme}>
+			<Accordion style={{ position: 'fixed', width: '100%', zIndex: 2 }}>
 				<AccordionSummary expandIcon={<ExpandMoreIcon />}>
-					<Typography>Ingredients List</Typography>
+					<Typography>Cocktail Ingredients</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<div style={{ display: 'flex', flexDirection: 'column' }}>
+					<div style={{ display: 'flex', flexDirection: 'column', maxHeight: 770, overflowY: 'scroll' }}>
 						<IngredientSection>
 							<IngredientTitle>Gin</IngredientTitle>
-							<IngredientChips>{GIN.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.GIN)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Tequila</IngredientTitle>
-							<IngredientChips>{TEQUILA.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.TEQUILA)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Vodka</IngredientTitle>
-							<IngredientChips>{VODKA.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.VODKA)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Rum</IngredientTitle>
-							<IngredientChips>{RUM.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.RUM)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Whisky</IngredientTitle>
-							<IngredientChips>{WHISKY.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.WHISKY)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Liqueur</IngredientTitle>
-							<IngredientChips>{LIQUEUR.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.LIQUEUR)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Syrup / Juice</IngredientTitle>
-							<IngredientChips>{SYRUPJUICE.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.SYRUPJUICE)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Bitters</IngredientTitle>
-							<IngredientChips>{BITTER.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.BITTER)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Mixers</IngredientTitle>
-							<IngredientChips>{MIXERS.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.MIXERS)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Other</IngredientTitle>
-							<IngredientChips>{OTHER.map(IngredientChip)}</IngredientChips>
+							<IngredientChips>{ingredientChips(IngredientType.OTHER)}</IngredientChips>
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Credit</IngredientTitle>
@@ -552,29 +598,35 @@ export const Rooftop: React.FC = () => {
 					);
 				})}
 			</div>
-			<Paper elevation={3} style={{ position: 'fixed', bottom: 8, padding: 4 }}>
-				<FormControlLabel
-					control={<Switch checked={showAll} onChange={(e) => setShowAll(e.target.checked)} color="primary" />}
-					label="Show All"
-					labelPlacement="start"
-				/>
-				{(showAll ? Object.keys(ALL_COCKTAILS) : availableCocktails).sort().map((cocktail) => {
-					const missingIngredients = ALL_COCKTAILS[cocktail].ingredients.filter(
-						(ingredient) => !inStock.includes(ingredient.name)
-					).length;
-					return (
-						<Chip
-							color={availableCocktails.includes(cocktail) ? 'primary' : 'error'}
-							key={cocktail}
-							label={missingIngredients > 0 ? `${cocktail} ${missingIngredients}` : cocktail}
-							onClick={() => {
-								handleMakingChange(cocktail);
-							}}
-							variant={makingCocktails.includes(cocktail) ? 'filled' : 'outlined'}
-						/>
-					);
-				})}
-			</Paper>
+			<div style={{ position: 'fixed', bottom: 8 }}>
+				<Fab color="secondary" style={{ marginBottom: 8 }} onClick={() => setDialogOpen(true)}>
+					<img src={NinteenFortyLogo} style={{ height: '60%', width: 'auto' }} />
+				</Fab>
+				<Paper elevation={3} style={{ padding: 4 }}>
+					<FormControlLabel
+						control={<Switch checked={showAll} onChange={(e) => setShowAll(e.target.checked)} color="primary" />}
+						label="Show All"
+						labelPlacement="start"
+					/>
+					{(showAll ? Object.keys(ALL_COCKTAILS) : availableCocktails).sort().map((cocktail) => {
+						const missingIngredients = ALL_COCKTAILS[cocktail].ingredients.filter(
+							(ingredient) => !inStock.includes(ingredient.ingredient.name)
+						).length;
+						return (
+							<Chip
+								color={availableCocktails.includes(cocktail) ? 'primary' : 'error'}
+								key={cocktail}
+								label={missingIngredients > 0 ? `${cocktail} ${missingIngredients}` : cocktail}
+								onClick={() => {
+									handleMakingChange(cocktail);
+								}}
+								variant={makingCocktails.includes(cocktail) ? 'filled' : 'outlined'}
+							/>
+						);
+					})}
+				</Paper>
+			</div>
+			<NinteenfortyDialog open={dialogOpen} handleClose={() => setDialogOpen(false)} />
 		</RooftopContainer>
 	);
 };
@@ -608,15 +660,15 @@ const Cocktail: React.FC<CocktailProps> = (props: CocktailProps) => {
 			{cocktail.ingredients.map((ingredient) => {
 				return (
 					<div
-						key={ingredient.name}
+						key={ingredient.ingredient.name}
 						style={{
 							display: 'flex',
 							justifyContent: 'space-between',
 							width: '100%',
-							background: !props.instock.includes(ingredient.name) ? '#ff000050' : '',
+							background: !props.instock.includes(ingredient.ingredient.name) ? '#ff000050' : '',
 						}}
 					>
-						<CocktailText>{ingredient.name}</CocktailText>
+						<CocktailText>{ingredient.ingredient.name}</CocktailText>
 						<CocktailText style={{ fontWeight: 'bold', marginLeft: '1rem' }}>
 							{typeof ingredient.amount === 'number' ? `${ingredient.amount}ml` : ingredient.amount}
 						</CocktailText>
@@ -640,3 +692,187 @@ const Cocktail: React.FC<CocktailProps> = (props: CocktailProps) => {
 		</CocktailContainer>
 	);
 };
+
+export interface DialogTitleProps {
+	children?: React.ReactNode;
+	onClose: () => void;
+}
+
+function BootstrapDialogTitle(props: DialogTitleProps) {
+	const { children, onClose, ...other } = props;
+
+	return (
+		<DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+			{children}
+			{onClose && (
+				<IconButton
+					aria-label="close"
+					onClick={onClose}
+					sx={{
+						position: 'absolute',
+						right: 8,
+						top: 8,
+						color: (theme) => theme.palette.grey[500],
+					}}
+				>
+					<CloseIcon />
+				</IconButton>
+			)}
+		</DialogTitle>
+	);
+}
+
+interface NinteenfortDialogProps {
+	handleClose: () => void;
+	open: boolean;
+}
+
+const CHECKLISTS: Record<string, string[]> = {
+	open: [
+		'Put cushions out',
+		'Get spirits from heritage store room',
+		'Get equipment',
+		'Open umbrellas',
+		'Get ice',
+		'Check stock',
+	],
+	close: [
+		'Collect and clean all glasses',
+		'Return all glasses',
+		'Put away all cushions',
+		'Bring umbrellas down',
+		'Put away all spirits',
+		'Wine save wines',
+		'Return Reds to heritage store room',
+	],
+};
+
+const REDS = [
+	'Red Claw Pinot Noir',
+	'Rymil Cabernet Sauvignon',
+	'Red Claw Shiraz',
+	'Heathcote Estate Shiraz',
+	'Terrazas Malbec',
+];
+
+const WHITES = ['Cloudy Bay Sauvignon Blanc', 'Red Clar Pinot Gris', 'Red Claw Chardonnay', 'Leo Buring Riesling'];
+
+const SPARKLING = ['Chandon', 'Chandon Rosé', 'Prosecco', 'Georg Jensen Pinot Noir Chardonnay'];
+
+const BEERS = [
+	'Heineken Zero',
+	'Heineken',
+	'Little Creatures Rogers',
+	'Pipsqueak Cider',
+	'James Squire Ginger Beer',
+	'Moon Dog Fizzer',
+];
+
+const EQUIPMENT = [
+	'2x Cocktail Shakers',
+	'2x Jiggers',
+	'Bar Spoon',
+	'Muddler',
+	'Boston Strainer',
+	'Chopping Board + Knife',
+	'Juicer',
+];
+function NinteenfortyDialog(props: NinteenfortDialogProps) {
+	const [checklist, setChecklist] = useState('open');
+	const reds = useState<string[]>([]);
+	const whites = useState<string[]>([]);
+	const sparkling = useState<string[]>([]);
+	const equipment = useState<string[]>([]);
+	const beers = useState<string[]>([]);
+
+	function handleStockChange(ingredient: string, state: [string[], React.Dispatch<React.SetStateAction<string[]>>]) {
+		const m_inStock = [...state[0]];
+		const index = state[0].indexOf(ingredient);
+
+		if (index !== -1) {
+			m_inStock.splice(index, 1);
+		} else {
+			m_inStock.push(ingredient);
+		}
+
+		state[1](m_inStock);
+	}
+
+	function CreateIngredientChips(
+		ingredients: string[],
+		state: [string[], React.Dispatch<React.SetStateAction<string[]>>]
+	) {
+		return ingredients.map((ingredient) => {
+			const stocked = state[0].includes(ingredient);
+			return (
+				<Chip
+					key={ingredient}
+					label={ingredient}
+					onClick={() => {
+						handleStockChange(ingredient, state);
+					}}
+					color="primary"
+					variant={stocked ? 'filled' : 'outlined'}
+					style={{ marginRight: stocked ? 1 : 0, marginLeft: stocked ? 1 : 0 }}
+				/>
+			);
+		});
+	}
+
+	return (
+		<Dialog open={props.open} onClose={props.handleClose}>
+			<BootstrapDialogTitle onClose={props.handleClose}>nineteenforty</BootstrapDialogTitle>
+			<DialogContent>
+				<div
+					style={{
+						display: 'flex',
+						flexDirection: 'column',
+						maxHeight: 300,
+						overflowY: 'scroll',
+						marginBottom: 16,
+						border: `2px solid ${NinteenFortyTheme.palette.primary.main}`,
+						borderRadius: 5,
+						padding: 8,
+						boxShadow:
+							'inset 0px 3px 5px -1px rgb(0 0 0 / 20%), inset  0px 6px 10px 0px rgb(0 0 0 / 14%), inset  0px 1px 18px 0px rgb(0 0 0 / 12%)',
+					}}
+				>
+					<IngredientSection>
+						<IngredientTitle>Reds</IngredientTitle>
+						<IngredientChips>{CreateIngredientChips(REDS, reds)}</IngredientChips>
+					</IngredientSection>
+					<IngredientSection>
+						<IngredientTitle>Whites</IngredientTitle>
+						<IngredientChips>{CreateIngredientChips(WHITES, whites)}</IngredientChips>
+					</IngredientSection>
+					<IngredientSection>
+						<IngredientTitle>Sparkling</IngredientTitle>
+						<IngredientChips>{CreateIngredientChips(SPARKLING, sparkling)}</IngredientChips>
+					</IngredientSection>
+					<IngredientSection>
+						<IngredientTitle>Beers</IngredientTitle>
+						<IngredientChips>{CreateIngredientChips(BEERS, beers)}</IngredientChips>
+					</IngredientSection>
+					<IngredientSection>
+						<IngredientTitle>Equipment</IngredientTitle>
+						<IngredientChips>{CreateIngredientChips(EQUIPMENT, equipment)}</IngredientChips>
+					</IngredientSection>
+				</div>
+				<ToggleButtonGroup
+					color="primary"
+					value={checklist}
+					exclusive
+					onChange={(_, newChecklist) => setChecklist(newChecklist)}
+				>
+					<ToggleButton value="open">Open</ToggleButton>
+					<ToggleButton value="close">Close</ToggleButton>
+				</ToggleButtonGroup>
+				<div>
+					{CHECKLISTS[checklist].map((instruction) => {
+						return <FormControlLabel control={<Checkbox />} label={instruction} />;
+					})}
+				</div>
+			</DialogContent>
+		</Dialog>
+	);
+}
