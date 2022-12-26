@@ -126,21 +126,87 @@ const INGREDIENTS = {
 	Sprite: { name: 'Sprite', type: IngredientType.MIXERS },
 };
 
-interface ICocktail {
-	name: string;
-	image: string;
-	ingredients: {
-		ingredient: Ingredient;
-		amount: string | number;
-	}[];
-	top?: string[];
-	garnishes?: string[];
-	extra?: string[];
-}
+const CHECKLISTS: Record<string, string[]> = {
+	open: [
+		'Get keys',
+		'Unlock back doors',
+		'Put cushions out',
+		'Put plants out',
+		'Open umbrellas',
+		'Get ice',
+		'Get spirits from heritage store room',
+		'Put chips/lollies bowl out',
+		'Get equipment',
+		'Check/Get stock',
+		'Temp checks',
+		'Cash on',
+		'PUMP THE TUNES',
+	],
+	close: [
+		'Collect and clean all glasses',
+		'Return all glasses',
+		'Put away all cushions',
+		'Bring umbrellas down',
+		'Bring plants back in',
+		'Put away all spirits',
+		'Chips/Lollies bowl back in',
+		'Wine save wines',
+		'Return Reds to heritage store room',
+		'Lock the doors',
+		'Lock the bar',
+		'Cash off',
+		'Return keys and iPad',
+	],
+};
 
-interface IAllCocktails {
-	[key: string]: ICocktail;
-}
+const REDS = [
+	'Red Claw Pinot Noir',
+	'Rymil Cabernet Sauvignon',
+	'Red Claw Shiraz',
+	'Heathcote Estate Shiraz',
+	'Terrazas Malbec',
+	'Minuty M Rosé',
+];
+
+const WHITES = [
+	'Cloudy Bay Sauvignon Blanc',
+	'Red Claw Pinot Gris',
+	'Red Claw Chardonnay',
+	'Leo Buring Riesling'
+];
+
+const SPARKLING = [
+	'Chandon',
+	'Chandon Rosé',
+	'Taylor Ferguson Prosecco',
+	'Georg Jensen Pinot Noir Chardonnay',
+	'Veuve Clicquot'
+];
+
+const BEERS = [
+	'Heineken Zero',
+	'Heineken',
+	'Little Creatures Rogers',
+	'Pipsqueak Cider',
+	'James Squire Ginger Beer',
+	'Moon Dog Fizzer',
+	'Brooklyn Lager',
+	'Koscuiuszko Pale Ale',
+];
+
+const EQUIPMENT = [
+	'2x Cocktail Shakers',
+	'2x Jiggers',
+	'Bar Spoon',
+	'Muddler',
+	'Boston Strainer',
+	'Chopping Board + Knife',
+	'Juicer',
+	'Double Strainer',
+	'Lemon/Lime/Jigger containers',
+	'Water Jugs',
+	'Used glass tray',
+];
 
 const ALL_COCKTAILS: IAllCocktails = {
 	'Aperol Spritz': {
@@ -382,6 +448,22 @@ const ALL_COCKTAILS: IAllCocktails = {
 		extra: ['Built'],
 	},
 };
+
+interface ICocktail {
+	name: string;
+	image: string;
+	ingredients: {
+		ingredient: Ingredient;
+		amount: string | number;
+	}[];
+	top?: string[];
+	garnishes?: string[];
+	extra?: string[];
+}
+
+interface IAllCocktails {
+	[key: string]: ICocktail;
+}
 
 // Hook
 function useLocalStorage<Type>(key: string, initialValue: Type) {
@@ -727,56 +809,6 @@ interface NinteenfortDialogProps {
 	open: boolean;
 }
 
-const CHECKLISTS: Record<string, string[]> = {
-	open: [
-		'Put cushions out',
-		'Get spirits from heritage store room',
-		'Get equipment',
-		'Open umbrellas',
-		'Get ice',
-		'Check stock',
-	],
-	close: [
-		'Collect and clean all glasses',
-		'Return all glasses',
-		'Put away all cushions',
-		'Bring umbrellas down',
-		'Put away all spirits',
-		'Wine save wines',
-		'Return Reds to heritage store room',
-	],
-};
-
-const REDS = [
-	'Red Claw Pinot Noir',
-	'Rymil Cabernet Sauvignon',
-	'Red Claw Shiraz',
-	'Heathcote Estate Shiraz',
-	'Terrazas Malbec',
-];
-
-const WHITES = ['Cloudy Bay Sauvignon Blanc', 'Red Clar Pinot Gris', 'Red Claw Chardonnay', 'Leo Buring Riesling'];
-
-const SPARKLING = ['Chandon', 'Chandon Rosé', 'Prosecco', 'Georg Jensen Pinot Noir Chardonnay'];
-
-const BEERS = [
-	'Heineken Zero',
-	'Heineken',
-	'Little Creatures Rogers',
-	'Pipsqueak Cider',
-	'James Squire Ginger Beer',
-	'Moon Dog Fizzer',
-];
-
-const EQUIPMENT = [
-	'2x Cocktail Shakers',
-	'2x Jiggers',
-	'Bar Spoon',
-	'Muddler',
-	'Boston Strainer',
-	'Chopping Board + Knife',
-	'Juicer',
-];
 function NinteenfortyDialog(props: NinteenfortDialogProps) {
 	const [checklist, setChecklist] = useState('open');
 	const reds = useState<string[]>([]);
