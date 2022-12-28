@@ -77,7 +77,7 @@ const INGREDIENTS = {
 	GreyGoose: { name: 'Grey Goose', type: IngredientType.VODKA },
 	Bacardi8: { name: 'Bacardi 8', type: IngredientType.RUM },
 	BacardiCartaBlanca: { name: 'Bacardi Carta Blanca', type: IngredientType.RUM },
-	BacardiOakheart: { name: 'Bacardi Oakheart', type: IngredientType.RUM },
+	BacardiOakheart: { name: 'Bacardi Spiced', type: IngredientType.RUM },
 	PureScot: { name: 'Pure Scot', type: IngredientType.WHISKY },
 	MakersMark: { name: "Maker's Mark", type: IngredientType.WHISKY },
 	DKTripleSec: { name: 'DK Triple Sec', type: IngredientType.LIQUEUR },
@@ -124,6 +124,15 @@ const INGREDIENTS = {
 	Strawberry: { name: 'Strawberry', type: IngredientType.GRANISHES },
 	LimeCordial: { name: 'Lime Cordial', type: IngredientType.MIXERS },
 	Sprite: { name: 'Sprite', type: IngredientType.MIXERS },
+	StarOfBombay: { name: 'Star of Bombay', type: IngredientType.GIN },
+	FourPillars: { name: 'Four Pillars', type: IngredientType.GIN },
+	MartinMillers: { name: "Martin Miller's", type: IngredientType.GIN },
+	MakersMark: { name: "Maker's Mark", type: IngredientType.WHISKY },
+	JackDaniels: { name: "Jack Daniel's", type: IngredientType.WHISKY },
+	JonnieWalker: { name: "Jonnie Walker", type: IngredientType.WHISKY },
+	Belveder: { name: 'Belveder', type: IngredientType.VODKA },
+	JimBeam: { name: 'Jim Beam', type: IngredientType.WHISKY },
+	Glenmorangie: { name: 'Glenmorangie', type: IngredientType.WHISKY },
 };
 
 const CHECKLISTS: Record<string, string[]> = {
@@ -140,9 +149,11 @@ const CHECKLISTS: Record<string, string[]> = {
 		'Check/Get stock',
 		'Temp checks',
 		'Cash on',
+		'Put the sign out',
 		'PUMP THE TUNES',
 	],
 	close: [
+		'Bring the sign in',
 		'Collect and clean all glasses',
 		'Return all glasses',
 		'Put away all cushions',
