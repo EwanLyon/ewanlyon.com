@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog')).filter(p => !p.data.draft).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout title="Blog | Ewan Lyon" description="Ewan Lyon's blog">
+  <main class="wrapper stack gap-8">
+    <Hero title="Blog" tagline="Where I write about anything and everything I'm working on." />
+    <ul>
+      {
+        posts.map((post) => {
+          const formattedDate = new Date(
+            post.data.publishDate
+          ).toLocaleDateString("en-AU", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          });
+          return (
+            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
+              <div class="title">
+                {post.data.externalUrl ? (
+                  <a
+                    href={post.data.externalUrl}
+                    target="_blank"
+                    class="unset
+                        transition-[background-size] duration-300
+                        bg-gradient-to-r bg-left-bottom bg-no-repeat
+                        bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
+                        from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
+                      "
+                  >
+                    <span>{post.data.title}</span>
+                    <span>
+                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+                    </span>
+                  </a>
+                ) : (
+                  <a
+                    href={`/blog/${post.slug}`}
+                    class="unset
+                        transition-[background-size] duration-300
+                        bg-gradient-to-r bg-left-bottom bg-no-repeat
+                        bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
+                        from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
+                      "
+                  >
+                    {post.data.title}
+                  </a>
+                )}
+              </div>
+              <div class="text-text-muted text-sm italic pt-1">
+                <time datetime={post.data.publishDate.toISOString()}>
+                  {formattedDate}
+                </time>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </main>
+</BaseLayout>
