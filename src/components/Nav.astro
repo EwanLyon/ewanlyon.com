@@ -183,8 +183,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
-		background-color: var(--gray-999);
-		border-bottom: 1px solid var(--gray-800);
+		background-color: #000;
 	}
 
 	.link {
@@ -205,7 +204,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		justify-content: space-between;
 		gap: 0.75rem;
 		padding: 1.5rem 2rem 1.5rem 1.5rem;
-		background-color: var(--gray-999);
+		background-color: #000;
 		border-radius: 0 0 0.75rem 0.75rem;
 		box-shadow: var(--shadow-lg);
 	}
@@ -262,17 +261,17 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			flex-direction: row;
 			font-size: var(--text-sm);
 			border-radius: 999rem;
-			border: 0;
+			border: 2px solid var(--accent-light);
 			padding: 0.5rem 0.5625rem;
-			background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
-			box-shadow: var(--shadow-md);
+			/* background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+			box-shadow: var(--shadow-md); */
 		}
 
 		.nav-items::before {
 			position: absolute;
 			inset: -1px;
 			content: '';
-			background: var(--gradient-stroke);
+			/* background: var(--gradient-stroke); */
 			border-radius: 999rem;
 			z-index: -1;
 		}
@@ -286,12 +285,14 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		.link:hover,
 		.link:focus {
 			color: var(--gray-100);
-			background-color: var(--accent-subtle-overlay);
+			background-color: var(--accent-dark);
+			/* outline: 2px solid var(--accent-dark); */
 		}
 
 		.link.active {
 			color: var(--accent-text-over);
-			background-color: var(--accent-regular);
+			/* background-color: var(--accent-regular); */
+			outline: 2px solid var(--accent-dark);
 		}
 
 		.menu-footer {

@@ -1,10 +1,14 @@
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import react from "@astrojs/react";
 
 // https://astro.build/config
-import tailwind from '@astrojs/tailwind';
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind()],
-	site: 'https://ewanlyon.com/',
+  integrations: [tailwind(), react()],
+  site: 'https://ewanlyon.com/',
+  output: "server",
+  adapter: netlify()
 });

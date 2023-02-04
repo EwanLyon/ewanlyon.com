@@ -36,13 +36,20 @@ const { Content } = await entry.render();
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 							</div>
 							<p class="description">{entry.data.description}</p>
-							{entry.data.updatedDate && <p>Updated: {new Date(entry.data.updatedDate).toLocaleString("en-AU", {
-								year: "numeric",
-								month: "short",
-								day: "numeric",
-								hour: "numeric",
-								minute: "2-digit"
-							  })}</p>}
+							{
+								entry.data.updatedDate && (
+									<p>
+										Updated:{' '}
+										{new Date(entry.data.updatedDate).toLocaleString('en-AU', {
+											year: 'numeric',
+											month: 'short',
+											day: 'numeric',
+											hour: 'numeric',
+											minute: '2-digit',
+										})}
+									</p>
+								)
+							}
 						</div>
 					</Hero>
 				</div>
@@ -66,10 +73,6 @@ const { Content } = await entry.render();
 		border-bottom: 1px solid var(--gray-800);
 	}
 
-	.back-link {
-		display: none;
-	}
-
 	.details {
 		display: flex;
 		flex-direction: column;
@@ -77,6 +80,15 @@ const { Content } = await entry.render();
 		gap: 1.5rem;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	.back-link {
+		display: none;
+	}
+
+	.back-link svg {
+		display: inline-block;
+		margin-right: 8px;
 	}
 
 	.tags {
@@ -137,14 +149,19 @@ const { Content } = await entry.render();
 		text-decoration-color: currentColor;
 	}
 
+	.content :global(ul) {
+		list-style: disc;
+		padding-inline-start: 40px;
+	}
+
 	@media (min-width: 50em) {
 		.back-link {
 			display: block;
 			align-self: flex-start;
 		}
 
-		.content :global(blockquote) {
-			font-size: var(--text-2xl);
+		.back-link :global(svg) {
+			display: inline-block;
 		}
 	}
 </style>
