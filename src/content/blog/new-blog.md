@@ -1,6 +1,6 @@
 ---
 title: Why a blog?
-publishDate: 2023-01-28 05:06:00
+publishDate: 2023-02-04 23:41:00
 description: |
   Aren't they a little... old fashioned?
 tags:
