@@ -12,13 +12,13 @@ Yes you may be right but over the past few years I've been going on little blogs
 
 That is the aim with this blog.
 
-#### Mindset
+## Mindset
 
 I am reminded of Nick Robinson's quote from "[The Mystery of MICHEALSOFT BINBOWS](https://youtu.be/yDzAAjzbV5g?t=1795)" in which he used a very small site from [Yoshinori Adachi](https://alf-s-room.com/) to discover the location of an old store which had turned into a meme.
 
 > "If there's something you like, if there's something that catches your eye or that you want to share or that you find fascinating... **just put it on the internet**"
 
-#### The siren's call of continual quality improvement
+## The siren's call of continual quality improvement
 
 But there is one caveat I'm giving myself with this blog. There is no quality bar. I am a perfectionist, which can be a good thing because I know anything that I produce I have mulled over time and time again to try and make it as best it can be with my knowledge at the time. But the downside is that any project not deemed to be perfect gets scrapped never to be seen by anyone.
 
@@ -28,7 +28,7 @@ I don't want to fall into that "trap", so anything I want to write, no matter ho
 
 Not to say continual quality improvement is always a bad thing, just not for a silly little blog.
 
-#### What to expect
+## What to expect
 
 I don't know, you tell me. I just wrote a whole section about trying to not have any sort of quality bar.
 
@@ -45,7 +45,7 @@ Well... I have some sort of an idea. My current work is in relation to web desig
 - Tutorials!
 - Bad tutorials!!!
 
-#### But why here?
+## But why here?
 
 Yeah I could make a blog on medium, dev.to, hell even blogger. But that would be too easy :)
 
