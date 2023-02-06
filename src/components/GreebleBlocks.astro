@@ -1,0 +1,52 @@
+---
+const numberOfBlocks = 10;
+---
+
+<div class="block-containers">
+	{
+		[...Array(numberOfBlocks).keys()].map((num) => {
+			return <div class="block" style={`animation-delay: ${num * 100}ms`} />;
+		})
+	}
+</div>
+
+<style>
+	.block-containers {
+		display: flex;
+		gap: 1rem;
+		margin: auto;
+	}
+
+	@keyframes flicker {
+		0% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.block {
+		background: var(--accent-dark);
+		height: 0.5rem;
+		width: 2rem;
+		border-radius: 999rem;
+		animation-name: flicker;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+	}
+
+	@media (min-width: 50em) {
+		.block-containers {
+			gap: 2rem;
+		}
+
+		.block {
+			background: var(--accent-dark);
+			width: 4rem;
+		}
+	}
+</style>

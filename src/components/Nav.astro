@@ -23,7 +23,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
+			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" />
 			Ewan Lyon
 		</a>
 		<menu-button>
@@ -45,9 +45,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 							class:list={[
 								'link',
 								{
-									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+									active: Astro.url.pathname === href || (href !== '/' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
@@ -144,29 +142,32 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		border-radius: 999rem;
 		padding: 0.5rem;
 		font-size: 1.5rem;
-		color: var(--gray-300);
-		background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
-		box-shadow: var(--shadow-md);
+		color: var(--accent-dark);
+		background: radial-gradient(var(--gray-999), var(--gray-999) 150%);
+		/* background: var(--gray-999); */
+		/* box-shadow: var(--shadow-md); */
+		border: 1px solid var(--accent-dark);
 	}
 
 	.menu-button[aria-expanded='true'] {
 		color: var(--gray-0);
-		background: linear-gradient(180deg, var(--gray-600), transparent),
-			radial-gradient(var(--gray-900), var(--gray-800) 150%);
+		/* background: linear-gradient(180deg, var(--gray-600), transparent),
+			radial-gradient(var(--gray-900), var(--gray-800) 150%); */
+		background: var(--accent-dark)
 	}
 
 	.menu-button[hidden] {
 		display: none;
 	}
 
-	.menu-button::before {
+	/* .menu-button::before {
 		position: absolute;
 		inset: -1px;
 		content: '';
 		background: var(--gradient-stroke);
 		border-radius: 999rem;
 		z-index: -1;
-	}
+	} */
 
 	#menu-content {
 		position: absolute;
@@ -183,7 +184,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
-		background-color: #000;
+		background-color: var(--gray-999);
 	}
 
 	.link {
@@ -204,9 +205,10 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		justify-content: space-between;
 		gap: 0.75rem;
 		padding: 1.5rem 2rem 1.5rem 1.5rem;
-		background-color: #000;
+		background-color: var(--gray-999);
 		border-radius: 0 0 0.75rem 0.75rem;
-		box-shadow: var(--shadow-lg);
+		/* box-shadow: var(--shadow-lg); */
+		border-bottom: 3px solid var(--accent-dark);
 	}
 
 	.socials {
@@ -240,8 +242,13 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			display: grid;
 			grid-template-columns: 1fr auto 1fr;
 			align-items: center;
-			padding: 2.5rem 5rem;
+			padding: 1rem 1.5rem;
 			gap: 1rem;
+			width: 80%;
+			margin: 2.7rem auto 5rem;
+			border-radius: 999rem;
+			border: 2px solid var(--accent-dark);
+			background-color: var(--gray-999);
 		}
 
 		.menu-header {
@@ -260,20 +267,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			position: relative;
 			flex-direction: row;
 			font-size: var(--text-sm);
-			border-radius: 999rem;
-			border: 2px solid var(--accent-light);
-			padding: 0.5rem 0.5625rem;
-			/* background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
-			box-shadow: var(--shadow-md); */
-		}
-
-		.nav-items::before {
-			position: absolute;
-			inset: -1px;
-			content: '';
-			/* background: var(--gradient-stroke); */
-			border-radius: 999rem;
-			z-index: -1;
+			padding: 0;
 		}
 
 		.link {
@@ -286,12 +280,10 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		.link:focus {
 			color: var(--gray-100);
 			background-color: var(--accent-dark);
-			/* outline: 2px solid var(--accent-dark); */
 		}
 
 		.link.active {
-			color: var(--accent-text-over);
-			/* background-color: var(--accent-regular); */
+			color: var(--nav-selected-color);
 			outline: 2px solid var(--accent-dark);
 		}
 
@@ -300,9 +292,10 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 
 			justify-self: flex-end;
 			align-items: center;
-			padding: 0;
 			background-color: transparent;
 			box-shadow: none;
+			padding: 0;
+			border: 0;
 		}
 
 		.socials {

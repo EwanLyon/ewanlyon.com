@@ -1,33 +1,34 @@
 ---
 import Icon from './Icon.astro';
-import {github, twitch, twitter, youtube} from '../settings';
+import { github, twitch, twitter, youtube } from '../settings';
 const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-	<div class="group">
-		<p>
-			Designed & Developed in Melbourne with <a href="https://astro.build/">Astro</a>
-			<Icon icon="rocket-launch" size="1.2em" />
-			and love
-			<Icon icon="heart" size="1.2em" />
+	<div class="footerContainer">
+		<div class="group">
+			<p>
+				Designed & Developed in Melbourne with <a href="https://astro.build/">Astro</a>
+				<Icon icon="rocket-launch" size="1.2em" />
+				and love
+				<Icon icon="heart" size="1.2em" />
+			</p>
+			<p>&copy; {currentYear} Ewan Lyon</p>
+		</div>
+		<p class="socials">
+			<a href={`https://twitter.com/${twitter}`}> Twitter</a>
+			<a href={`https://github.com/${github}`}> GitHub</a>
+			<a href={`https://www.youtube.com/${youtube}`}> YouTube</a>
+			<a href={`https://twitch.tv/${twitch}`}> Twitch</a>
 		</p>
-		<p>&copy; {currentYear} Ewan Lyon</p>
 	</div>
-	<p class="socials">
-		<a href={`https://twitter.com/${twitter}`}> Twitter</a>
-		<a href={`https://github.com/${github}`}> GitHub</a>
-		<a href={`https://www.youtube.com/${youtube}`}> YouTube</a>
-		<a href={`https://twitch.tv/${twitch}`}> Twitch</a>
-	</p>
 </footer>
 <style>
 	footer {
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
 		margin-top: auto;
-		padding: 3rem 2rem 3rem;
+		padding: 2rem 2rem 2rem;
 		text-align: center;
 		color: var(--gray-400);
 		font-size: var(--text-sm);
@@ -62,11 +63,22 @@ const currentYear = new Date().getFullYear();
 		flex-wrap: wrap;
 	}
 
+	.footerContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border-radius: 2rem;
+		border: 2px solid var(--accent-dark);
+		background-color: var(--gray-999);
+		padding: 1rem 0;
+		gap: 2rem;
+	}
+
 	@media (min-width: 50em) {
 		footer {
 			flex-direction: row;
-			justify-content: space-between;
-			padding: 2.5rem 5rem;
+			justify-content: center;
+			padding: 1.4rem 5rem;
 		}
 
 		.group {
@@ -77,6 +89,15 @@ const currentYear = new Date().getFullYear();
 
 		.socials {
 			justify-content: flex-end;
+		}
+
+		.footerContainer {
+			flex-direction: row;
+			width: 80%;
+			border-radius: 999rem;
+			border: 2px solid var(--accent-dark);
+			background-color: var(--gray-999);
+			padding: 1rem 2rem;
 		}
 	}
 </style>
