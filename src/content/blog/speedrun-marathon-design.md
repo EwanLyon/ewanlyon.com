@@ -242,7 +242,7 @@ The camera needs to be a size that is big enough to see but not big enough to st
 
 ### Pronouns
 
-![Graphic showing different versions of pronouns](/assets/blog/speedrun-marathon-design/pronouns-example.png)
+![Graphic showing different versions of pronouns](/assets/blog/speedrun-marathon-design/pronoun-examples.png)
 
 Requirement: **Recommended**
 
