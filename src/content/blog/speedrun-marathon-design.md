@@ -183,7 +183,7 @@ This tells the viewers what specifically is being run. This is crucial because y
 
 Acronyms should not be used unless the name is incredibly long. This is because people watching the event may not know what something like NMG (No Major Glitches) or GSR (Ganondorf Source Requirement). But when the category name is incredibly long and the space is limited you may choose the acronym.
 
-![An image of the speedrun category Ganondorf Source Requirement being changed to GSR](/assets/blog/speedrun-marathon-design/category-acryonym.png)
+![An image of the speedrun category Ganondorf Source Requirement being changed to GSR](/assets/blog/speedrun-marathon-design/category-acronym.png)
 <div align="center">An example of changing the category name due to no space at ASM 2020. The "(RACE)" could've also been omitted but oh well. <a target="_blank" href="https://www.youtube.com/watch?v=S86V8-omPdw">Link to run</a></div>
 
 ### Runner name
