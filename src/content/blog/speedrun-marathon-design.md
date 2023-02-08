@@ -1,7 +1,7 @@
 ---
 title: Speedrun Marathon Layout Design
 publishDate: 2023-02-06 08:56:00
-# updatedDate: 2023-02-08 08:56:00
+updatedDate: 2023-02-08 13:26:00
 description: |
   A big ol post about different speedrun marathon elements
 tags:
