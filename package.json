@@ -1,7 +1,7 @@
 {
-  "name": "@example/portfolio",
+  "name": "@ewanlyon/portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^2.0.2",
+    "@astrojs/sitemap": "^1.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@astrojs/vercel": "^3.0.1",
     "@emotion/react": "^11.10.5",
