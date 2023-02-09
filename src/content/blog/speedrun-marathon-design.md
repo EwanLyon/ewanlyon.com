@@ -114,9 +114,9 @@ Why should you be taking advice from me though? Because I've thought about this 
 My very first design I showed someone was in 2018. Looking back on it now I don't think it's the worst. A lot of negative space but 16:9 layouts are generally difficult because of how much space you have to fill.
 
 ![A speedrun design developed in 2018 for AusSpeedruns](/assets/blog/speedrun-marathon-design/first-design.jpg)
-<div align="center">My very first design</div>
+<div align="center">My very first concept</div>
 
-They rejected me but I talked to them in person at PAX 2019 and became the designer and developer for ASM2020. Since them I've designed 8 events over 3 years, continually improving and refining the layouts.
+They rejected me... but I talked to them in person at PAX 2019 and became the designer and developer for ASM2020. Since them I've designed 8 events over 3 years, continually improving and refining the layouts.
 
 ![A collage of speedrun layouts from ASM2019, ASM2020 and ASM2022](/assets/blog/speedrun-marathon-design/asm-lineage.png)
 <div align="center">ASM2019, ASM2020 (my first design), ASM2022 (latest ASM design)</div>
@@ -274,11 +274,19 @@ A <a target="_blank" href="https://en.wikipedia.org/wiki/News_ticker">ticker</a>
 
 #### Upcoming games
 
+As there is little room on the ticker, only incoude the game name and either the category or the runners name. Only do at max the next 3 runs since generally that'll be enough to fill the ticker.
+
 #### Call to Action (CTA)
+
+The call to action is where you put the donation link or website. For AusSpeedruns I include a bit about donation challenges as well and if the charity has a "X amount donated means Y", I will include those as well to show the impact we are having.
 
 #### Prizes
 
+Give the name of the prize and how much it costs to enter.
+
 #### Incentives
+
+Incentives or "donation challenges" (incentives sounds too artificial to me tbh) should be shown in the order that they are being finished. Don't show all the incentives as if you are doing a large event it will take a while to go through them.
 
 ### Game metadata
 
@@ -314,7 +322,7 @@ This is my favourite aspect ratio as the whole gameplay screen can fit inside a 
 
 ### DS / 3DS
 
-*Coming soon*
+These can be difficult to maintain the "gameplay as large as it can" mantra as the second screen takes up a lot of space. Add a camera element into the mix and you suddenly have a very very small area to put all the other information. I have omitted information deemed not crucial only leaving the pure run information in a tiny compressed box.
 
 ### GB / GBC
 
@@ -326,15 +334,36 @@ This is my favourite aspect ratio as the whole gameplay screen can fit inside a 
 
 ### Race/Co-op
 
-*Coming soon*
+Multiple screens are difficult to manage as you have to clearly show who is the speedrunner for each section while also maximising gameplay real estate. For 2 player games this is manageable as you can easily split the screen in half vertically and mirror the layouts. More gets tricky which we will jump into.
+
+#### Game audio indicators
+
+With multiple people gaming you should only be playing from one audio source at a given time. The runner whose audio should be playing should be the person in the lead, if its back and forth and neck and neck then try to keep changing it to a minimum to not disorient viewers.
+
+The graphics need to show whose audio is currently playing though. We complete this by having a little audio flag that animates in or out next to the runners name.
 
 #### 2 player
 
+As stated just before the easiest way to do 2 player layouts is to mirror the layouts vertically, giving each player a half of the screen. As resoltuions are even numbers though you will have to have a 2 pixel border in the middle.
+
+For 4:3 the size of the game for 2 runners actually perfectly fills the screen leaving plenty of room to spare for the run elements and cameras.
+
+For 16:9 there will be significant space left over. The way I've attempted to minimise the space left over is to make the top elements taller and put the commentator/host information in the bottom bar.
+
 #### 3 player
+
+Three player layouts are difficult as they are assymetric. Some versions I have seen looks like they run a 4 player layout but have the 4th player game screen be the camera spot or leave it blank. The difficulty comes when trying to show which runner is playing which game.
+
+For ASM 2022 and PAX 2021 I made little custom icons and troed to keep it in a clockwise fashion so that the person on the left was playing on the bottom left and person on the right was playing top right. The only odd one out is the person playing top left. I have been given feedback about adding more labels next to the runner in the empty space between the game and edge of the screen.
 
 #### 4 player
 
+I do have to note that I have not developed a graphic specifically for 4 players as of yet.
+
+For 4:3 the screen does split quite easily leaving a space in the middle for information.
+
 ## Changelog
 
+- 2023-02-09 Added info on: aspect ratios, ticker elements
 - 2023-02-08 Added info on: game, category, runner name, intermission screen, run estimate, amount raised and charity name, camera, pronouns, current time, ticker, game metadata
 - 2023-02-06 Initial post
