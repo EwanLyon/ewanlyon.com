@@ -167,23 +167,31 @@ const { Content } = await entry.render();
 		}
 	}
 
-	:global(h1) {
+	.content :global(h1) {
 		font-size: var(--text-4xl);
 	}
 
-	:global(h2) {
+	.content :global(h2) {
 		font-size: var(--text-3xl);
 	}
 
-	:global(h3) {
+	.content :global(h3) {
 		font-size: var(--text-2xl);
 	}
 
-	:global(h4) {
+	.content :global(h4) {
 		font-size: var(--text-xl);
 	}
 
-	:global(h5) {
+	.content :global(h5) {
 		font-size: var(--text-xl);
+	}
+
+	.content :global(table, th, td) {
+		border: 1px solid #ffffff69;
+	}
+
+	.content :global(td) {
+		padding: 4px;
 	}
 </style>

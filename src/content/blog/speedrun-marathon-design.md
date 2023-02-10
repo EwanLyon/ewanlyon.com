@@ -46,12 +46,14 @@ This is a continually updating post about speedrun marathon layout design. This 
     - [Console/Platform](#consoleplatform)
     - [Year of release](#year-of-release)
 - [Aspect Ratios](#aspect-ratios)
+  - [List of consoles and their aspect ratios / resolutions](#list-of-consoles-and-their-aspect-ratios--resolutions)
   - [16:9 / Widescreen](#169--widescreen)
   - [4:3 / Standard](#43--standard)
   - [DS / 3DS](#ds--3ds)
   - [GB / GBC](#gb--gbc)
   - [GBA](#gba)
   - [Race/Co-op](#raceco-op)
+    - [Game audio indicators](#game-audio-indicators)
     - [2 player](#2-player)
     - [3 player](#3-player)
     - [4 player](#4-player)
@@ -62,6 +64,8 @@ This is a continually updating post about speedrun marathon layout design. This 
 This may sound basic but it is important to remember what the goals are for a speedrun marathon when designing layouts. A speedrun marathon is an event where multiple people will speedrun multiple different games sequentially one after another. These events can be to raise money for charity or to have a community event where everyone gets together.
 
 ## Balance
+
+![A graphic showing a gradient between lots of detail and minimal detail](/assets/blog/speedrun-marathon-design/balance.png)
 
 The most difficult thing when it comes to speedrun marathon design is the balance between giving as much information as you can while also trying to not clutter and overload the layouts.
 
@@ -106,30 +110,35 @@ These are elements that require extra design and/or programming to implement.
 
 ## Who am I?
 
-Why should you be taking advice from me though? Because I've thought about this stuff for years and years. I've been interested in layouts since finding out about <a target="_blank" href="https://gamesdonequick.com/">Awesome Games Done Quick</a> in 2016.
+I currently work for AusSpeedruns working on both the layouts and now website and anything else to do with the more software side of tech. I've been developing the AusSpeedruns layouts since 2020 working on 8 events (so far!)
+
+![Me at the stream PC putting the final touches before we start ASM 2022](/assets/blog/speedrun-marathon-design/asm2022-irl.jpg)
+
+<div align="center">The start of ASM 2022. I was very nervous in this photo</div>
+
+I've been interested in layouts since finding out about <a target="_blank" href="https://gamesdonequick.com/">Awesome Games Done Quick</a> in 2016.
 
 ![An image of Barhunga playing Super Monkey Ball at AGDQ 2016 (https://www.youtube.com/watch?v=zywO7w49Fys)](/assets/blog/speedrun-marathon-design/agdq16.jpg)
-<div align="center"><p>My first love</p>Super Monkey Ball – Barhunga – <a target="_blank" href="https://www.youtube.com/watch?v=zywO7w49Fys">Link</a></div>
+
+<div align="center"><p>My first love. <a target="_blank" href="https://www.youtube.com/watch?v=zywO7w49Fys">Link to run</a></div>
 
 My very first design I showed someone was in 2018. Looking back on it now I don't think it's the worst. A lot of negative space but 16:9 layouts are generally difficult because of how much space you have to fill.
 
 ![A speedrun design developed in 2018 for AusSpeedruns](/assets/blog/speedrun-marathon-design/first-design.jpg)
+
 <div align="center">My very first concept</div>
 
 They rejected me... but I talked to them in person at PAX 2019 and became the designer and developer for ASM2020. Since them I've designed 8 events over 3 years, continually improving and refining the layouts.
 
 ![A collage of speedrun layouts from ASM2019, ASM2020 and ASM2022](/assets/blog/speedrun-marathon-design/asm-lineage.png)
+
 <div align="center">ASM2019, ASM2020 (my first design), ASM2022 (latest ASM design)</div>
 
 In designing these layouts I have looked at many events analysing what they do and where they place things.
 
 ![An image taken from PureRef showing a matrix of multiple marathons and their designs for different aspect ratios](/assets/blog/speedrun-marathon-design/all-marathons.jpg)
+
 <div align="center">Photo from one of my PureRef boards</div>
-
-I still currently work for AusSpeedruns working on both the layouts and now website and anything else to do with the more software side of tech.
-
-![Me at the stream PC putting the final touches before we start ASM 2022](/assets/blog/speedrun-marathon-design/asm2022-irl.jpg)
-<div align="center">I was very nervous in this photo</div>
 
 ## Basic rules
 
@@ -141,7 +150,7 @@ The gameplay screen should always be clear, you should never cover any of the ga
 
 - Numbers that change **need** to use a monospace font
 
-This should be a general rule but absolutely any number that will increment, decrement, whateverment itself needs to use a monospaced font so as to not cause changing element widths. Once you look out for elements that hold numbers you will see the changing widths. Numbers that will change the again, **need** a monospace font are: Timer, Donation total, Clock time.
+This should be a general rule for ALL graphics but absolutely any number that will increment, decrement, whateverment itself needs to use a monospaced font so as to not cause changing element widths. Once you look out for elements that hold numbers you will see the changing widths. Numbers that will change the again, **need** a monospace font are: Timer, Donation total, Clock time.
 
 ## Elements
 
@@ -155,9 +164,10 @@ This is the most crucial element of the whole layouts. Every other element is re
 
 Requirement: **Crucial**
 
-This is a *speedrun* marathon so of course we need a timer! The timer should be large and easily viewable at a glance. It needs seconds, minutes and hours.
+This is a _speedrun_ marathon so of course we need a timer! The timer should be large and easily viewable at a glance. It needs seconds, minutes and hours.
 
 ![ASM 2022 Timer reading 1:41:23.7](/assets/blog/speedrun-marathon-design/timer.png)
+
 <div align="center">ASM 2022 Timer. Font is <a target="_blank" href="https://youtu.be/RTB5XhjbgZA?t=276">Seamless</a></div>
 
 It is a good idea to omit the hours values when below an hour to remove useless information as it takes a whole hour for those digits to be useful. You shouldn't omit the minutes as it takes a much shorter amount of time to reach 10 minutes.
@@ -168,6 +178,8 @@ Milliseconds are not a required part of the timer but can be used as a bit of co
 
 ### Game name
 
+![Graphic showing different versions of the game name](/assets/blog/speedrun-marathon-design/gamename-examples.png)
+
 Requirement: **Crucial**
 
 This one should be pretty obvious why it's required.
@@ -177,6 +189,8 @@ Mario & Sonic at the Olympic Games Tokyo 2020"). This can be a challenge as we o
 
 ### Speedrun category
 
+![Graphic showing different versions of categories](/assets/blog/speedrun-marathon-design/category-examples.png)
+
 Requirement: **Crucial**
 
 This tells the viewers what specifically is being run. This is crucial because you need to know what type of run is being played and some categories can explain the rules (e.g. Glitchless).
@@ -184,9 +198,12 @@ This tells the viewers what specifically is being run. This is crucial because y
 Acronyms should not be used unless the name is incredibly long. This is because people watching the event may not know what something like NMG (No Major Glitches) or GSR (Ganondorf Source Requirement). But when the category name is incredibly long and the space is limited you may choose the acronym.
 
 ![An image of the speedrun category Ganondorf Source Requirement being changed to GSR](/assets/blog/speedrun-marathon-design/category-acronym.png)
+
 <div align="center">An example of changing the category name due to no space at ASM 2020. The "(RACE)" could've also been omitted but oh well. <a target="_blank" href="https://www.youtube.com/watch?v=S86V8-omPdw">Link to run</a></div>
 
 ### Runner name
+
+![Graphic showing different versions of runner names](/assets/blog/speedrun-marathon-design/runnername-examples.png)
 
 Requirement: **Crucial**
 
@@ -199,6 +216,7 @@ If there is space it would be nice to include the runner's social information as
 ### Intermission screen
 
 ![An image showing the ASM 2022 intermission and Clubwho dancing in the crowd cam](/assets/blog/speedrun-marathon-design/intermission-example.png)
+
 <div align="center">ASM 2022 and me having a dance. <a target="_blank" href="https://www.twitch.tv/ausspeedruns/clip/LuckyDirtyPheasantWOOP-KmnZnto7H0NjjaQM">Link to clip</a></div>
 
 Requirement: **Crucial**
@@ -228,11 +246,15 @@ The 10's of hours should be omitted as it is unneeded information, having a the 
 
 ### Amount raised so far & charity name
 
+![Graphic showing a version of a charity and amount raised graphic](/assets/blog/speedrun-marathon-design/charity-example.png)
+
 Requirement: **Crucial** (if doing a charity event)
 
 Pretty obvious but if you're raising money for charity you should have on screen who you are raising money for and how much you have currently raised.
 
 ### Camera
+
+![Graphic showing different sizes of cameras](/assets/blog/speedrun-marathon-design/cameras-example.png)
 
 Requirement: **Recommended**
 
@@ -252,11 +274,15 @@ The pronouns should be optional as well as some may not be comfortable putting t
 
 ### Current time at the location
 
+![Graphic showing an example of a time at current location](/assets/blog/speedrun-marathon-design/currenttime-example.png)
+
 Requirement: **Recommended**
 
-If an in-person event it allows a lot more context as to the reasons why an event might be quiet or have long runs (e.g. Night time).
+If an in-person event it allows a lot more context as to the reasons why an event might be quiet or have long runs (e.g. Night time). We put ours in the ticker next to the amount raised.
 
 ### Commentator/Host names
+
+![Graphic showing an examples of commentators and host names](/assets/blog/speedrun-marathon-design/commentators-example.png)
 
 Requirement: **Recommended**
 
@@ -274,7 +300,7 @@ A <a target="_blank" href="https://en.wikipedia.org/wiki/News_ticker">ticker</a>
 
 #### Upcoming games
 
-As there is little room on the ticker, only incoude the game name and either the category or the runners name. Only do at max the next 3 runs since generally that'll be enough to fill the ticker.
+As there is little room on the ticker, only include the game name and either the category or the runners name. Only do at max the next 3 runs since generally that'll be enough to fill the ticker.
 
 #### Call to Action (CTA)
 
@@ -308,9 +334,45 @@ It isn't at all necessary but according to this tweet it seems that people like 
 
 ## Aspect Ratios
 
-People like to speedrun games from all years on all different consoles. This leads to very interesting aspect ratios that games run at. It can get even more interesting when you add races or co-op games which require multiple screens into the mix.
+People like to speedrun games from all years on all different consoles. This leads to very interesting aspect ratios that games run at. It can get even more interesting when you add races or co-op games which require multiple screens into the mix. Images shown are of the AusSpeedruns layouts as of 2022.
+
+### List of consoles and their aspect ratios / resolutions
+
+If you're ever unsure about aspect ratio, the <a target="_blank" href="https://andrew.hedges.name/experiments/aspect_ratio/">Aspect Ratio Calculator (ARC)</a> has done wonders for me.
+
+| Console                    | Aspect Ratio                | Base Resolution                 |
+| -------------------------- | --------------------------- | ------------------------------- |
+| PC Widescreen              | 16:9                        | Multiple, typically 1920 x 1080 |
+| PC Standard                | 4:3                         | Multiple, typically 1440 x 1080 |
+| PlayStation 1              | 4:3                         | 640 x 480                       |
+| PlayStation 2              | 4:3                         | 640 x 480                       |
+| PlayStation 3              | 16:9                        | 1920 x 1080                     |
+| PlayStation 4              | 16:9                        | 1920 x 1080                     |
+| PlayStation 5              | 16:9                        | 1920 x 1080                     |
+| Nintendo NES               | 16:15 but to stretch to 4:3 | 256 x 240                       |
+| Nintendo SNES              | 8:7 but to stretch to 4:3   | Multiple, typically 256 x 224   |
+| Nintendo 64                | 4:3                         | 640 x 480                       |
+| Nintendo GameCube          | 4:3                         | 640 x 480                       |
+| Nintendo Wii               | 4:3                         | 854 x 480                       |
+| Nintendo WiiU              | 16:9                        | 1920 x 1080                     |
+| Nintendo Game Boy          | 10:9                        | 160 x 144                       |
+| Nintendo Game Boy Color    | 10:9                        | 160 x 144                       |
+| Nintendo Game Boy Advanced | 3:2                         | 240 x 160                       |
+| Nintendo DS                | 4:3, 4:3                    | 256 x 192, 256 x 192            |
+| Nintendo 3DS               | 5:3, 4:3                    | 400 x 240, 256 x 192            |
+| Nintendo Switch            | 16:9                        | 1920 x 1080                     |
+| Sega Master System         | 4:3                         | 256 x 192                       |
+| Sega Game Gear             | 10:9                        | 160 x 144                       |
+| Xbox                       | 4:3                         | 854 x 480                       |
+| Xbox 360                   | 16:9                        | 1920 x 1080                     |
+| Xbox One                   | 16:9                        | 1920 x 1080                     |
+| Xbox Series                | 16:9                        | 1920 x 1080                     |
+
+![Graphic showing the guide of the different sections for the following images](/assets/blog/speedrun-marathon-design/Layout-Guide.png)
 
 ### 16:9 / Widescreen
+
+![Graphic showing the size of the 16:9 resolution](/assets/blog/speedrun-marathon-design/Layout-Widescreen.png)
 
 This I find is the hardest aspect ratio to nail down. You need to shrink the gameplay screen down to allow for the marathon elements but you also need to maximise the gameplay screen. This immediately leaves you with a lot of room to fill in. The good news is that there is a lot of inspiration on Twitch as most people will stream 16:9 games (though a lot of people just have elements on top of the screen which I despise but oh well).
 
@@ -318,19 +380,28 @@ For my layouts the gamescreen is determined by how wide the camera box is. I've 
 
 ### 4:3 / Standard
 
+![Graphic showing the size of the 4:3 resolution](/assets/blog/speedrun-marathon-design/Layout-Standard.png)
+
 This is my favourite aspect ratio as the whole gameplay screen can fit inside a widescreen layout and have a lot of room for our elements.
 
 ### DS / 3DS
+
+![Graphic showing the size of the DS resolution](/assets/blog/speedrun-marathon-design/Layout-DS.png)
+![Graphic showing the size of the 3DS resolution](/assets/blog/speedrun-marathon-design/Layout-3DS.png)
 
 These can be difficult to maintain the "gameplay as large as it can" mantra as the second screen takes up a lot of space. Add a camera element into the mix and you suddenly have a very very small area to put all the other information. I have omitted information deemed not crucial only leaving the pure run information in a tiny compressed box.
 
 ### GB / GBC
 
-*Coming soon*
+![Graphic showing the size of the GB/GBC resolution](/assets/blog/speedrun-marathon-design/Layout-GameBoyColour.png)
+
+GameBoy and GameBoy Color are the same size which is fortunate. The aspect ratio does mean it leave a lot of space to fill in. I've decided to try and centre the gameplay and leave the right side for some random abstract designs.
 
 ### GBA
 
-*Coming soon*
+![Graphic showing the size of the GBA resolution](/assets/blog/speedrun-marathon-design/Layout-GBA.png)
+
+It is possible to have the GBA as the height of the available space however it does leave a thin space for information. It is thinner than ideal but reducing font size can help fit in the space.
 
 ### Race/Co-op
 
@@ -344,17 +415,26 @@ The graphics need to show whose audio is currently playing though. We complete t
 
 #### 2 player
 
-As stated just before the easiest way to do 2 player layouts is to mirror the layouts vertically, giving each player a half of the screen. As resoltuions are even numbers though you will have to have a 2 pixel border in the middle.
+As stated just before the easiest way to do 2 player layouts is to mirror the layouts vertically, giving each player a half of the screen. As resolutions are even numbers though you will have to have a 2 pixel border in the middle.
+
+![Graphic showing the size of the 4:3 2 player resolution](/assets/blog/speedrun-marathon-design/Layout-Standard2p.png)
 
 For 4:3 the size of the game for 2 runners actually perfectly fills the screen leaving plenty of room to spare for the run elements and cameras.
+
+![Graphic showing the size of the 16:9 2 player resolution](/assets/blog/speedrun-marathon-design/Layout-Widescreen2p.png)
 
 For 16:9 there will be significant space left over. The way I've attempted to minimise the space left over is to make the top elements taller and put the commentator/host information in the bottom bar.
 
 #### 3 player
 
-Three player layouts are difficult as they are assymetric. Some versions I have seen looks like they run a 4 player layout but have the 4th player game screen be the camera spot or leave it blank. The difficulty comes when trying to show which runner is playing which game.
+Three player layouts are difficult as they are asymmetric. Some versions I have seen looks like they run a 4 player layout but have the 4th player game screen be the camera spot or leave it blank. The difficulty comes when trying to show which runner is playing which game.
+
+![Graphic showing the size of the 16:9 3 player resolution](/assets/blog/speedrun-marathon-design/Layout-Widescreen3p.png)
 
 For ASM 2022 and PAX 2021 I made little custom icons and troed to keep it in a clockwise fashion so that the person on the left was playing on the bottom left and person on the right was playing top right. The only odd one out is the person playing top left. I have been given feedback about adding more labels next to the runner in the empty space between the game and edge of the screen.
+
+![Graphic showing a in use graphic at ASM 2022](/assets/blog/speedrun-marathon-design/widescreen3p-example.png)
+<div align="center">ASM 2022's 3 player graphics. <a target="_blank" href="https://www.youtube.com/watch?v=n2T9hbH89tY">Link to run</a></div>
 
 #### 4 player
 
@@ -364,6 +444,7 @@ For 4:3 the screen does split quite easily leaving a space in the middle for inf
 
 ## Changelog
 
+- 2023-02-10 Added more images, aspect ratio table
 - 2023-02-09 Added info on: aspect ratios, ticker elements
 - 2023-02-08 Added info on: game, category, runner name, intermission screen, run estimate, amount raised and charity name, camera, pronouns, current time, ticker, game metadata
 - 2023-02-06 Initial post
