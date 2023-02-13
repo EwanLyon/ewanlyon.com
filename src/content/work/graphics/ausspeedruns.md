@@ -16,6 +16,16 @@ tags:
 
 Over the year I am in charge of programming, designing and making decisions in relation to anything software related for [AusSpeedruns](https://ausspeedruns.com/). AusSpeedruns is a non-profit charity organisation that organises various speedrun marathons with conventions and also hosts it's own week long, non-stop, speedrun marathon creatively called the Australian Speedrun Marathon.
 
+### Production
+
+![Ewan doing the final few checks before starting ASM 2022](/assets/work/broadcast/ausspeedruns/asm2022-irl.jpg)
+
+I've worked with AusSpeedruns on both online and in-person events. Doing planning and setup for video, audio and all other equipment required.
+
+![Ewan during the setup of ASM 2022](/assets/work/broadcast/ausspeedruns/me-plugging-in.jpg)
+
+In 2021, 2 weeks before ASM 2021 was set to begin AusSpeedruns had to make the tough call to cancel the event and migrate to an online one. This meant that I was required to move our whole infrastructure online within 2 weeks which facilitated managing several AWS and Azure instances and developing remote control capabilities for OBS to allow for volunteers to manage the stream.
+
 ### Broadcast graphics
 
 ![Midg2000, Paladinight and LaceyStripes speedrunning Kingdom Hearts at ASM2022](/assets/work/broadcast/ausspeedruns/asm2022.png)
