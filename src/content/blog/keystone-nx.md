@@ -10,6 +10,8 @@ tags:
 draft: false
 ---
 
+**For a live implementation of this go to the [AusSpeedruns.com repo](https://github.com/ausspeedruns/ausspeedruns.com).**
+
 Keystone doesn't allow the changing of build folders. If it had this then it would mostly be as simple as changing the build repo and asking NX to then generate the package.json.
 
 However I developed a very simple and easy script that can be added to an NX monorepo as a library/executor.
