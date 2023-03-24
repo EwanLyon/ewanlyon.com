@@ -357,7 +357,7 @@ If you're ever unsure about aspect ratio, the <a target="_blank" href="https://a
 | Nintendo WiiU              | 16:9                        | 1920 x 1080                     |
 | Nintendo Game Boy          | 10:9                        | 160 x 144                       |
 | Nintendo Game Boy Color    | 10:9                        | 160 x 144                       |
-| Nintendo Game Boy Advanced | 3:2                         | 240 x 160                       |
+| Nintendo Game Boy Advance | 3:2                         | 240 x 160                       |
 | Nintendo DS                | 4:3, 4:3                    | 256 x 192, 256 x 192            |
 | Nintendo 3DS               | 5:3, 4:3                    | 400 x 240, 256 x 192            |
 | Nintendo Switch            | 16:9                        | 1920 x 1080                     |
