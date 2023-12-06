@@ -17,6 +17,8 @@ That is the aim with this blog.
 I am reminded of Nick Robinson's quote from "[The Mystery of MICHEALSOFT BINBOWS](https://youtu.be/yDzAAjzbV5g?t=1795)" in which he used a very small site from [Yoshinori Adachi](https://alf-s-room.com/) to discover the location of an old store which had turned into a meme.
 
 > "If there's something you like, if there's something that catches your eye or that you want to share or that you find fascinating... **just put it on the internet**"
+>
+> Nick Robinson
 
 ## The siren's call of continual quality improvement
 

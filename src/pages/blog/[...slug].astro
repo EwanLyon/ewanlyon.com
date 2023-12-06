@@ -1,6 +1,6 @@
 ---
 export const prerender = true;
-import { CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
@@ -24,7 +24,9 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-
+<head>
+	<meta name="keywords" content={entry.data.keywords?.join(", ")}>
+</head>
 <BaseLayout title={`${entry.data.title} | Ewan Lyon`} description={entry.data.description}>
 	<div class="stack gap-20">
 		<div class="stack gap-15">

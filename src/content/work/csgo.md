@@ -2,7 +2,7 @@
 title: CS:GO Graphics
 publishDate: 2021-01-30 00:00:00
 img: /assets/work/broadcast/csgo/Midround.jpg
-img_alt: An image of a custom CS:GO HUD
+img_alt: A custom CS:GO HUD
 description: |
   Project used to really push my abilities designing a graphics package
 tags:

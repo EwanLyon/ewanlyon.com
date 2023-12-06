@@ -22,6 +22,7 @@ export const collections = {
 			img_alt: z.string().optional(),
 			draft: z.boolean(),
 			externalUrl: z.string().optional(),
+			keywords: z.array(z.string()).optional(),
 		}),
 	})
 };
