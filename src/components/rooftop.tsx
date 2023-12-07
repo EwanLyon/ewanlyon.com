@@ -53,6 +53,8 @@ const NineteenFortyTheme = createTheme({
 	},
 });
 
+console.log(NineteenFortyTheme);
+
 enum IngredientType {
 	VODKA = 'VODKA',
 	RUM = 'RUM',
@@ -613,7 +615,7 @@ export const Rooftop: React.FC = () => {
 	}
 
 	return (
-		<RooftopContainer theme={NineteenFortyTheme}>
+		<>
 			<Accordion style={{ position: 'fixed', width: '100%', zIndex: 2 }}>
 				<AccordionSummary expandIcon={<ExpandMoreIcon />}>
 					<Typography>Cocktail Ingredients</Typography>
@@ -721,7 +723,7 @@ export const Rooftop: React.FC = () => {
 				</Paper>
 			</div>
 			<NineteenfortyDialog open={dialogOpen} handleClose={() => setDialogOpen(false)} />
-		</RooftopContainer>
+		</>
 	);
 };
 
