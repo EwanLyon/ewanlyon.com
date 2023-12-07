@@ -24,25 +24,25 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CloseIcon from '@mui/icons-material/Close';
 
-// import AperolSpritz from '../../assets/cocktails/Aperol Spritz.svg';
-// import Cosmopolitan from '../../assets/cocktails/Cosmopolitan.svg';
-// import EspressoMartini from '../../assets/cocktails/Espresso Martini.svg';
-// import LongIslandIcedTea from '../../assets/cocktails/Long Island Iced Tea.svg';
-// import TraditionalNegroni from '../../assets/cocktails/Traditional Negroni.svg';
-// import RaspberryCollins from '../../assets/cocktails/Raspberry Collins.svg';
-// // import TikiMandarine from '../../assets/cocktails/Tiki Mandarine.svg';
-// import PatronMargarita from '../../assets/cocktails/Patron Margarita.svg';
-// import WildStrawberryMojito from '../../assets/cocktails/Wild Strawberry Mojito.svg';
-// import CubanMojito from '../../assets/cocktails/Cuban Mojito.svg';
-// import PassionfruitMojito from '../../assets/cocktails/Passionfruit Mojito.svg';
-// import Zombie from '../../assets/cocktails/Zombie.svg';
-// import OldFashioned from '../../assets/cocktails/Old Fashioned.svg';
-// import AperolSpritz from '../../assets/cocktails/Aperol Spritz.svg';
-// import NinteenFortyLogo from '../../assets/NinteenfortyLogo.svg';
+import AperolSpritz from '../assets/cocktails/Aperol Spritz.svg';
+import Cosmopolitan from '../assets/cocktails/Cosmopolitan.svg';
+import EspressoMartini from '../assets/cocktails/Espresso Martini.svg';
+import LongIslandIcedTea from '../assets/cocktails/Long Island Iced Tea.svg';
+import TraditionalNegroni from '../assets/cocktails/Traditional Negroni.svg';
+import RaspberryCollins from '../assets/cocktails/Raspberry Collins.svg';
+// import TikiMandarine from '../assets/cocktails/Tiki Mandarine.svg';
+import PatronMargarita from '../assets/cocktails/Patron Margarita.svg';
+import WildStrawberryMojito from '../assets/cocktails/Wild Strawberry Mojito.svg';
+import CubanMojito from '../assets/cocktails/Cuban Mojito.svg';
+import PassionfruitMojito from '../assets/cocktails/Passionfruit Mojito.svg';
+import Zombie from '../assets/cocktails/Zombie.svg';
+import OldFashioned from '../assets/cocktails/Old Fashioned.svg';
+
+import NineteenFortyLogo from '../assets/cocktails/NinteenfortyLogo.svg';
 
 const RooftopContainer = styled(ThemeProvider)``;
 
-const NinteenFortyTheme = createTheme({
+const NineteenFortyTheme = createTheme({
 	palette: {
 		primary: {
 			main: '#1e4591',
@@ -223,7 +223,7 @@ const EQUIPMENT = [
 const ALL_COCKTAILS: IAllCocktails = {
 	'Aperol Spritz': {
 		name: 'Aperol Spritz',
-		image: '/assets/cocktails/Aperol Spritz.svg',
+		image: AperolSpritz.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.Aperol, amount: 60 },
 			{ ingredient: INGREDIENTS.Prosecco, amount: 60 },
@@ -235,7 +235,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	Cosmopolitan: {
 		name: 'Cosmopolitan',
-		image: '/assets/cocktails/Cosmopolitan.svg',
+		image: Cosmopolitan.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.GreyGoose, amount: 45 },
 			{ ingredient: INGREDIENTS.DKTripleSec, amount: 15 },
@@ -247,7 +247,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Espresso Martini': {
 		name: 'Espresso Martini',
-		image: '/assets/cocktails/Espresso Martini.svg',
+		image: EspressoMartini.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.FortyTwoBelow, amount: 40 },
 			{ ingredient: INGREDIENTS.DKCremeDeCafé, amount: 20 },
@@ -259,7 +259,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Long Island Iced Tea': {
 		name: 'Long Island Iced Tea',
-		image: '/assets/cocktails/Long Island Iced Tea.svg',
+		image: LongIslandIcedTea.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.FortyTwoBelow, amount: 15 },
 			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 15 },
@@ -275,7 +275,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Traditional Negroni': {
 		name: 'Traditional Negroni',
-		image: '/assets/cocktails/Traditional Negroni.svg',
+		image: TraditionalNegroni.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.BombaySapphire, amount: 30 },
 			{ ingredient: INGREDIENTS.MartiniBitter, amount: 30 },
@@ -287,7 +287,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Raspberry Collins': {
 		name: 'Raspberry Collins',
-		image: '/assets/cocktails/Raspberry Collins.svg',
+		image: RaspberryCollins.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.BombaySapphire, amount: 50 },
 			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
@@ -298,7 +298,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Patron Margarita': {
 		name: 'Patron Margarita',
-		image: '/assets/cocktails/Patron Margarita.svg',
+		image: PatronMargarita.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.PatronReposado, amount: 50 },
 			{ ingredient: INGREDIENTS.DKTripleSec, amount: 20 },
@@ -309,7 +309,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Wild Strawberry Mojito': {
 		name: 'Wild Strawberry Mojito',
-		image: '/assets/cocktails/Wild Strawberry Mojito.svg',
+		image: WildStrawberryMojito.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 30 },
 			{ ingredient: INGREDIENTS.DKWildStrawberry, amount: 30 },
@@ -323,7 +323,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Cuban Mojito': {
 		name: 'Cuban Mojito',
-		image: '/assets/cocktails/Cuban Mojito.svg',
+		image: CubanMojito.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 50 },
 			{ ingredient: INGREDIENTS.Lime, amount: '4 Wedges' },
@@ -336,7 +336,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Passionfruit Mojito': {
 		name: 'Passionfruit Mojito',
-		image: '/assets/cocktails/Passionfruit Mojito.svg',
+		image: PassionfruitMojito.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 50 },
 			{ ingredient: INGREDIENTS.MoninPassionfruitPuree, amount: 50 },
@@ -350,7 +350,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	Zombie: {
 		name: 'Zombie',
-		image: '/assets/cocktails/Zombie.svg',
+		image: Zombie.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.PineappleJuice, amount: 40 },
 			{ ingredient: INGREDIENTS.Bacardi8, amount: 20 },
@@ -365,7 +365,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Old Fashioned': {
 		name: 'Old Fashioned',
-		image: '/assets/cocktails/Old Fashioned.svg',
+		image: OldFashioned.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.PureScot, amount: 50 },
 			{ ingredient: INGREDIENTS.SugarSyrup, amount: 10 },
@@ -377,7 +377,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Raspberry Jam': {
 		name: 'Raspberry Jam',
-		image: '/assets/cocktails/Raspberry Collins.svg',
+		image: RaspberryCollins.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.BacardiCartaBlanca, amount: 45 },
 			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
@@ -389,7 +389,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Blackberry Jam': {
 		name: 'Blackberry Jam',
-		image: '/assets/cocktails/Raspberry Collins.svg',
+		image: RaspberryCollins.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.BombaySapphire, amount: 45 },
 			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
@@ -401,7 +401,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Apricot Jam': {
 		name: 'Apricot Jam',
-		image: '/assets/cocktails/Raspberry Collins.svg',
+		image: RaspberryCollins.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.FortyTwoBelow, amount: 45 },
 			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
@@ -413,7 +413,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Orange Marmalade Jam': {
 		name: 'Orange Marmalade Jam',
-		image: '/assets/cocktails/Raspberry Collins.svg',
+		image: RaspberryCollins.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.BombaySapphire, amount: 45 },
 			{ ingredient: INGREDIENTS.LemonJuice, amount: 30 },
@@ -426,7 +426,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Moscow Mule': {
 		name: 'Moscow Mule',
-		image: '/assets/cocktails/Old Fashioned.svg',
+		image: OldFashioned.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.FortyTwoBelow, amount: 45 },
 			{ ingredient: INGREDIENTS.Lime, amount: '4 Wedges' },
@@ -438,7 +438,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	Manhattan: {
 		name: 'Manhattan',
-		image: '/assets/cocktails/Old Fashioned.svg',
+		image: OldFashioned.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.MakersMark, amount: 45 },
 			{ ingredient: INGREDIENTS.MartiniRosso, amount: 30 },
@@ -450,7 +450,7 @@ const ALL_COCKTAILS: IAllCocktails = {
 	},
 	'Lemon Lime Bitters': {
 		name: 'Lemon Lime Bitters',
-		image: '/assets/cocktails/Cuban Mojito.svg',
+		image: CubanMojito.src,
 		ingredients: [
 			{ ingredient: INGREDIENTS.LimeCordial, amount: 'Around 1cm' },
 			{ ingredient: INGREDIENTS.AngosturaBitters, amount: '3–4 Dashes' },
@@ -539,7 +539,7 @@ export const Rooftop: React.FC = () => {
 	}, []);
 
 	const [inStock, setInStock] = useLocalStorage<string[]>('stock', []);
-	const [availableCocktails, setAvaialableCocktails] = useState<string[]>([]);
+	const [availableCocktails, setAvailableCocktails] = useState<string[]>([]);
 	const [makingCocktails, setMakingCocktails] = useState<string[]>([]);
 	const [showAll, setShowAll] = useState(false);
 	const [dialogOpen, setDialogOpen] = useState(false);
@@ -578,7 +578,7 @@ export const Rooftop: React.FC = () => {
 			}
 		});
 
-		setAvaialableCocktails(m_availableCocktails);
+		setAvailableCocktails(m_availableCocktails);
 	}, [inStock]);
 
 	function IngredientChip(ingredient: Ingredient) {
@@ -613,7 +613,7 @@ export const Rooftop: React.FC = () => {
 	}
 
 	return (
-		<RooftopContainer theme={NinteenFortyTheme}>
+		<RooftopContainer theme={NineteenFortyTheme}>
 			<Accordion style={{ position: 'fixed', width: '100%', zIndex: 2 }}>
 				<AccordionSummary expandIcon={<ExpandMoreIcon />}>
 					<Typography>Cocktail Ingredients</Typography>
@@ -662,7 +662,7 @@ export const Rooftop: React.FC = () => {
 						</IngredientSection>
 						<IngredientSection>
 							<IngredientTitle>Credit</IngredientTitle>
-							<span>Developed by Ewan Lyon for ninteenforty</span>
+							<span>Developed by Ewan Lyon for nineteenforty</span>
 						</IngredientSection>
 						<Button onClick={allInStock}>All in Stock</Button>
 						<Button onClick={allOutOfStock}>All Out of Stock</Button>
@@ -686,7 +686,7 @@ export const Rooftop: React.FC = () => {
 						<Cocktail
 							key={cocktail}
 							cocktail={cocktail}
-							instock={inStock}
+							inStock={inStock}
 							hidden={!makingCocktails.includes(cocktail)}
 						/>
 					);
@@ -694,7 +694,7 @@ export const Rooftop: React.FC = () => {
 			</div>
 			<div style={{ position: 'fixed', bottom: 8 }}>
 				<Fab color="secondary" style={{ marginBottom: 8 }} onClick={() => setDialogOpen(true)}>
-					<img src={'/assets/cocktails/NinteenfortyLogo.svg'} style={{ height: '60%', width: 'auto' }} />
+					<img src={NineteenFortyLogo.src} style={{ height: '60%', width: 'auto' }} />
 				</Fab>
 				<Paper elevation={3} style={{ padding: 4 }}>
 					<FormControlLabel
@@ -720,7 +720,7 @@ export const Rooftop: React.FC = () => {
 					})}
 				</Paper>
 			</div>
-			<NinteenfortyDialog open={dialogOpen} handleClose={() => setDialogOpen(false)} />
+			<NineteenfortyDialog open={dialogOpen} handleClose={() => setDialogOpen(false)} />
 		</RooftopContainer>
 	);
 };
@@ -741,7 +741,7 @@ const CocktailText = styled(Typography)``;
 
 interface CocktailProps {
 	cocktail: string;
-	instock: string[];
+	inStock: string[];
 	hidden?: boolean;
 }
 
@@ -759,7 +759,7 @@ const Cocktail: React.FC<CocktailProps> = (props: CocktailProps) => {
 							display: 'flex',
 							justifyContent: 'space-between',
 							width: '100%',
-							background: !props.instock.includes(ingredient.ingredient.name) ? '#ff000050' : '',
+							background: !props.inStock.includes(ingredient.ingredient.name) ? '#ff000050' : '',
 						}}
 					>
 						<CocktailText>{ingredient.ingredient.name}</CocktailText>
@@ -816,12 +816,12 @@ function BootstrapDialogTitle(props: DialogTitleProps) {
 	);
 }
 
-interface NinteenfortDialogProps {
+interface NineteenfortDialogProps {
 	handleClose: () => void;
 	open: boolean;
 }
 
-function NinteenfortyDialog(props: NinteenfortDialogProps) {
+function NineteenfortyDialog(props: NineteenfortDialogProps) {
 	const [checklist, setChecklist] = useState('open');
 	const reds = useState<string[]>([]);
 	const whites = useState<string[]>([]);
@@ -874,7 +874,7 @@ function NinteenfortyDialog(props: NinteenfortDialogProps) {
 						maxHeight: 300,
 						overflowY: 'scroll',
 						marginBottom: 16,
-						border: `2px solid ${NinteenFortyTheme.palette.primary.main}`,
+						border: `2px solid ${NineteenFortyTheme.palette.primary.main}`,
 						borderRadius: 5,
 						padding: 8,
 						boxShadow:

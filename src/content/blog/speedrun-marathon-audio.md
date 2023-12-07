@@ -64,7 +64,7 @@ That's 14 mixes, 13 inputs and 12 outputs.
 
 ## Our solution
 
-![Our X32 Rack on my desk](/assets/blog/speedrun-marathon-audio/X32.jpg)
+![Our X32 Rack on my desk](../../assets/blog/speedrun-marathon-audio/X32.jpg)
 
 The [Behringer X32 Rack Digital Mixer](https://www.behringer.com/product.html?modelCode=P0AWN).
 
@@ -74,7 +74,7 @@ We chose this over a full X32 or X32 Compact because we don't *need* physical fa
 
 The X32 is setup in a way so that the Main LR bus is the stream bus, Bus 1 and 2 are speakers and then buses 3 – 10 are runners and Bus 11 and 12 are Host. This leaves us with 4 left over buses for future expansion.
 
-![X32 Edit settings](/assets/blog/speedrun-marathon-audio/x32-edit.png)
+![X32 Edit settings](../../assets/blog/speedrun-marathon-audio/x32-edit.png)
 
 <div align="center">X32 Edit Settings</div>
 
@@ -84,9 +84,9 @@ The runner tablet (name still pending, I'm leaning towards the AusSpeedruns Scre
 
 This allows each runner to configure how loud or quiet they want their commentators, other runners and host. They do this through a tablet or laptop setup next to the runners, with a web interface that allows them to slide faders up and down. The names are filled in at the top to discern who is who
 
-![The Runner Tablet (or AusSpeedruns Screen)](/assets/blog/speedrun-marathon-audio/runner-tablet.png)
+![The Runner Tablet (or AusSpeedruns Screen)](../../assets/blog/speedrun-marathon-audio/runner-tablet.png)
 
-![The Runner Tablet in use](/assets/blog/speedrun-marathon-audio/tablet-in-use.jpg)
+![The Runner Tablet in use](../../assets/blog/speedrun-marathon-audio/tablet-in-use.jpg)
 
 <div align="center">Where we had the tablet/flip laptop at ASGX 2023. <a target="_blank" href="https://www.youtube.com/watch?v=hNS1t_EBnOM">Link to run</a></div>
 

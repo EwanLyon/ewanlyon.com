@@ -7,6 +7,8 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
+import CrossGrid from '../assets/backgrounds/cross-grid.svg';
+
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
@@ -34,7 +36,7 @@ const { title, description } = Astro.props;
 		<style>
 			:root {
 				--_placeholder-bg: linear-gradient(transparent, transparent);
-				--bg-image-main: url('/assets/backgrounds/cross-grid.svg');
+				--bg-image-main: url('/backgrounds/cross-grid.svg');
 				--bg-image-subtle-1: var(--_placeholder-bg);
 				--bg-image-subtle-2: var(--_placeholder-bg);
 				--bg-image-footer: var(--_placeholder-bg);
@@ -51,7 +53,7 @@ const { title, description } = Astro.props;
 			}
 
 			:root.theme-dark {
-				--bg-image-main: url('/assets/backgrounds/cross-grid.svg');
+				--bg-image-main: url('/backgrounds/cross-grid.svg');
 				--bg-svg-blend-mode: normal;
 				--bg-blend-mode: lighten;
 			}
@@ -59,10 +61,10 @@ const { title, description } = Astro.props;
 			/* These backgrounds are displayed below the fold, so we lazy load them
 			   once the `.loaded` class has been set.  */
 			:root.loaded {
-				--bg-image-footer: url('/assets/backgrounds/footer-bars.svg');
+				--bg-image-footer: url('/backgrounds/footer-bars.svg');
 			}
 			:root.loaded.theme-dark {
-				--bg-image-footer: url('/assets/backgrounds/footer-bars.svg');
+				--bg-image-footer: url('/backgrounds/footer-bars.svg');
 			}
 
 			@media (min-width: 50em) {
@@ -78,7 +80,7 @@ const { title, description } = Astro.props;
 				min-height: 100%;
 				isolation: isolate;
 				background:
-					/*noise*/ url('/assets/backgrounds/noise.png') top center/220px repeat,
+					/*noise*/ url('/backgrounds/noise.png') top center/220px repeat,
 					/*footer*/ var(--bg-image-footer) bottom center/var(--bg-footer-size) repeat-x,
 					/*header*/ var(--bg-image-main) top center/var(--bg-gradient-size) repeat-x,
 					/*base*/ var(--gray-999);
