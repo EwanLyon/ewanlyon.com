@@ -1,18 +1,22 @@
 ---
+import { Image } from 'astro:assets';
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+
+import BAMImage from '../assets/at-work.jpg';
 ---
 
 <BaseLayout title="About | Ewan Lyon" description="About Ewan Lyon">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero title="About" tagline="Thanks for stopping by. Read below to learn more about myself and my background.">
-				<img
+				<Image
 					width="1553"
 					height="873"
-					src="/assets/at-work.jpg"
+					src={BAMImage}
 					alt="Ewan Lyon working as the technical producer for Melbourne Melee at BAM12. 2022"
 				/>
 			</Hero>
