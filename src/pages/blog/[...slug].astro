@@ -26,6 +26,7 @@ const { Content } = await entry.render();
 ---
 <head>
 	<meta name="keywords" content={entry.data.keywords?.join(", ")}>
+	<meta charset="utf-8" />
 </head>
 <BaseLayout title={`${entry.data.title} | Ewan Lyon`} description={entry.data.description}>
 	<div class="stack gap-20">

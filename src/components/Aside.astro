@@ -1,0 +1,83 @@
+---
+import { AstroError } from "astro/errors";
+import Icon from "./Icon.astro";
+
+const asideVariants = ["note", "tip", "caution", "danger"] as const;
+const icons = { note: "information", tip: "rocket", caution: "warning", danger: "error" } as const;
+
+interface Props {
+	type?: (typeof asideVariants)[number];
+	title?: string;
+}
+
+let { type = "note", title } = Astro.props;
+
+if (!asideVariants.includes(type)) {
+	throw new AstroError(
+		"Invalid `type` prop passed to the `<Aside>` component.\n",
+		`Received: ${JSON.stringify(type)}\n` + `Expected one of ${asideVariants.map((i) => JSON.stringify(i)).join(", ")}`
+	);
+}
+---
+
+<aside aria-label={title} class={`starlight-aside starlight-aside--${type}`}>
+	<p class="starlight-aside__title" aria-hidden="true">
+		<Icon icon={icons[type]} class="starlight-aside__icon" />{title}
+	</p>
+	<section class="starlight-aside__content">
+		<slot />
+	</section>
+</aside>
+
+<style>
+	.starlight-aside {
+		padding: 1rem;
+		border-inline-start: 0.25rem solid var(--sl-color-asides-border);
+		color: white;
+	}
+	.starlight-aside--note {
+		--sl-color-asides-text-accent: rgb(135, 176, 249);
+		--sl-color-asides-border: rgb(135, 176, 249);
+		background-color: rgba(135, 176, 249, 0.1);
+	}
+	.starlight-aside--tip {
+		--sl-color-asides-text-accent: var(--sl-color-purple-high);
+		--sl-color-asides-border: var(--sl-color-purple);
+		background-color: var(--sl-color-purple-low);
+	}
+	.starlight-aside--caution {
+		--sl-color-asides-text-accent: rgb(250, 179, 135);
+		--sl-color-asides-border: rgb(250, 179, 135);
+		background-color: rgba(250, 179, 135, 0.1);
+	}
+	.starlight-aside--danger {
+		--sl-color-asides-text-accent: var(--sl-color-red-high);
+		--sl-color-asides-border: var(--sl-color-red);
+		background-color: var(--sl-color-red-low);
+	}
+
+	.starlight-aside__title {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: var(--sl-line-height-headings);
+		color: var(--sl-color-asides-text-accent);
+	}
+
+	.starlight-aside__icon {
+		font-size: 1.333em;
+		width: 1em;
+		height: 1em;
+		fill: var(--sl-color-asides-text-accent);
+	}
+
+	.starlight-aside__title + .starlight-aside__content {
+		margin-top: 0.5rem;
+	}
+
+	.starlight-aside__content a {
+		color: var(--sl-color-asides-text-accent);
+	}
+</style>

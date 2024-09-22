@@ -7,6 +7,7 @@ export interface Props {
 	color?: string;
 	gradient?: boolean;
 	size?: string;
+	class?: string;
 }
 
 const { color = 'currentcolor', gradient, icon, size } = Astro.props;
@@ -25,6 +26,7 @@ const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString
 	viewBox="0 0 256 256"
 	aria-hidden="true"
 	stroke={gradient ? `url(#${gradientId})` : color}
+	class={Astro.props.class}
 	{...attrs}
 >
 	<g set:html={iconPath} />
