@@ -17,6 +17,7 @@ keywords:
 I have never done something like this. I assume 0 people are going to read it but I think it'll be fun to look back on and see what I wrote. At the start of the year I wanted to write more and I just haven't. I've moved the goal posts a bunch of times with the current one being that my laptop is too slow (which it IS but like c'mon me. 2018 Microsoft Surface Book 2 btw, can barely start now. It took about 17 mins for the code tunnel to launch. Had to change folders as well to just the one containing the blog content. Currently writing this in notepad.).
 
 ![Concorde Box Front](../../assets/blog/concorde-lego/box-1.jpg)
+
 ![Concorde Box Back](../../assets/blog/concorde-lego/box-2.jpg)
 
 If you know me, you know I love Lego and I love Planes. When I first heard of the Concorde coming out as a Lego set I knew it I was gonna buy it instantly even though I am pretty much at capacity for Lego sets. I have just come off the back of building the Millennium Falcon which took about 5 months of on and off building. I have heard great things about the Concorde build and am eager to get started.
@@ -26,7 +27,9 @@ If you know me, you know I love Lego and I love Planes. When I first heard of th
 Cracking out the bags, one section is loose bags and the other is a box with the instructions, a few more bags and a mystery piece! Ooooooo, I presume they needed to alter the build but had already setup the production line so it's cheaper to do this. I am excited to see what will ultimately be a very mundane piece.
 
 ![Contents](../../assets/blog/concorde-lego/contents-1.jpg)
+
 ![All bags](../../assets/blog/concorde-lego/all-bags.jpg)
+
 ![Mystery bag](../../assets/blog/concorde-lego/mystery-bag.jpg)
 
 Bags:
@@ -70,6 +73,7 @@ It seems like we're building the trailing edge of the wing and fuselage first wh
 These little notes are what I missed from the Millennium Falcon build. Just little tid bits of information that would've been nice rather than having to guess or make it to the end of the process.
 
 ![Bag 1 Complete Front](../../assets/blog/concorde-lego/bag-1-done-1.jpg)
+
 ![Bag 1 Complete Back](../../assets/blog/concorde-lego/bag-1-done-2.jpg)
 
 Only 13 steps for the first bag??? It went by so quickly. I again had gotten used to doing a section for an hour or two and taking a break or leaving another bag for the next day. I feel like I could do 2 or 3 more right now! Let's keep going!
@@ -107,6 +111,7 @@ These are some weird looking pieces. on the left we have like a raised 1x2 round
 It gets removed!!!!!!! Now the gears can spin freely. I wonder if they encountered weird stuff in play testing.
 
 ![Bag 3 Done Front](../../assets/blog/concorde-lego/bag-3-done-1.jpg)
+
 ![Bag 3 Done Back](../../assets/blog/concorde-lego/bag-3-done-2.jpg)
 
 THEY MADE BUILDING STANDS?!?!?!?!? I can only imagine the amount of meetings the design team must've had with the business team to include large pieces that aren't included in the final build. Even though Lego would only be losing probably a couple extra cents per build for this I can imagine this making the build process so much better. I had heard this was one of the best build's of the year and so far it is not disappointing.
@@ -140,6 +145,7 @@ I see some printed pieces! Actually, come to think of it, there wasn't a sticker
 Not sure how I feel about the structural rigidity of this part. It is braced against the wall and the corner piece at the bottom but it's really just held in by the tiny post.
 
 ![Photo of snots](../../assets/blog/concorde-lego/20231127_220619.jpg)
+
 ![Photo of snots](../../assets/blog/concorde-lego/20231127_220826.jpg)
 
 This part is satisfying.
@@ -161,6 +167,7 @@ The curve of the delta wing is coming together quite nicely. Not a fan of the ga
 The shape of the wings really are coming together!
 
 ![Bag 6 done](../../assets/blog/concorde-lego/20231128_175000.jpg)
+
 ![Bag 6 done 2](../../assets/blog/concorde-lego/20231128_175005.jpg)
 
 **Bag 7**
@@ -182,6 +189,7 @@ Forgot to mention about these axles and how they're colour coded! So cute
 Well have I been through some fun. I finished the bag an noticed I had some small white "pins" (White Bar 2L with Stop Ring). I flicked back a few pages and found I forgot to add them to some round 1x1 bricks to secure them better. Too easy I thought. How wrong I was. The thing is the last step involves pushing in an axle to engage it with the landing gear system. That also completely locks the fuselage in place. Pulling apart the aircraft was a disaster and took a 3 second job into a 10 minute one. I only got one photo of the carnage but oh boy it was not fun to just place two small pins.
 
 ![Carnage](../../assets/blog/concorde-lego/20231128_181040.jpg)
+
 ![Carnage 2](../../assets/blog/concorde-lego/20231128_181043.jpg)
 
 ![Bag 7 done](../../assets/blog/concorde-lego/20231128_182007.jpg)
@@ -205,6 +213,7 @@ I'm loving these little stands to support the build rather than doing things sid
 The build is starting to get a bit unweildly and it's only gonna get bigger from here.
 
 ![Bag 8 done](../../assets/blog/concorde-lego/20231129_214713.jpg)
+
 ![Bag 8 done 2](../../assets/blog/concorde-lego/20231129_214718.jpg)
 
 ## Fourth Day: 2-12-23
@@ -218,6 +227,7 @@ I can already see a bunch of orange plates which means more building help! Also 
 This is a really interesting "clutch" mechanism. Using the friction between the round pins in this pin connector the axle can still spin but if one side is bound up it will overcome the friction and still let the other side move. Super simple with just a handful or parts as well.
 
 ![Clutch](../../assets/blog/concorde-lego/20231202_115746.jpg)
+
 ![Clutch inside](../../assets/blog/concorde-lego/20231202_115805.jpg)
 
 Update: They called it a clutch too!
@@ -245,6 +255,7 @@ Now it's starting to become unweildly.
 Looks like we're doing the cabin!
 
 ![Toilets](../../assets/blog/concorde-lego/20231202_130740.jpg)
+
 ![Toilets 2](../../assets/blog/concorde-lego/20231202_130809.jpg)
 
 The instruction booklet says that the passenger's flew at the edge of space. While 60,000ft is pretty much twice as high as a normal passenger jet, it's only 18.2 km up and space really starts at 100km. So unless 18.2% to space is considered the edge, it's a pretty big edge.
@@ -262,10 +273,13 @@ These long pins look so funny.
 So lego is so precise that I actually can't fit this in right now. Have to twist it in and hope I don't break anything
 
 ![Too tight!](../../assets/blog/concorde-lego/20231202_135834.jpg)
+
 ![Too tight 2!](../../assets/blog/concorde-lego/20231202_135837.jpg)
 
 ![Bag 12 done](../../assets/blog/concorde-lego/20231202_140208.jpg)
+
 ![Bag 12 done 2](../../assets/blog/concorde-lego/20231202_140239.jpg)
+
 ![Bag 12 done 3](../../assets/blog/concorde-lego/20231202_140243.jpg)
 
 **Bag 13**
@@ -275,7 +289,9 @@ So lego is so precise that I actually can't fit this in right now. Have to twist
 A very sleek piece of kit.
 
 ![Bag 13 done](../../assets/blog/concorde-lego/20231202_142323.jpg)
+
 ![Bag 13 done 2](../../assets/blog/concorde-lego/20231202_142327.jpg)
+
 ![Bag 13 done 3](../../assets/blog/concorde-lego/20231202_142341.jpg)
 
 ## Fifth day: 3-12-23
@@ -285,8 +301,11 @@ A very sleek piece of kit.
 ![Bag 14 knoll](../../assets/blog/concorde-lego/20231203_100005.jpg)
 
 ![Bag 14 done](../../assets/blog/concorde-lego/20231203_101239.jpg)
+
 ![Bag 14 done 2](../../assets/blog/concorde-lego/20231203_101242.jpg)
+
 ![Both engines on!](../../assets/blog/concorde-lego/20231203_101330.jpg)
+
 ![Both 14 done 3](../../assets/blog/concorde-lego/20231203_214728.jpg)
 
 **Bag 15**
@@ -294,6 +313,7 @@ A very sleek piece of kit.
 ![Bag 15 knoll](../../assets/blog/concorde-lego/20231203_215200.jpg)
 
 ![Bag 15 done](../../assets/blog/concorde-lego/20231203_220055.jpg)
+
 ![Bag 15 done 2](../../assets/blog/concorde-lego/20231203_220101.jpg)
 
 **Bag 16**
@@ -301,6 +321,7 @@ A very sleek piece of kit.
 Finally the "mystery" piece comes into action. (The instructions have told me what the piece is but I'm having fun ok)
 
 ![Bag 16 knoll](../../assets/blog/concorde-lego/20231203_220716.jpg)
+
 ![Mystery bag](../../assets/blog/concorde-lego/20231203_221547.jpg)
 
 Ooooooooh it's time!!!
@@ -330,8 +351,11 @@ Search: `concorde "droop nose"`
 Results: 14,400
 
 ![Bag 16 done](../../assets/blog/concorde-lego/20231203_221920.jpg)
+
 ![Bag 16 done 2](../../assets/blog/concorde-lego/20231203_222147.jpg)
+
 ![Bag 16 done 3](../../assets/blog/concorde-lego/20231203_222153.jpg)
+
 ![Bag 16 done 4](../../assets/blog/concorde-lego/20231203_222158.jpg)
 
 **Bag 17**
@@ -339,7 +363,9 @@ Results: 14,400
 ![Bag 17 knoll](../../assets/blog/concorde-lego/20231204_172901.jpg)
 
 ![Bag 17 done](../../assets/blog/concorde-lego/20231204_174333.jpg)
+
 ![Bag 17 done 2](../../assets/blog/concorde-lego/20231204_174333.jpg)
+
 ![Bag 17 done 3](../../assets/blog/concorde-lego/20231204_174350.jpg)
 
 ## Sixth day: 4-12-23
@@ -353,6 +379,7 @@ Hopefully I can finish it today.
 Love me a universal joint. Just so simple and clever.
 
 ![Bag 18 done](../../assets/blog/concorde-lego/20231204_174333.jpg)
+
 ![Bag 18 done 2](../../assets/blog/concorde-lego/20231204_174350.jpg)
 
 **Bag 19**
@@ -360,7 +387,9 @@ Love me a universal joint. Just so simple and clever.
 Damn this looks like quite a few parts for a bag. I've been spoilt with the other bags being so light on parts.
 
 ![Bag 19 knoll](../../assets/blog/concorde-lego/20231204_175637.jpg)
+
 ![Axle extraction instruction](../../assets/blog/concorde-lego/20231204_181340.jpg)
+
 ![Axle extraction start](../../assets/blog/concorde-lego/20231204_181331.jpg)
 
 I'm uhh... really sorry bud.
@@ -378,6 +407,7 @@ That tail is a lot longer than I thought! I was also having an issue with the no
 ![Bag 20 knoll](../../assets/blog/concorde-lego/20231204_212002.jpg)
 
 ![Bag 20 done](../../assets/blog/concorde-lego/20231204_213743.jpg)
+
 ![Bag 20 done 2](../../assets/blog/concorde-lego/20231204_213753.jpg)
 
 **Bag 21**
@@ -386,8 +416,8 @@ That tail is a lot longer than I thought! I was also having an issue with the no
 
 ## Completed!
 
-![Concorde done 1](../../assets/blog/concorde-lego/20231204_214114.jpg)
 ![Concorde done 2](../../assets/blog/concorde-lego/20231204_214729.jpg)
+
 ![Concorde done 3](../../assets/blog/concorde-lego/20231204_214732.jpg)
 
 It was quite an enjoyable build. I was seeing headlines and video thumbnails talking about how this was a really nice building experience and I have to agree with them. The inclusion of the amount of different stands and orange braces (in the same colour as the brick separator which was awesome) was really cool! It is surprisingly long and the place I had planned for it to be might not be suitable for it. I'll figure it out but its been a few days since I built it and we have it on our coffee table next to the Millennium Falcon. I look at it and am amazed by how beautiful and sleek it is. I've unsurprisingly been on a concorde video binge and everything I see about it people just love it so much. Though I imagine the people who lived under Heathrow weren't too pleased. I hope Boom Aerospace is successful because it would be pretty cool to travel supersonic.

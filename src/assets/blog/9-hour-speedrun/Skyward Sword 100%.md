@@ -1,0 +1,839 @@
+# Skyloft 1
+- :SshSpeechBubble: Talk to Horwell
+- :SshSpeechBubble: Meet Zelda
+- :SshSpeechBubble: Meet Groose
+- Practice Sword
+- Waterfall Caves
+	- :SshRupee: FIRST CHEST IN CAVE FOR 20 RUPEES
+	- :SshRupee: 40 Rupees in cave crawlspace
+- Wing Ceremony
+- Fi Escort
+- Goddess Sword + Tablet
+- Adventure Pouch from Fledge
+- Wooden Shield
+- Faron
+
+## Checkpoint
+| Item   | Amount |
+| ------ | ------ |
+| Rupees | 60     |
+| Hearts | 6      |
+
+# Faron 1
+- Deku Babas
+- Sealing Strike in Pit
+- Potion
+- :SshSpeechBubble: Impa Conversation
+- Gorko Bokoblin Fight
+- Faron Woods
+- Machi Bokoblin Fight
+- Knock vine loose
+- :SshSpeechBubble: Machi
+- Collect all Kikwi's
+- :SshSpeechBubble: Talk to Bucha for Slingshot
+- Push down log
+	- Get Amber Relic
+	- Get Amber Relic ledge under Bucha's platform or on path behind Bucha's platform
+- Farm 2 Hornets Nest
+	- Check for Amber Relic in Bushes on right
+- :SshGoddessCube: Cube warp
+- :SshGoddessCube: Goddess Cube in front of temple
+## Checkpoint
+| Item         | Amount |
+| ------------ | ------ |
+| Rupees       | 60     |
+| Hearts       | 6      |
+| Golden Skull | 0-1    |
+| Amber Relic  | 1-4    |
+
+# Skyview
+- Shoot crystal
+- Spin eyes
+	- Possible Amber Relic
+- Go in left room to hit switch
+- Go in right room to hit switch
+- Go to east room via higher door
+- Kill spider, Spin Sword
+- Go through locked door
+- Bonk pillar
+- Stalfos Fight
+	- Spin
+	- Slash
+	- Bash
+	- 2x Spin
+	- Bash
+	- 2x Spin
+	- Bash
+- Open chest for Beetle
+- Activate switch over western door with Beetle
+- Use Beetle to knock down crate
+- Kill Skulltula and spin sword to defeat triple eye guardians
+- Open chest for small key
+- Slingshot snipe to raise water level
+- Shoot caged crystal at top of statue in main circular room with slingshot
+- :SshHeartPiece: Get Heart Piece in cage
+- Enter eastern locked door
+- Drink Revitalizing Potion
+- Defeat Staldra
+- Fill bottle with Mushroom Spores
+- Spider skip (or use the Beetle)
+- Open gate with slingshot
+- Vine swinging fun
+- Get Golden Carving (boss key)
+- :SshRupee: Chest near boss door for 20 Rupees
+- Girahim 1
+	- Spin attack Stab
+	- 2x
+		- Slash
+		- Spin
+		- Spin stab
+	- 2x
+		- Slash
+		- Spin
+- :SshHeartContainer: Heart Container
+- :SshGoddessCube: Goddess Cube
+- Ruby Tablet
+## Checkpoint
+| Item         | Amount                  |
+| ------------ | ----------------------- |
+| Rupees       | 80                      |
+| Hearts       | 7.25                    |
+
+# Eldin 1
+- ✈ Fly to Skyloft
+- Place Ruby Tablet
+- ✈ Fly to Eldin
+- :SshGoddessCube: Goddess Cube near Entrance
+- :SshSpeechBubble: Mogma Conversation
+- Run through to bomb cavern
+	- :SshRupee: Slingshot ceiling for 20-30 Rupees
+- Blow up boulder
+- Slingshot to skip pyrup cutscene
+- Bomb throwing trick to drain lava
+- Get Heart Piece on ledge
+- Enter Mogma Turf with **fronthop**, use sailcloth
+- Bokoblin fight (pick up Golden Skull if one appears)
+- Digging Mitts
+	- :SshRupee: Dig up spot in corridor for RNG rupees and possible Eldin Ore
+- Leave cave via Maze
+- :SshGoddessCube: Goddess Cube across Lake
+- :SshSpeechBubble: Cutscene
+- Climb first slope
+	- :SshRupee: If *<120 Rupees* blow up rock to left after first slope and collect both rupees
+- Amber Relic Spawn near vines
+- :SshSpeechBubble: Just saying cutscene
+- Key pieces
+	- :SshRupee: Slingshot jewel above Earth Temple and pick up Red Rupee
+- **Autosave!**
+- :SshGoddessCube: Goddess Cube near tower
+- Eldin OoB trick
+	- https://cdn.discordapp.com/attachments/862800946424971285/1227703485823189082/SSHD-EldinOoB100-EarlyVentCycle.mp4?ex=66295ef8&is=6616e9f8&hm=e17e5268a396494fe8a8cc0bf97214135aa400adeefa9ea96a0ee104724a4232&
+	- Else go through Hot Cave and damage to 3-4 hearts
+- :SshGoddessCube: Goddess Cube on left path
+- :SshRupee: Run up and around and collect 10 Rupees on slide
+- Fourth Key
+- Fifth key piece (Damage with bomb)
+- Deathwarp 
+## Checkpoint
+| Item   | Amount |
+| ------ | ------ |
+| Rupees | 170    |
+| Hearts | 7.25   |
+
+# Earth Temple
+- Camera manip
+- Lower drawbridge
+- Skyward strike bomb
+- Bomb rolling
+- Dual Lizalfos Fight
+- Bomb Bag and 5 Bombs
+- Blow up Wall
+- Camera Manipulation
+- Open chest for Blue Bird Feather
+- Peg Skip
+- Seed refill in pot right of door to slopes
+- Stuttersprint up slopes
+- Boss Key
+	- Amber Relic spawn near chest
+- Fill Bomb Bag
+- Defat Scalera
+	- Use a bomb to knock Scaldera backwards.
+	- As Scaldera is climbing to its feet, place a bomb nearby on one side.
+	- Throw a third bomb into its mouth.
+	- Cycle 1
+		- Slash Scaldera's eye once.
+	- Let the placed bomb explode and knock Scaldera backwards.
+	- Throw a fourth bomb into Scaldera's mouth
+	- Charge a Skyward Strike.
+	- Cycle 2
+		- Two Skyward Strikes
+		- Spin attack.
+	- Run away from Scaldera while it gathers itself. This should cause it to immediately start its fireball attack.
+	- Run back down and throw a fifth bomb into Scaldera's mouth
+	- Charge a Skyward Strike.
+	- Cycle 3
+		- Skyward Strike
+		- Spin attack
+		- Final Skyward Strike (Double strike)
+- :SshHeartContainer: Heart Container
+- Strike Crest for Amber Tablet
+# Skyloft 2
+- Fly to Skyloft
+- Place Amber Tablet
+- :SshSpeechBubble: Talk to Wryna
+- :SshSpeechBubble: Talk to Potion Lady for Empty Bottle
+- :SshSpeechBubble: Talk to Peatrice
+- Go to Peatrice's house
+	- :SshSleepToNight: Sleep to Night
+	- :SshSpeechBubble: Talk to Peater
+- Go to graveyard and open shed
+	- :SshSpeechBubble: Talk to Batreaux to start gratitude crystals
+- :SshSleepToDay: Sleep to Day in Wryna's house
+	- :SshSpeechBubble: :SshGratitudeCrystal: Talk to Wryna for crystals *(5)*
+- :SshSpeechBubble: Talk to Peatrice in Bazaar
+- Enter Beedle's shop *(270 Rupees)*
+	- *50 Bug Net*
+	- *100 Extra Wallet*
+	- *100 Extra Wallet?*
+	- Buy Net
+	- Buy Extra Wallet
+	- :SshSleepToDay: Sleep to Day
+	- Buy Extra Wallet
+- :SshGratitudeCrystal: Fly and rescue Orielle *(10)*
+- Dive to Lanayru Pillar
+# Lanayru Mines
+- :SshGoddessCube: Goddess cube behind starting platform
+- Push minecart
+- Slingshot timeshift stone, get flowers
+- Pull and ride minecart
+- Bomb statue
+- Brakeslide to cross quicksand
+- Bomb rock on minecart track
+- *If no Golden Skull*
+	- Roll bomb to uncover timeshift stone
+	- Brakeslide to it
+	- Drop bomb to activate timeshift stone
+	- Open chest for Rare Treasure
+- *If Golden Skull*
+	- Roll bomb to uncover timeshift stone
+	- Slingshot stone
+- Ride minecart
+# Lanayru Desert
+- Bomb rock blocking timeshift stone
+- Grab 2 tumbleweeds on the way to hook beetle area
+- :SshGoddessCube: Goddess cube near hook beetle fight
+- Open chest for Tumbleweed
+- Dual Technoblin fight
+- Hook Beetle
+- Brakeslide to reach fire node
+- Grab 2 tumbleweeds on the way to fire node
+- Enter Fire node
+- Bomb refill
+- Bomb to uncover timeshift stone then brakeslide across
+- :SshRupee: **Slingshot seed refill + RNG Rupees in barrels**
+- Activate Fire node
+- Open chest on ledge for Eldin Ore
+- Grab 4 tumbleweeds to lightning node
+- Bomb Lightning Node Room
+- Activate Lightning Node
+- *If no Golden Skull*
+	- Activate timeshift stone
+	- Open chest
+- Grab 1 tumbleweed after lightning node
+- :SshSpeechBubble: 5 Beacons
+- Bomb rocks around timeshift stone
+- Activate Water Node
+- Activate Main Generator
+- Enter LMF
+# LMF
+- Hook beetle to knock down statue
+- Pull lever to open door
+- :SshRupee: *If no RNG rupee from Fire Node*
+	- Blue rupee near lever
+- Small key in chest hub room
+- Bomb refill in barrel
+- Backtrack room
+- Go through locked door
+- Beetle-Bomb trick to break crate
+- Slingshot snipe timeshift stone
+- Pull lever behind Beamos
+- Gust Bellows
+	- Get seed refill on path
+- *If no Golden Skull*
+	- Open large chest
+- Deathwarp with spikes
+- Use gust bellows to move block
+- :SshRupee: **Defeat Staldra and pick up red rupee**
+- Cross sinksand and activate timeshift stone
+- Gust bellows to cross platforms
+- Enter map room
+- Activate timeshift stone
+- Defeat Armos
+- Crawling through vents
+- Hit hidden floor switch
+- Autosave at statue
+- Minecart skip
+- Hit timeshift stone in boss key room
+- Beetle-bomb switches through statues
+- Bomb refill in barrel
+- Open chest for Ancient Circuit
+- Deathwarp
+- Defeat Moldarach
+- Get Heart Container
+- Goddess Harp
+# Imprisoned 1
+- Farm Ancient Flowers until 3
+- :SshGoddessCube: Goddess Cube on minecart ride
+- **Fly to Faron from Desert Gorge statue**
+- Land in Faron for Grooseland cutscene
+- Ballad of the Goddess
+- Imprisoned 1
+# Skyloft 3
+- Warp to Sky
+- Lumpy Pumpkin
+	- :SshGoddessChest: Goddess Chest on roof
+	- :SshGoddessChest: Goddess chest on right side
+	- Gossip stone for Monster Claw
+	- Bonk down chandelier
+	- :SshSpeechBubble: Talk to Pumm for soup
+	- :SshRupee: Collect blue rupee
+- Fly to Skyloft *(Bazaar landing)*
+- Enter Bazaar *(350 Rupees)*
+	- *50 Quick Beetle
+	- *300 Adventure Pouch*
+	- Upgrade Beetle
+	- :SshSpeechBubble: Talk to Peatrice
+- Enter Academy via upper doors
+	- :SshSpeechBubble: Talk to Geapora
+	- :SshSleepToNight: Sleep to night
+	- :SshGratitudeCrystal: Single crystal in Link's room *(11)*
+	- :SshGratitudeCrystal: Single crystal in plant upstairs *(12)*
+- Leave Academy, Enter Sparring Hall
+	- :SshGratitudeCrystal: Single crystal *(13)*
+	- :SshSpeechBubble: Pumpkin soup
+- :SshGratitudeCrystal: Collect single crystals on west cliff and wooden planks *(15)*
+- :SshGratitudeCrystal: Crystal on light house *(16)*
+- Enter Orielle and Parrow's house
+	- :SshSpeechBubble: :SshGratitudeCrystal: Get Empty Bottle and quest crystals from Parrow *(21)*
+	- :SshGratitudeCrystal: Get single crystal *(22)*
+	- :SshSleepToDay: Sleep to Day
+- Shoot Beedle's bell
+- Turn windmill
+- Enter Beedle's shop
+	- Buy Pouch slot *(300 rupees)*
+- Trigger windmill cutscene
+- :SshGratitudeCrystal: Clean Mallara's house *(27)*
+# Thunderhead
+- Enter Bazaar and repair Scrapper
+	- :SshSpeechBubble: Talk to Peatrice
+- Fly to Eldin
+- :SshGoddessCube: Goddess Cube on ledge
+- Activate gossip stone for Eldin ore
+- Windmill propeller
+- Warp to sky
+- Turn second windmill
+- Ballad of the Goddess on Light Tower
+- Thunderhead
+- Entrance Puzzle*
+- Farore's Courage
+# Faron Silent Realm
+- Warp to Eldin and Back
+- Farore's Silent Realm for Water Dragon's Scale
+# Skyview 2
+- Warp to sky and land at Forest Temple
+- Enter Skyview Temple
+- Activate Goddess Wall with harp
+- Run through main room to eastern room
+- :SshSpeechBubble: Second Mogma conversation
+- Small key from dig spot
+- Run through circular room
+- Skyward strike the Bokoblin Archers
+- Defeat triple Stalfos
+- Bomb refill in jar
+- **Fill 2 bottles with normal water**
+- Sacred Water
+- Deathwarp
+- Warp to sky
+# Ancient Cistern
+- Fly to Faron *(In the Woods)*
+- Fence method for Early Lake Floria
+- Activate gossip stone for monster claw
+- Heal Water Dragon
+- Enter Ancient Cistern
+- Combination Lock (UDLR)
+- Flip lilypad in next room
+- Break boards in water
+- Open chest for small key
+- Back to main room and enter statue
+- Defeat Stalmaster
+- Open chest for whip
+- Go back to main room (whip switches on the way, deathwarp is slower)
+- :SshRupee: Silver rupee in left hand
+- Pull lever to close off waterfall
+- Whirlpool room
+- Use Beetle to drop spider on lilypad **(DO NOT AUTOSAVE)**
+- Small key from Bokoblin with whip
+- Open gate to main room **(DO NOT AUTOSAVE)**
+- Autosave moving towards entrance bird statue from left, against wall
+- Die, Quit at Prompt, Start Autosave, Deathwarp
+- AC clip and OoB movement to rope
+- Open chest for Blessed Idol
+- Enter and climb statue
+- Open boss door
+- Raise the statue
+- Defeat Koloktos
+- Get Heart Container
+- Strike crest for Farore's Flame and Goddess Long Sword
+# Nayru's Wisdom
+- Warp to sky
+- Talk to Dodoh on Fun Fun Island
+- Land at Desert Entrance in Lanayru
+- Activate timeshift stone, climb vines, ancient flower
+- Warp to sky
+- Fly to Isle of Songs
+- Nayru's Wisdom
+- Warp back to Lanayru
+- Pick up party wheel
+- Run to North Desert and farm tumbleweeds if not at 11
+# Lanayru Silent Realm
+- Lanayru Silent Realm
+	- Get on path dusk relics (2)
+# Lanayru Sand Sea
+- :SshGoddessCube: Heart Piece and Goddess Cube in North Desert
+- :SshGoddessCube: Oasis Cube from cliff into quicksand
+- Autosave at West Desert statue
+- Enter Caves
+- Activate gossip stone for evil crystal
+- :SshSpeechBubble: Talk to Golo for small key
+- Go through locked door to Sand Sea
+- Hit timeshift stone on boat
+- Sail to Skipper's Retreat
+- Deku Baba skip with clawshots
+- Ancient Sea Chart
+- :SshGoddessCube: Goddess cube on pillar near Moblin
+- Sail to Shipyard
+- Defeat Moldarach 2 *(stun claws with clawshots)*
+- :SshHeartPiece: Rickety Coaster minigame for Heart Piece
+- Sail to Pirate Stronghold
+- :SshRupee: Three Silver Rupees in Sharkhead nose with Beetle
+- Open second and third chests in stronghold for potential Evil Crystal
+- Bomb refill at the end of stronghold
+- Farm ancient flowers in 2 corners of entrance room, reload to farm to 5 ancient flowers
+- :SshGoddessCube: Get goddess cube atop upper platform
+- Activate Fi trigger for sails
+- Warp out with Amiibo, fly to Triple Island in Southwest Sky
+- :SshGoddessChest: Open top goddess chest (small seed satchel)
+- :SshGoddessChest: Open caged goddess chest (potion medal)
+- :SshGoddessChest: Open bottom goddess chest (life medal)
+- :SshGratitudeCrystal: Deliver Party wheel *(32)*
+- :SshRupee: Dodoh's High Dive minigame for 500 rupees and Heart Piece
+- Land at Ancient Harbor
+- Enter Sandship
+# Sandship
+- *If < 3 Jelly Blobs*
+	- Farm aracha in hallway
+- Damage to 1-2 hearts on spike wall (no save)
+- Small key *(DUDR)*
+- Deathwarp via bombs
+- Defeat Scervo for Bow
+- Mast sequence (use any arrows needed)
+- :SshHeartPiece: Sandship Heart Piece
+- Refill arrows with barrels
+- Lower Lifeboat
+- Go inside, use lifeboat to hit timeshift stone
+- Activate both power generators (take damage to 2 hearts from spikes/technoblins)
+- Go to engine room
+- *If not at 4 evil crystals*
+	- After first set of pistons
+	- Whip to ladder
+	- Open 1, 3, 5 chests
+- Deathwarp
+- Shoot timeshift stone to present
+- Refill arrows with barrels
+- Enter captain's cabin
+- Shoot timeshift stone (to past)
+- Open chest for Squid Carving
+- Exit captain's cabin and drop to lifeboat
+- Open boss door
+- Escape the ship
+- Defeat Tentalus
+- :SshHeartContainer: Get Heart Container
+- Strike crest for Nayru's Flame and Goddess White Sword
+
+*Checkpoint: 800 Rupees*
+# Din's Power
+- :SshGoddessCube: Goddess cube in Ancient Harbor
+- Warp to Sky
+- Fly to Skyloft (Plaza)
+- Enter Beedle's shop *(800 Rupees)*
+	- *800 Rupees*
+- Buy life medal
+- :SshSleepToDay: Sleep
+- Enter Bazaar
+- :SshSpeechBubble: Talk to Peatrice
+- Fly to Eldin *(Volcano Ascent)*
+- Warp to sky
+- Fly to Isle of Songs
+- Din's Power
+- Warp to Eldin
+# Din's Silent Realm
+- Din's Silent Realm
+# Enter Fire Sanctuary
+- Blow up rocks blocking air vent (take damage if needed)
+- Enter Volcano Summit
+- Goddess Cube dowsing
+- Water both frogs
+- Fly to Faron *(Floria Waterfall)* using Inside the Volcano statue
+- :SshRupee: Get freestanding Gold Rupee with Hook Beetle
+- :SshGoddessCube: Lake Floria Waterfall Ledge Goddess Cube
+- Retrieve Water Basin from Water Dragon with Scrapper
+- Damage to 1-2 hearts in water
+- *If not at 4 Evil Crystals*
+	- Open north chest in dragon's lair
+- :SshGoddessCube: Lake Floria Goddess Cube
+- *If not at 2 Goddess Plumes*
+	- Open chest behind statue
+- Call Fi for Heart Dowsing
+- Fly to Eldin
+- Fly to sky at Volcano Entry
+- Go back and Land at Temple Entrance
+- Deathwarp
+- Fast Scrapper Escort
+- Enter Waterfall
+- :SshGoddessCube: Skydive Goddess Cube
+- Deathwarp
+- Escort Scrapper to Fire Sanctuary
+# Fire Sanctuary
+- Enter Fire Sanctuary
+- Open chest for small key in first room
+- :SshSpeechBubble: Guld skip
+- First Magmanos room
+- Defeat single Dark Lizalfos
+- Beetle-bomb rocks to make lava flow
+- Small key in mogma room
+- Water plant jumpslash trick to water frog
+- *If < 4 Evil Crystals*
+	- Open large chest in upper level of water plant room
+- Defeat double Magmanos (call Fi to skip cutscene after)
+- Open chest for Mogma Mitts
+- Burrow underground to next room
+- Autosave at statue near locked door
+- Use gust bellows to reveal digging spot
+- Open gate and exit to bridge
+- Cross center bridge to map room
+- Solve double gate puzzle
+- Use waterplant to douse flame wall
+- Bomb open hidden wall for small key
+	- Pull lever just before bomb explodes
+- Open third small key chest
+- Leave normally and clawshot across gap
+- Go left and hit switch to open shortcut
+- Avoid Autosave at room
+- Use Mogma tunnel to open gate in single magmanos room
+- Defeat single magmanos and call Fi to skip cutscene
+- Open chest for Empty Bottle
+- Deathwarp
+- Plats minigame
+- :SshHeartPiece: Open chest for Heart Piece
+- Start lava river flowing
+- Defeat double Dark Lizalfos
+- Defeat cursed keese on staircase for evil crystal drops if needed
+- Open chest in staircase room for possible evil crystal if needed
+- Underground puzzle and Moldorm fight for Mysterious Crystals
+- Autosave at Fire Sanctuary overworld bird statue
+- Defeat Ghirahim (equip shield)
+- :SshHeartContainer: Heart Container
+- Strike Crest for Din's Flame and Master Sword
+# Imprisoned 2
+- :SshGoddessCube: Clawshot across platforms to goddess cube
+- :SshHeartPiece: Mogma tunnel to Heart Piece
+- Warp to Sky with Amiibo
+- Fly to Faron *(Behind the Temple)*
+- Activate Goddess Wall near Gorko + Cutscene
+- :SshSpeechBubble: Talk to Gorko again
+- :SshHeartPiece: Draw Arrow for Heart Piece (pick up arrow drops)
+- Enter Sealed Temple
+- Charge Skyward Strike near closed Gate of Time
+- Defeat Imprisoned 2
+# Skyloft 4
+- Enter Gate of Time
+	- :SshSpeechBubble: Talk to Impa
+	- True Master Sword
+	- Return to present
+- :SshSpeechBubble: Impa + Groose conversation
+- Warp to Sky with Amiibo
+- Fly to Lumpy Pumpkin
+	- :SshSpeechBubble: Talk to Pumm
+	- Pumpkin Carrying minigame
+	- :SshSleepToNight: Sleep to night and exit
+	- :SshGratitudeCrystal: Storage Shed Crystal *(33)*
+	- :SshHeartPiece: Harp minigame
+	- :SshHeartPiece: Heart Piece
+	- :SshGratitudeCrystal: Get crystal on top of stairs *(34)*
+	- :SshSleepToDay: Sleep to Day
+- Talk to Kina outside for crystal quest
+- Fly to Eldin *(Volcano East)*
+- Enter Mogma Turf with **Skydive**
+	- :SshGoddessCube: Goddess Cube
+	- :SshSpeechBubble: Talk to Guld
+	- :SshSpeechBubble: Talk to Cobal in maze for Rupee Dowsing
+	- :SshRupee: Open chest behind bombable wall for Silver Rupee
+	- Use amiibo to exit cave
+- Fly to Skyloft *(Village)*
+- :SshSpeechBubble: Talk to Sparrot in his house
+- Enter the Bazaar *(320 Rupees)*
+	- *50 Scattershot*
+	- *100 Big Bug Net
+	- *50 Tough Beetle*
+	- *100 2x Stamina Potions*
+	- *20 Bomb Refill*
+	- *50 Iron Bow*
+	- *100 Sacred Bow*
+	- Upgrade to Scattershot
+	- Upgrade to Big Bug Net
+	- Upgrade to Tough Beetle *(if able)*
+		- *Can upgrade to Iron or Sacred Bow if you have the treasures*
+	- Cancel for Treasure Dowsing
+	- :SshSpeechBubble: Talk to Peatrice
+	- Buy 2 Stamina Potions
+	- Buy bomb refill
+- Enter the Academy via chimney
+	- :SshSleepToNight: Sleep to night
+	- :SshGratitudeCrystal: :SshHeartPiece: Zelda's crystal and Heart Piece *(35)*
+	- Try to open restroom door
+	- Enter Fledge's room
+	- Give stamina potion to fledge
+	- :SshSleepToNight: Sleep to night, give another stamina potion, sleep to night
+	- :SshGratitudeCrystal: Talk to Fledge for crystals *(40)*
+	- Sleep to day and talk to Cawlin for Cawlin's Letter
+	- Give letter to Karane
+	- :SshSpeechBubble: Talk to Gaepora
+	- :SshSpeechBubble: Talk to Owlan
+	- Spiral Charge tutorial skip (if Amiibo)
+	- Spiral Charge tutorial (if failed skip)
+- Fly to Lumpy Pumpkin
+	- :SshGratitudeCrystal: Deliver Guld to Kina *(45)*
+	- Retrieve Pumpkin Soup Cauldron with Scrapper
+- Fly to NE caged island
+	- :SshGoddessChest: Open goddess chest in cage (Treasure Medal)
+	- :SshGoddessChest: :SshRupee: Open goddess chest behind bombable wall (Silver Rupee)
+- :SshGoddessChest: :SshHeartPiece: Fly to Beedle's island, open goddess chest (Heart Piece)
+- Fly to Watering Hole island
+	- :SshGoddessChest: :SshRupee: Open top goddess chest (Silver Rupee)
+	- :SshGoddessChest: Open inside goddess chest (Heart Medal)
+- Fly to Bamboo Island
+	- :SshGoddessChest: Open goddess chest
+	- Enter Bamboo minigame
+	- *If no Golden Skull*
+		- Gossip stone at back has golden skull
+	- :SshSpeechBubble: Talk to Peater, play minigame
+		- Score 20-27 for Evil Crystal
+		- 15-19 for Rupees
+	- :SshSpeechBubble: Talk to Peater again for quest but decline minigame
+- Drop off Soup
+# Bilocyte
+- Bilocyte
+# Bokoblin Base
+- Deathwarp
+- Fly to Bug Island
+	- Talk to Strich
+- Deathwarp
+- Fly to Eldin
+- Pick up barrel, get Mogma Mitts
+- Talk to Plats near Volcano East
+- Precise sidehop to lower platform, underground tunnels to Gust Bellows
+- Follow path and go through mogma tunnel to Clawshots
+- Jump down, ride platform, cutscene skip, bomb tower for Whip
+- Peahat skip, whip bomb flowers to blow up boulders, central vent
+- Run towards Earth Temple area and skip cutscene
+- Run into next cutscene trigger. skip, pick up at least 10 seeds from hut, get slingshot
+- Stun boko on tower to enter tunnel for Bomb Bag
+- Enter Volcano Summit
+- Get True Master Sword
+- :SshGoddessCube: Strike Goddess Cube in lava river
+- Enter and leave Fire Dragon's room
+- Adventure Pouch and other items, deathwarp
+- Cut ropes with cutscene skips
+- Fire Dragon's Song
+# Skyloft 5
+- Retrieve Crystal Ball with Scrapper
+- *If less than 4 evil crystals*
+	- Gossip stone in cave near boko camp for evil crystal
+- Warp to Sky with Amiibo
+- Fly to Skyloft *(Academy)*
+- :SshSpeechBubble: Enter Academy, talk to Pipit
+- :SshSpeechBubble: Talk to Owlan to start crystal quest
+- :SshGratitudeCrystal: Love triangle cutscene for crystals *(50)*
+- Enter Beedle's shop *(675 rupees)*
+	- *600 Adventure Pouch
+	- *20 Air Potion*
+	- *20 Bomb Refill*
+	- Buy pouch slot
+	- :SshSleepToNight: Sleep to night
+	- :SshGratitudeCrystal: Single Crystal above airship *(51)*
+	- :SshSpeechBubble: Talk to Beedle
+	- :SshSleepToDay: Sleep to day
+- Enter Bazaar
+	- Buy Air Potion
+	- Buy bomb refill
+	- :SshSpeechBubble: Talk to Peatrice
+	- :SshGoddessChest: Goddess Chest in Bazaar
+	- *Any upgrades missed*
+- Enter Peatrice's house
+	- :SshSleepToNight: Sleep to night
+	- :SshSpeechBubble: :SshGratitudeCrystal: Talk to Peatrice for Crystals *(56)*
+- :SshGratitudeCrystal: Beetle for single crystals past waterfall cave *(58)*
+- Clawshot to top of waterfall
+- :SshGoddessChest: :SshRupee: Skydive off left side for Goddess Chest (Gold Rupee)
+- :SshGratitudeCrystal: Clawshot back up and get single crystal in water *(59)*
+- :SshGoddessChest: :SshHeartPiece: Open Goddess Chest (Heart Piece)
+- *If < 2 Goddess Plumes*
+	- Activate gossip stone
+- Skydive to bird's nest and get Baby's Rattle
+- Enter Luv and Bertie's house
+	- :SshGratitudeCrystal: Give rattle to Bertie for crystals *(64)*
+- :SshGratitudeCrystal: Crystal in pumpkin patch *(65)*
+- :SshGratitudeCrystal: Deliver Crystal ball to Sparrot in his house for crystals *(70)*
+	- :SshSleepToDay: Sleep to day
+- Enter Batreaux's house
+	- Talk to Batreaux for:
+		- Wallet Upgrade
+		- :SshHeartPiece: Heart Piece
+		- :SshRupee: 900 rupees
+# Imprisoned 3
+- Warp to Eldin
+- Warp to sky
+- Fly to Faron
+- Imprisoned 3
+# Tadtones
+- Talk to Impa
+- Use Air Potion
+- Talk to Groose
+- Complete Tadtones
+- Retrieve Oolo
+- Deathwarp
+- Water Dragon's song
+# Faron Cleanup
+- :SshGoddessCube: Drop from tree for swag goddess cube
+- :SshGoddessCube: Goddess cube near clawshot
+- :SshHeartPiece: Heart Piece on ledge
+- :SshGoddessCube: Goddess cube on branch
+- :SshHeartPiece: Heart Piece on bombable wall
+- Warp to sky
+- Land at Forest Temple
+- :SshGoddessCube: Goddess cube on roof
+- Warp to Sky
+- Fly to Lanayru (West Desert)
+- Enter caves
+- Bomb open crawlspace
+- *If < 3 Monster claws*
+	- Activate gossip stone for monster claw
+- Enter Gorge
+- Get small key
+# Minecart Escort
+- Minecart escort
+# Life Tree Fruit
+- :SshSpeechBubble: Talk to thunder dragon
+- Get life tree seedling
+- :SshGoddessCube: Goddess cube
+- Warp to sky
+- Fly to Faron
+- Land Behind the Temple
+- Enter Sealed Temple and go through Gate of Time
+- Plant Life Tree Seedling and return to Present/Future
+- Bonk tree for Life Tree Fruit
+- Warp to sky
+- :SshGoddessChest: Fly to island south of Faron
+- Fly to Volcanic Island
+- :SshGoddessChest: Goddess chest inside
+- :SshGoddessChest: Goddess chest outside
+- Fly to Lanayru (Gorge)
+- Give Life Tree Fruit
+# Boss Rush
+- :SshHeartPiece: Boss Rush
+	- Start with Demise, take set of 4 if next bosses are Ghirahim 1, Scaldera, Moldarach
+	- Otherwise, continue to set of 8, especially if you get Imprisoned 3 and/or Tentalus
+	- If you complete set of 8 first, start your set of 4 with Ghirahim 2
+# Chores
+- Warp to Sky
+- :SshRupee: Fun Fun Island until >= *2700 Rupees*
+	- *100 Extra Wallet?*
+	- *1200 Adventure Pouch*
+	- *800 Heart Piece*
+	- *500 Bug Medal*
+	- *40 2x Health Potion*
+	- *20 Bomb Refill*
+	- *100 Sacred Bow*
+- :SshGoddessChest: Goddess chest underneath Fun Fun Island
+- Fly to Thunderhead
+	- Song of the Hero from Levias
+	- Land on small island east of Isle of Songs
+		- :SshGoddessChest: Goddess Chest
+	- Land on Isle of Songs
+		- :SshGoddessChest: 2 Goddess Chests
+	- Bug island
+		- :SshGoddessChest: Goddess chest on side platform
+		- Play bug minigame
+	- Fly to caged Island
+		- :SshGoddessChest: 2 Goddess Chests
+- Warp to Gorge, Warp to sky
+- Fly to Skyloft *(Academy)*
+- Enter Academy through upper doors
+	- :SshGratitudeCrystal: Deliver Oolo to Owlan for crystals *(75)*
+- :SshHeartPiece: Pumpkin Archery minigame for Heart Piece
+- :SshRupee: Open goddess chest on West Cliff (Silver Rupee)
+- Enter Beedle's shop
+	- Buy extra wallet
+	- Buy Pouch Slot
+	- :SshSleepToNight: Sleep to night
+	- :SshRupee: Open Goddess Chest in enclosure (Rupee Medal)
+	- :SshGratitudeCrystal: Deliver Horned Collosus Beetle to Beedle *(80)*
+	- :SshSleepToDay: Sleep to day
+	- Buy Heart Piece with discount
+	- Buy Bug Medal
+- Enter Bazaar
+- *If Clawshot Vineclip*
+	- Buy bombs (for clawshot vineclip later)
+	- Buy red potion(s) (optional, for clawshot vineclip later)
+- Upgrade to Sacred Bow (and any other item wheel upgrades you missed previously)
+# Trial
+- Skyloft Trial for Stone of Trials
+# Skyloft 6.5
+- Enter Batreaux's house
+	- Talk to Batreaux for Tycoon Wallet
+	- Open chest for Cursed Medal
+	- Fi Trigger for Crystal Dowsing
+- :SshGoddessChest: :SshHeartPiece: Swim to goddess chest in shed (Heart Piece)
+- Open Sky Keep
+# Sky Keep
+- Dungeon Map
+- First sliding puzzle: **D R D** | *L U R* | **D R U** | *L L D* | **R U R** | *U*
+- Skyview Temple Room
+- Arrow refill at the beginning of LMF room if needed
+- LMF Room clip
+	- Shoot eyes without using timeshift orb
+	- Second sliding puzzle: **L D**
+- Backtrack through Skyview Temple Room
+	- Bomb boosted clawshot vineclip to Fire Sanctuary room
+	- Triforce of Power
+	- Arrow refill before leaving
+- Entrance Room
+	- Third sliding puzzle: **D R U** | *L D L* | **U U R** | *D L U*
+- Sandship Room
+	- Precise bow shot
+	- Triforce of Wisdom
+- Fourth sliding puzzle:  **R D D** | *R U L* | **D**
+	- Dreadfuse fight
+	- Small key
+	- Ancient Cistern Room
+	- Double Iron Moblin
+	- Bokoblins and Stalfos, equip bombs and shield
+	- Stalmaster and Zombie Bokoblins
+	- Triforce of Courage
+- Gate of Time to Hylia's Realm
+# Horde
+- Horde battle with horde skip
+# Ghirahim
+- Ghirahim
+# Demise
+- Demise

@@ -1,0 +1,36 @@
+---
+interface Props {
+	videoId: string;
+	timestamp?: string;
+}
+
+const { videoId, timestamp } = Astro.props as Props;
+---
+
+<style>
+	.responsive-iframe-container {
+		position: relative;
+		width: 100%;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		height: 0;
+		overflow: hidden;
+	}
+
+	.responsive-iframe-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+<div class="responsive-iframe-container">
+	<iframe
+		src={`https://www.youtube.com/embed/${videoId}${timestamp ? `?start=${timestamp}` : ""}`}
+		title="YouTube video player"
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		allowfullscreen></iframe>
+</div>
