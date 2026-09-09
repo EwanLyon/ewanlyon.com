@@ -11,24 +11,23 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/react": "^4.4.2",
-    "@astrojs/sitemap": "^3.7.0",
-    "@astrojs/vercel": "^9.0.4",
+    "@astrojs/mdx": "^8.0.1",
+    "@astrojs/react": "^6.0.5",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/vercel": "^11.0.10",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^7.3.7",
-    "@mui/material": "^7.3.7",
-    "@tailwindcss/vite": "^4.1.18",
-    "@types/react": "^19.2.13",
-    "@types/react-dom": "^19.2.3",
-    "astro": "^5.17.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "styled-components": "^6.3.8",
-    "tailwindcss": "^4.1.18"
+    "@mui/icons-material": "^9.4.0",
+    "@mui/material": "^9.4.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "astro": "^7.3.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "styled-components": "^6.5.3"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.36"
+    "@types/styled-components": "^5.1.36",
+    "sharp": "^0.35.4"
   }
 }

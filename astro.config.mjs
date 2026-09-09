@@ -9,8 +9,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
 
-import tailwindcss from '@tailwindcss/vite';
-
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), sitemap({
@@ -21,7 +19,4 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
 
-  vite: {
-    plugins: [tailwindcss()]
-  }
 });

@@ -1,10 +1,10 @@
 ---
 export const prerender = true;
-import { getCollection } from 'astro:content';
-import Hero from '../components/Hero.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+import Hero from "../components/Hero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const posts = (await getCollection('blog'))
+const posts = (await getCollection("blog"))
 	.filter((p) => !p.data.draft)
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 ---
@@ -12,48 +12,31 @@ const posts = (await getCollection('blog'))
 <BaseLayout title="Blog | Ewan Lyon" description="Ewan Lyon's blog">
 	<main class="wrapper stack gap-8 blog-container">
 		<Hero title="Blog" tagline="Where I write about anything and everything I'm working on." />
-		<ul>
+		<ul class="post-list">
 			{
 				posts.map((post) => {
-					const formattedDate = new Date(post.data.publishDate).toLocaleDateString('en-AU', {
-						year: 'numeric',
-						month: 'short',
-						day: 'numeric',
+					const formattedDate = new Date(post.data.publishDate).toLocaleDateString("en-AU", {
+						year: "numeric",
+						month: "short",
+						day: "numeric",
 					});
 					return (
-						<li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
+						<li class="post-item">
 							<div class="title">
 								{post.data.externalUrl ? (
-									<a
-										href={post.data.externalUrl}
-										target="_blank"
-										class="unset
-                        transition-[background-size] duration-300
-                        bg-gradient-to-r bg-left-bottom bg-no-repeat
-                        bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
-                        from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-                      "
-									>
+									<a href={post.data.externalUrl} target="_blank" class="post-link">
 										<span>{post.data.title}</span>
 										<span>
-											<i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+											<i class="external-link-icon fa-solid fa-up-right-from-square" />
 										</span>
 									</a>
 								) : (
-									<a
-										href={`/blog/${post.slug}`}
-										class="unset
-                        transition-[background-size] duration-300
-                        bg-gradient-to-r bg-left-bottom bg-no-repeat
-                        bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
-                        from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-                      "
-									>
+									<a href={`/blog/${post.slug}`} class="post-link">
 										{post.data.title}
 									</a>
 								)}
 							</div>
-							<div class="text-text-muted text-sm italic pt-1">
+							<div class="post-date">
 								<time datetime={post.data.publishDate.toISOString()}>{formattedDate}</time>
 							</div>
 						</li>
@@ -68,7 +51,51 @@ const posts = (await getCollection('blog'))
 	.blog-container {
 		max-width: 50rem;
 		font-size: var(--text-md);
+	}
 
-		--tw-gradient-stops: var(--gradient-stop-1), var(--gradient-stop-3);
+	.post-list {
+		padding: 0;
+		list-style: none;
+	}
+
+	.post-item {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: start;
+		margin-bottom: 0.75rem;
+	}
+
+	.post-link {
+		color: var(--link-color);
+		text-decoration: none;
+		background-image: linear-gradient(to right, var(--gradient-stop-1), var(--gradient-stop-3));
+		background-position: left bottom;
+		background-repeat: no-repeat;
+		background-size: 0% 55%;
+		transition: background-size 0.3s;
+	}
+
+	.post-link:hover {
+		background-size: 100% 55%;
+	}
+
+	.external-link-icon {
+		margin-inline: 0.25rem;
+		padding-bottom: 0.5rem;
+		font-size: 12px;
+	}
+
+	.post-date {
+		padding-top: 0.25rem;
+		color: var(--gray-400);
+		font-size: var(--text-sm);
+		font-style: italic;
+	}
+
+	@media (min-width: 50em) {
+		.post-item {
+			grid-template-columns: 1fr auto;
+			column-gap: 0.5rem;
+		}
 	}
 </style>

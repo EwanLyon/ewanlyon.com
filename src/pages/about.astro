@@ -1,37 +1,33 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
 
-import BAMImage from '../assets/at-work.jpg';
+import AboutMeImage from "../assets/about.jpg";
 ---
 
 <BaseLayout title="About | Ewan Lyon" description="About Ewan Lyon">
 	<div class="stack gap-20">
 		<main class="wrapper about">
-			<Hero title="About" tagline="Thanks for stopping by. Read below to learn more about myself and my background.">
+			<Hero title="About" tagline="Nerd.">
 				<Image
 					width="1553"
-					height="873"
-					src={BAMImage}
-					alt="Ewan Lyon working as the technical producer for Melbourne Melee at BAM12. 2022"
+					height="1200"
+					src={AboutMeImage}
+					alt="A black and white photo of Ewan Lyon with broadcast headphones on looking at a monitor off screen."
 				/>
 			</Hero>
 
 			<section>
 				<h2 class="section-title">Background</h2>
 				<div class="content">
+					<p>Love Games, Love Programming, Love Designing, Love Trains.</p>
 					<p>
-						I've always been passionate about learning programming and design. I've been programming since I was 15
-						learning web design and games programming step by step.
-					</p>
-					<p>
-						I've been volunteering with AusSpeedruns developing their graphics, website and live event tech pipeline
-						since 2020. I've also worked with ESL Australia as a camera operator and Melbourne Melee as a technical
-						producer.
+						Love the behind the scenes of how large events work and have had the chance to work a few with ESL Australia
+						and Melbourne Melee.
 					</p>
 				</div>
 			</section>
@@ -39,8 +35,13 @@ import BAMImage from '../assets/at-work.jpg';
 				<h2 class="section-title">Education</h2>
 				<div class="content">
 					<p>
-						Bachelor of Computer Science.<br />Bachelor of Games and Interactivity.<br />Major in Games Development.<br
-						/>Minor in Visual Effects.
+						Swinburne University of Technology.<br />
+						<ul>
+							<li>Bachelor of Computer Science.</li>
+							<li>Bachelor of Games and Interactivity.</li>
+							<li>Major in Games Development.</li>
+							<li>Minor in Visual Effects.</li>
+						</ul>
 					</p>
 				</div>
 			</section>
