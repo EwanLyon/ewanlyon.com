@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Use Monospace</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Roboto+Mono:wght@450&display=swap"
+		rel="stylesheet">
+	<style>
+		body {
+			margin-top: 50px;
+			background-color: black;
+			color: white;
+			font-family: "Lucida Console", monospace;
+			font-size: 150%;
+			max-width: 60vw;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		h2 {
+			text-align: center;
+			text-wrap: balance;
+		}
+
+		section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		figcaption {
+			color: black;
+			text-align: center;
+		}
+
+		p {
+			max-width: 600px;
+			text-align: center;
+			text-wrap: balance;
+		}
+
+		.example {
+			font-size: 350%;
+			background-color: white;
+			color: black;
+			padding: 16px 16px 32px 16px;
+		}
+
+		.monospace {
+			font-family: "Roboto Mono", monospace;
+			font-optical-sizing: auto;
+			font-weight: 450;
+		}
+
+		.variable {
+			font-family: "Kanit", sans-serif;
+		}
+
+		.question-mark {
+			text-decoration: dotted underline;
+			cursor: help;
+		}
+
+		.small-text {
+			font-size: 50%;
+			font-style: italic;
+		}
+
+		#bad-examples {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.bad-example {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 16px;
+
+			figure {
+				background-color: white;
+				color: black;
+				font-size: 300%;
+				padding: 0 16px;
+				margin: 8px;
+				width: fit-content;
+			}
+		}
+
+		footer {
+			font-size: 75%;
+			text-align: center;
+			color: #444;
+			margin-top: 50px;
+		}
+
+		footer a {
+			color: #444;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<section>
+			<h1>Please do this</h1>
+			<figure>
+				<span class="example monospace" id="prime-example-monospace">111111</span>
+				<figcaption>Monospace Font</figcaption>
+			</figure>
+			<h1><i>Not</i> this</h1>
+			<figure>
+				<span class="example variable" id="prime-example-variable">111111</span>
+				<figcaption>Variable Font</figcaption>
+			</figure>
+		</section>
+		<section id="description">
+			<p>
+				Hi, I'm Ewan, and I hate seeing the above. It is much harder to read the bottom number when the whole
+				box is changing size.
+			</p>
+
+			<h2>What is a monospace font?</h2>
+			<p>A monospace font is one where each character is the same width as all the others.</p>
+
+			<h3>When to use monospace?</h3>
+			<ul>
+				<li>Numbers that change often</li>
+				<li>Timers</li>
+				<li>Clocks</li>
+			</ul>
+
+			<h3>When you <i>don't</i> have to use monospace:</h3>
+			<ul>
+				<li>Numbers that do not change</li>
+				<li>Numbers that change every couple of minutes</li>
+				<li>
+					<span title="Numbers used as decorative details rather than to convey information."
+						class="question-mark">Greeble numbers</span> <sup class="small-text">(But even then you are
+						probably better off
+						using monospace)</sup>
+				</li>
+			</ul>
+		</section>
+		<!-- <section id="accessibility">
+				<h2>Accessibility</h2>
+			</section>
+			<section id="resources">
+				<h2>Resources</h2>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+
+		<section id="favourites">
+			<h2>Some of my favourite monospace numbers fonts:</h2>
+			<ul>
+				<li></li>
+			</ul>
+		</section> -->
+
+		<h2><a
+				href="https://fonts.google.com/?preview.text=0123456789&categoryFilters=Appearance:%2FMonospace%2FMonospace">Explore
+				Monospace Fonts on Google Fonts</a></h2>
+
+		<section id="examples">
+			<h2>For fun, some other bad examples of using variable width fonts for changing numbers</h2>
+			<div id="bad-examples">
+				<div class="bad-example" id="time">
+					<figure class="monospace">60:00</figure>
+					<figure class="variable">60:00</figure>
+				</div>
+				<div class="bad-example" id="clock">
+					<figure class="monospace">0:00:00 AM</figure>
+					<figure class="variable">0:00:00 AM</figure>
+				</div>
+				<div class="bad-example" id="counting-up">
+					<figure class="monospace">123456</figure>
+					<figure class="variable">123456</figure>
+				</div>
+				<div class="bad-example" id="random">
+					<figure class="monospace">111111</figure>
+					<figure class="variable">111111</figure>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<a href="http://github.com/EwanLyon/INSERT-REPO" target="_blank" rel="noopener noreferrer">GitHub</a> | Last
+		Updated INSERT DATE | Made by <a href="http://ewanlyon.com" target="_blank" rel="noopener noreferrer">Ewan
+			Lyon</a>
+	</footer>
+
+	<script>
+		function primeExample() {
+			const monospace = document.getElementById("prime-example-monospace");
+			const variable = document.getElementById("prime-example-variable");
+			const numbers = [111111, 111118, 111188, 111888, 118888, 188888, 888888, 888881, 888811, 888111, 881111, 811111];
+			let index = 0;
+
+			const interval = setInterval(() => {
+				if (index >= numbers.length - 1) {
+					index = 0;
+				} else {
+					index++;
+				}
+
+				const number = numbers[index];
+
+				monospace.textContent = number.toLocaleString();
+				variable.textContent = number.toLocaleString();
+			}, 100);
+		}
+
+		function countingUpExample() {
+			const monospace = document.querySelector("#counting-up .monospace");
+			const variable = document.querySelector("#counting-up .variable");
+
+			let count = 0;
+			const interval = setInterval(() => {
+				if (count >= 999999) {
+					count = 0;
+				}
+
+				count++;
+				monospace.textContent = count.toLocaleString();
+				variable.textContent = count.toLocaleString();
+			}, 50);
+		}
+
+		function timeExample() {
+			const monospace = document.querySelector("#time .monospace");
+			const variable = document.querySelector("#time .variable");
+
+			let count = 60 * 60;
+			const interval = setInterval(() => {
+				const minutes = String(Math.floor(count / 60)).padStart(2, "0");
+				const seconds = String(count % 60).padStart(2, "0");
+				const time = `${minutes}:${seconds}`;
+
+				monospace.textContent = time;
+				variable.textContent = time;
+
+				count--;
+				if (count <= 0) {
+					count = 60 * 60;
+				}
+			}, 100);
+		}
+
+		function randomExample() {
+			const monospace = document.querySelector("#random .monospace");
+			const variable = document.querySelector("#random .variable");
+
+			const interval = setInterval(() => {
+				const number = Math.floor(Math.random() * 900000) + 100000;
+
+				monospace.textContent = number.toLocaleString();
+				variable.textContent = number.toLocaleString();
+			}, 500);
+		}
+
+		function clockExample() {
+			const monospace = document.querySelector("#clock .monospace");
+			const variable = document.querySelector("#clock .variable");
+
+			const interval = setInterval(() => {
+				const now = new Date();
+				const hours = String(now.getHours() % 12 || 12).padStart(2, "0");
+				const minutes = String(now.getMinutes()).padStart(2, "0");
+				const seconds = String(now.getSeconds()).padStart(2, "0");
+				const ampm = now.getHours() >= 12 ? "PM" : "AM";
+				const time = `${hours}:${minutes}:${seconds} ${ampm}`;
+
+				monospace.textContent = time;
+				variable.textContent = time;
+			}, 1000);
+		}
+
+		primeExample();
+		countingUpExample();
+		timeExample();
+		randomExample();
+		clockExample();
+	</script>
+</body>
+
+</html>
