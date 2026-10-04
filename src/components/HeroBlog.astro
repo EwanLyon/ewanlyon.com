@@ -1,4 +1,6 @@
 ---
+import { formatSiteDateTime } from "../utils/date";
+
 interface Props {
 	title: string;
 	tagline?: string;
@@ -13,13 +15,11 @@ const { align = 'center', tagline, title, date } = Astro.props;
 	<div class="stack gap-2">
 		<h1 class="title">{title}</h1>
 		{tagline && <p class="tagline">{tagline}</p>}
-		{date && <p class="tagline">{date.toLocaleString("en-AU", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-			hour: "numeric",
-			minute: "2-digit"
-          })}</p>}
+		{date && (
+			<p class="tagline">
+				<time datetime={date.toISOString()}>{formatSiteDateTime(date)}</time>
+			</p>
+		)}
 	</div>
 	<slot />
 </header>

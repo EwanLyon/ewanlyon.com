@@ -3,6 +3,7 @@ export const prerender = true;
 import { getCollection } from "astro:content";
 import Hero from "../components/Hero.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { formatSiteDate } from "../utils/date";
 
 const posts = (await getCollection("blog"))
 	.filter((p) => !p.data.draft)
@@ -15,11 +16,7 @@ const posts = (await getCollection("blog"))
 		<ul class="post-list">
 			{
 				posts.map((post) => {
-					const formattedDate = new Date(post.data.publishDate).toLocaleDateString("en-AU", {
-						year: "numeric",
-						month: "short",
-						day: "numeric",
-					});
+					const formattedDate = formatSiteDate(post.data.publishDate);
 					return (
 						<li class="post-item">
 							<div class="title">
@@ -71,12 +68,12 @@ const posts = (await getCollection("blog"))
 		background-image: linear-gradient(to right, var(--gradient-stop-1), var(--gradient-stop-3));
 		background-position: left bottom;
 		background-repeat: no-repeat;
-		background-size: 0% 55%;
+		background-size: 0% 15%;
 		transition: background-size 0.3s;
 	}
 
 	.post-link:hover {
-		background-size: 100% 55%;
+		background-size: 100% 15%;
 	}
 
 	.external-link-icon {

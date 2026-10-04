@@ -1,6 +1,6 @@
 ---
 title: Basic Git Guide
-publishDate: 2024-09-23 06:00:00
+publishDate: 2024-09-23T06:00:00.000Z
 description: |
   A basic introduction for my friends
 tags:
@@ -14,8 +14,6 @@ keywords:
   - tutorial
 ---
 
-import Aside from '../../components/Aside.astro';
-
 ## Git
 
 According to the git [README](https://git.kernel.org/pub/scm/git/git.git/tree/README.md?h=main), git is:
@@ -26,7 +24,9 @@ According to the git [README](https://git.kernel.org/pub/scm/git/git.git/tree/RE
 - **g**oddamn **i**diotic **t**ruckload of shit
 
 ![XKCD 1597](https://imgs.xkcd.com/comics/git.png)
-<div align="center"><a target="_blank" href="https://www.xkcd.com/1597/">XKCD 1597</a></div>
+{% caption %}
+[XKCD 1597](https://www.xkcd.com/1597/)
+{% /caption %}
 
 Git is a Distributed  Version Control System. Meaning that you do not need a server to run it like Perforce. It was made in 2005 for Linux after BitKeeper (the VCS they used at the time) revoked their free license. It has since grown to become the de facto standard VCS.
 
@@ -121,9 +121,9 @@ It is highly customisable with many premade themes that exist and the capability
 
 ### GitHub desktop
 
-<Aside type="caution" title="This is not advice">
+{% aside type="caution" title="This is not advice" %}
 I do not use GUIs so I cannot truly say how good they are. I have learnt how GitHub Desktop and Fork work to be able to help people but I do not personally use them. I use the git cli with oh-my-posh
-</Aside>
+{% /aside %}
 
 [GitHub Desktop Website](https://github.com/apps/desktop)
 
@@ -182,7 +182,7 @@ Files have 4 different stages they can be in (well 5 if you count merge conflict
 
 Once a file has been committed it falls back to being unmodified.
 
-![Git File Lifecycle](../../assets/blog/basic-git-guide/FileLifecycle.png)
+![Git File Lifecycle](@assets/blog/basic-git-guide/FileLifecycle.png)
 
 ## Commands
 
@@ -234,9 +234,9 @@ To undo a file you have added to staging.
 `git restore <FILE>`
 `git restore --staged <FILE>`
 
-<Aside type="caution" title="Old Guides">
+{% aside type="caution" title="Old Guides" %}
 There might be some old guides that talk about using `git reset` to bring files back from staging. This is **old** as of v2.23.0 (2019-08-03) and you should use `git restore`.
-</Aside>
+{% /aside %}
 
 ### Commit
 
@@ -294,9 +294,9 @@ If someone has made another commit on the branch you want to merge to git will d
 
 Takes all of your commits off the tree, pulls all of the commits and then places each commit one by one.
 
-<Aside type="caution" title="Only do on local">
+{% aside type="caution" title="Only do on local" %}
 This one is slightly dangerous as it does rewrite your git history so it should only be used locally if you have **not pushed**. This operation should really only be done on local branches.
-</Aside>
+{% /aside %}
 
 I use it when I make a commit on main and then someone else commits before I had a chance to push.
 
@@ -365,9 +365,9 @@ To designate a file use the command:
 `git lfs track "*.FILETYPE"`
 E.g. `git lfs track "*.psd"` for Photoshop Files.
 
-<Aside type="note" title="Add .gitattributes">
+{% aside type="note" title="Add .gitattributes" %}
 If this is the first file being uploaded to Git LFS make sure to also add the `.gitattributes` file if it shows up.
-</Aside>
+{% /aside %}
 
 ### Conventional/Semantic Commits
 

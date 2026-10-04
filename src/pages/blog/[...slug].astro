@@ -8,6 +8,7 @@ import ContactCTA from "../../components/ContactCTA.astro";
 import Hero from "../../components/HeroBlog.astro";
 import Icon from "../../components/Icon.astro";
 import Pill from "../../components/Pill.astro";
+import { formatSiteDateTime } from "../../utils/date";
 
 interface Props {
 	entry: CollectionEntry<"blog">;
@@ -61,13 +62,9 @@ const { Content } = await render(entry);
 								entry.data.updatedDate && (
 									<p>
 										Updated:{" "}
-										{new Date(entry.data.updatedDate).toLocaleString("en-AU", {
-											year: "numeric",
-											month: "short",
-											day: "numeric",
-											hour: "numeric",
-											minute: "2-digit",
-										})}
+										<time datetime={entry.data.updatedDate.toISOString()}>
+											{formatSiteDateTime(entry.data.updatedDate)}
+										</time>
 									</p>
 								)
 							}
@@ -77,7 +74,7 @@ const { Content } = await render(entry);
 			</header>
 			<main class="wrapper">
 				<div class="stack gap-10 content">
-					{entry.data.img && <img src={entry.data.img.src} alt={entry.data.img_alt || ""} />}
+					{entry.data.img && <img src={entry.data.img.src} alt={entry.data.img_alt ?? ""} />}
 					<div class="content">
 						<Content />
 					</div>

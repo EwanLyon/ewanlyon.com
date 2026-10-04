@@ -1,19 +1,16 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-
 import vercel from '@astrojs/vercel';
-
-// https://astro.build/config
 import sitemap from '@astrojs/sitemap';
-
-// https://astro.build/config
 import mdx from "@astrojs/mdx";
+import markdoc from "@astrojs/markdoc";
+import keystatic from "@keystatic/astro";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), sitemap({
     filter: page => page !== 'https://ewanlyon.com/riv'
-  }), mdx()],
+  }), mdx(), markdoc(), keystatic()],
 
   site: 'https://ewanlyon.com/',
   output: 'server',
