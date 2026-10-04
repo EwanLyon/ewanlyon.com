@@ -105,6 +105,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  astro>sharp: '-'
+
 importers:
 
   .:
@@ -4303,8 +4306,6 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 22.0.0
       zod: 4.5.4
-    optionalDependencies:
-      sharp: 0.35.4(@types/node@24.13.3)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'

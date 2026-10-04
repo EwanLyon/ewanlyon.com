@@ -1,6 +1,12 @@
 import { component, defineMarkdocConfig } from "@astrojs/markdoc/config";
+import shiki from "@astrojs/markdoc/shiki";
 
 export default defineMarkdocConfig({
+	extends: [
+		shiki({
+			theme: "houston",
+		}),
+	],
 	tags: {
 		aside: {
 			render: component("./src/components/Aside.astro"),
