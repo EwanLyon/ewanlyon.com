@@ -10,7 +10,7 @@ import keystatic from "@keystatic/astro";
 export default defineConfig({
   integrations: [react(), sitemap({
     filter: page => page !== 'https://ewanlyon.com/riv'
-  }), mdx(), markdoc(), keystatic()],
+  }), mdx(), markdoc(), ...(process.env.SKIP_KEYSTATIC ? [] : [keystatic()])],
 
   site: 'https://ewanlyon.com/',
   output: 'server',

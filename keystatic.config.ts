@@ -43,7 +43,9 @@ export default config({
 			label: "Blog",
 			slugField: "title",
 			path: "src/content/blog/*",
+			entryLayout: "content",
 			format: { contentField: "content" },
+			columns: ["title", "publishDate", "draft"],
 			schema: {
 				title: fields.slug({ name: { label: "Title" } }),
 				description: fields.text({ label: "Description" }),
@@ -83,6 +85,8 @@ export default config({
 			label: "Work",
 			slugField: "title",
 			path: "src/content/work/*",
+			entryLayout: "content",
+			columns: ["title", "publishDate"],
 			format: { contentField: "content" },
 			schema: {
 				title: fields.slug({ name: { label: "Title" } }),
